@@ -1,7 +1,6 @@
-﻿
-namespace HIMS_Project
+﻿namespace HIMS_Project.PL
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +31,9 @@ namespace HIMS_Project
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "Login";
         }
 
         #endregion
     }
 }
-
