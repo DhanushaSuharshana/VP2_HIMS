@@ -5,10 +5,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace PRATHTHANA_SHEET_CENTER_NEW_PROJECT.OTHER
+namespace HIMS_Project.Others
 {
    
-    class MysqlParameterFormat
+    class sqlParameterFormat
     {
         public static SqlParameter Format(string parameter, SqlDbType dtype, object value)
         {

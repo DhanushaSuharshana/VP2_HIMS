@@ -5,13 +5,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace PRATHTHANA_SHEET_CENTER_NEW_PROJECT.OTHER
+namespace HIMS_Project.Others
 {
       
     internal class ODBC
     {
-
-
         //Initialize MSSQL database connection
         private static SqlConnection con;
 
