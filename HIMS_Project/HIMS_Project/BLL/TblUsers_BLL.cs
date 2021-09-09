@@ -2,6 +2,7 @@
 using HIMS_Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +12,6 @@ namespace HIMS_Project.BLL
 {
     class TblUsers_BLL
     {
-        public void LoadUserId(TblUsers tblUser)
-        {
-            try
-            {
-                return TblUsers_DAL.GetUserByUsername(tblUser);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        
     }
 }

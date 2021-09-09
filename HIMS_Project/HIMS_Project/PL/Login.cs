@@ -8,26 +8,53 @@ namespace HIMS_Project.PL
 {
     public partial class Login : Form
     {
-        TblUsers_BLL TblUsers_BLL; 
 
         public Login()
         {
             InitializeComponent();
-            TblUsers_BLL = new TblUsers_BLL(); // create a object
+            txtUsername.Focus();
         }
 
         public void Clear()
         {
-            txtUserId.Text = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
         }
+
+        public void VerifyLoginDetail()
+        {
+
+            //var LoginUser = new TblUsers
+            //{
+            //    Username = txtUsername.Text,
+            //    UPassword = txtPassword.Text,
+            //};
+
+            Login_BLL userCredentials = new Login_BLL();
+            bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, txtPassword.Text);
+
+            if (UserFound) // if user found
+            {
+                Dashboard dBoard = new Dashboard();
+                dBoard.Show();
+                this.Hide();
+            }
+            else if(!UserFound) // if user does not found
+            {
+                lblLoginError.Text = "Incorrect Username Or Password.";
+                Clear();
+                txtUsername.Focus();
+                return;
+            }
+
+        }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                // check tect bos is empty or not
+                // check text boxes are empty or not
                 if (string.IsNullOrEmpty(txtUsername.Text))
                 {
                     lblLoginError.Text = "Invalid username. Please Try again.";
@@ -42,19 +69,7 @@ namespace HIMS_Project.PL
                 }
                 else
                 {
-                    //var ID = txtUserId.Text;
-                    if (string.IsNullOrEmpty(txtUserId.Text))
-                    {
-                        lblLoginError.Text = "Incorrect Username Or Password.";
-                        Clear();
-                        txtUsername.Focus();
-                        return;
-                    }
-                    else
-                    {
-                        // Link MDI Dashboard here - Login to the system
-                        lblLoginError.Text = "Successfully Login.";
-                    }
+                    VerifyLoginDetail();
                 }
             }
             catch (Exception)
@@ -66,7 +81,14 @@ namespace HIMS_Project.PL
         // Close the login form
         private void btnLoginExit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+
+        private void btnRecoverPW_Click(object sender, EventArgs e)
+        {
+            PasswordRecover PwRecover = new PasswordRecover();
+            PwRecover.Show();
+            this.Hide();
         }
     }
 }

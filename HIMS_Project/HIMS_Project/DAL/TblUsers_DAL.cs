@@ -9,24 +9,25 @@ namespace HIMS_Project.DAL
     class TblUsers_DAL
     {
 
-        // Select login user details from user table
-        public static DataTable GetUserByUsername(TblUsers tblUsers)
-        {
-            try
-            {
-                string sql = string.Format("SELECT UserId FROM TblUsers WHERE Username=@Username AND UPassword=@UPassword");
-                SqlParameter[] sqlpara = new SqlParameter[2];
+        // Select login user details from DB to check whether the entered username & password correct or not 
+        //public DataTable GetUserByUsername(TblUsers LoginUser)
+        //{
+        //    try
+        //    {
+        //        string sql = string.Format("SELECT * FROM TblUsers WHERE Username=@Username AND UPassword=@UPassword");
+        //        SqlParameter[] sqlpara = new SqlParameter[2];
 
-                sqlpara[0] = sqlParameterFormat.Format("@Username", tblUsers.Username);
-                sqlpara[1] = sqlParameterFormat.Format("@UPassword", tblUsers.UPassword);
+        //        sqlpara[0] = sqlParameterFormat.Format("@Username", LoginUser.Username);
+        //        sqlpara[1] = sqlParameterFormat.Format("@UPassword", LoginUser.UPassword);
 
-                return ODBC.GetData(sql, sqlpara);
-            }
-            catch (Exception)
-            {
+        //        return ODBC.GetData(sql, sqlpara);
+        //    }
+        //    catch (Exception)
+        //    {
 
-                throw;
-            }
-        }
+        //        throw;
+        //    }
+        //}
+
     }
 }
