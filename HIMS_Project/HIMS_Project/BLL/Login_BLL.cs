@@ -11,7 +11,7 @@ namespace HIMS_Project.BLL
 {
     class Login_BLL
     {
-        public string UserId,RecoverUsername,RecoverPassword;
+        public string RecoverUsername,RecoverPassword;
 
         public bool AuthenticateUser(string Username, string UPassword)
         {
@@ -26,8 +26,14 @@ namespace HIMS_Project.BLL
                 {
                     if((Username == _dRow["Username"].ToString()) && (UPassword == _dRow["UPassword"].ToString())) // If find correct data row
                     {
-                        UserId = _dRow["UserId"].ToString();
+                        //UserId = _dRow["UserId"].ToString();
                         UserFound = true;
+
+                        //DataRow userRow = _dtable.Rows[0];
+                        LoggedInUser.Username = _dRow["Username"].ToString();
+                        LoggedInUser.UserId = Convert.ToInt32(_dRow["UserId"]);
+                        LoggedInUser.UserRole = Convert.ToInt32(_dRow["UserRole"]);
+                        LoggedInUser.RoleName = _dRow["RoleName"].ToString();
                     }
                 }
 
@@ -45,6 +51,7 @@ namespace HIMS_Project.BLL
             }
         }
 
+        // To Confirm exact user request to the recover password
         public bool ConfirmUser(string NIC, string DOB)
         {
             try
@@ -77,6 +84,5 @@ namespace HIMS_Project.BLL
                 throw;
             }
         }
-
     }
 }

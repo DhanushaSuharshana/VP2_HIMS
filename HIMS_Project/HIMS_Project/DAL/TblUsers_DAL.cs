@@ -29,5 +29,31 @@ namespace HIMS_Project.DAL
         //    }
         //}
 
+        // Select All Patients
+        public static DataTable GetAllPatients()
+        {
+            try
+            {
+                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblUserRole ON TblUserRole.RoleId=TblUsers.UserRole WHERE TblUserRole.RoleName='Patient'"); 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // Select All Medical Officers
+        public static DataTable GetAllMO()
+        {
+            try
+            {
+                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblStaff ON TblStaff.StaffId=TblUsers.StaffId WHERE TblUsers.UserRole=3");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

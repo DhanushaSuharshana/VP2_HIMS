@@ -15,7 +15,7 @@ namespace HIMS_Project.PL
             txtUsername.Focus();
         }
 
-        public void Clear()
+        public void Clear() // clear text boxes
         {
             txtUsername.Text = "";
             txtPassword.Text = "";
@@ -84,6 +84,7 @@ namespace HIMS_Project.PL
             Application.Exit();
         }
 
+        // If the password will forget go to recover password form
         private void btnRecoverPW_Click(object sender, EventArgs e)
         {
             PasswordRecover PwRecover = new PasswordRecover();

@@ -47,12 +47,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Login_BLL.cs" />
+    <Compile Include="BLL\TblAppointment_BLL.cs" />
+    <Compile Include="BLL\TblSpecialtyArea_BLL.cs" />
     <Compile Include="BLL\TblUsers_BLL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
+    <Compile Include="DAL\TblAppointment_DAL.cs" />
+    <Compile Include="DAL\TblSpecialtyArea_DAL.cs" />
     <Compile Include="DAL\TblUsers_DAL.cs" />
+    <Compile Include="Functions\AppointmentFunc.cs" />
+    <Compile Include="Functions\UserAccess.cs" />
+    <Compile Include="Functions\ValidateFunc.cs" />
+    <Compile Include="Model\LoggedInUser.cs" />
+    <Compile Include="Model\TblAppoinments.cs" />
+    <Compile Include="Model\TblSpecialtyArea.cs" />
+    <Compile Include="Model\TblStaff.cs" />
     <Compile Include="Model\TblUsers.cs" />
     <Compile Include="Others\MysqlParameterFormat.cs" />
     <Compile Include="Others\ODBC.cs" />
+    <Compile Include="PL\AppointmentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AppointmentModule.Designer.cs">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\AppointmentModule.resx">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
