@@ -11,3 +11,4 @@ E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HI
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Dashboard.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PasswordRecover.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserProfile.resources

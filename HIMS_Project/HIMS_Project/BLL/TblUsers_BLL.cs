@@ -12,6 +12,7 @@ namespace HIMS_Project.BLL
 {
     class TblUsers_BLL
     {
+        #region Appointment Module ComboBox
         // Fetch All Patients
         public void cmbLoadAllPatients(ComboBox cmbPatient)
         {
@@ -19,38 +20,20 @@ namespace HIMS_Project.BLL
             {
                 cmbPatient.DataSource = TblUsers_DAL.GetAllPatients();
                 cmbPatient.DisplayMember = "Name"; // Combo Box display value
-                cmbPatient.ValueMember = "UserId"; // Loading unique value to identify the Patient
+                cmbPatient.ValueMember = "Name"; // Loading unique value to identify the Patient
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
+        
+        #endregion Appointment Module ComboBox
 
-        // Fetch All Medical officers for specialty area
-        public void cmbLoadSpecialMO(int spArea, ComboBox cmbMO)
-        {
-            try
-            {
-                DataTable _dtable = TblUsers_DAL.GetAllMO();
+        #region User Profile
+        // Fetch All Logginned User details to user profile form
 
-                // check each rows till find user entered username & password
-                foreach (DataRow _dRow in _dtable.Rows)
-                {
-                    if (spArea == Convert.ToInt32(_dRow["SpecialityArea"])) // If find correct data row
-                    {
-                        cmbMO.DataSource = TblUsers_DAL.GetAllMO();
-                        cmbMO.DisplayMember = "Name";
-                        cmbMO.ValueMember = "UserId";
-                    }
-                }
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-        }
+        #endregion User Profile
     }
 }

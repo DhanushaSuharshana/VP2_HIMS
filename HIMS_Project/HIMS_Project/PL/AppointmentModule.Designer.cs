@@ -33,7 +33,6 @@
             this.txtAppointmentNo = new System.Windows.Forms.TextBox();
             this.txtAppTime = new System.Windows.Forms.TextBox();
             this.btnAppointmentUpdate = new System.Windows.Forms.Button();
-            this.btnAppointmentClear = new System.Windows.Forms.Button();
             this.btnAppointmentSave = new System.Windows.Forms.Button();
             this.cmbAppSpArea = new System.Windows.Forms.ComboBox();
             this.cmbAppMO = new System.Windows.Forms.ComboBox();
@@ -46,14 +45,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAppointmentClear = new System.Windows.Forms.Button();
             this.pnlAppointmentView = new System.Windows.Forms.Panel();
+            this.btnAppointmentSearch = new System.Windows.Forms.Button();
+            this.lblShowAppointmentMsg = new System.Windows.Forms.Label();
+            this.pnlViewButtons = new System.Windows.Forms.Panel();
+            this.btnAppointmentDelete = new System.Windows.Forms.Button();
+            this.btnAppointmentEdit = new System.Windows.Forms.Button();
+            this.btnAppointmentApprove = new System.Windows.Forms.Button();
+            this.btnAppointmentComplete = new System.Windows.Forms.Button();
+            this.btnAppointmentPrint = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAppointmentSearch = new System.Windows.Forms.TextBox();
-            this.btnAppointmentPrint = new System.Windows.Forms.Button();
-            this.btnAppointmentComplete = new System.Windows.Forms.Button();
-            this.btnAppointmentApprove = new System.Windows.Forms.Button();
-            this.btnAppointmentEdit = new System.Windows.Forms.Button();
-            this.btnAppointmentDelete = new System.Windows.Forms.Button();
             this.cmbFilterAppointment = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvAppointment = new System.Windows.Forms.DataGridView();
@@ -66,12 +69,10 @@
             this.MedicalOfficer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Symptom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppointmentStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlViewButtons = new System.Windows.Forms.Panel();
-            this.lblShowAppointmentMsg = new System.Windows.Forms.Label();
             this.pnlFormAppointment.SuspendLayout();
             this.pnlAppointmentView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).BeginInit();
             this.pnlViewButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAppointmentClose
@@ -137,17 +138,6 @@
             this.btnAppointmentUpdate.Text = "UPDATE";
             this.btnAppointmentUpdate.UseVisualStyleBackColor = true;
             this.btnAppointmentUpdate.Click += new System.EventHandler(this.btnAppointmentUpdate_Click);
-            // 
-            // btnAppointmentClear
-            // 
-            this.btnAppointmentClear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAppointmentClear.Location = new System.Drawing.Point(456, 0);
-            this.btnAppointmentClear.Name = "btnAppointmentClear";
-            this.btnAppointmentClear.Size = new System.Drawing.Size(82, 60);
-            this.btnAppointmentClear.TabIndex = 9;
-            this.btnAppointmentClear.Text = "CLEAR ALL";
-            this.btnAppointmentClear.UseVisualStyleBackColor = true;
-            this.btnAppointmentClear.Click += new System.EventHandler(this.btnAppointmentClear_Click);
             // 
             // btnAppointmentSave
             // 
@@ -256,9 +246,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
             // 
+            // btnAppointmentClear
+            // 
+            this.btnAppointmentClear.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAppointmentClear.Location = new System.Drawing.Point(456, 0);
+            this.btnAppointmentClear.Name = "btnAppointmentClear";
+            this.btnAppointmentClear.Size = new System.Drawing.Size(82, 60);
+            this.btnAppointmentClear.TabIndex = 9;
+            this.btnAppointmentClear.Text = "CLEAR ALL";
+            this.btnAppointmentClear.UseVisualStyleBackColor = true;
+            this.btnAppointmentClear.Click += new System.EventHandler(this.btnAppointmentClear_Click);
+            // 
             // pnlAppointmentView
             // 
             this.pnlAppointmentView.AutoScroll = true;
+            this.pnlAppointmentView.Controls.Add(this.btnAppointmentSearch);
             this.pnlAppointmentView.Controls.Add(this.lblShowAppointmentMsg);
             this.pnlAppointmentView.Controls.Add(this.pnlViewButtons);
             this.pnlAppointmentView.Controls.Add(this.label8);
@@ -274,58 +276,51 @@
             this.pnlAppointmentView.Size = new System.Drawing.Size(558, 585);
             this.pnlAppointmentView.TabIndex = 3;
             // 
-            // label8
+            // btnAppointmentSearch
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(238, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Search By Patient Name";
+            this.btnAppointmentSearch.Location = new System.Drawing.Point(514, 84);
+            this.btnAppointmentSearch.Name = "btnAppointmentSearch";
+            this.btnAppointmentSearch.Size = new System.Drawing.Size(31, 26);
+            this.btnAppointmentSearch.TabIndex = 12;
+            this.btnAppointmentSearch.Text = "Search";
+            this.btnAppointmentSearch.UseVisualStyleBackColor = true;
+            this.btnAppointmentSearch.Click += new System.EventHandler(this.btnAppointmentSearch_Click);
             // 
-            // txtAppointmentSearch
+            // lblShowAppointmentMsg
             // 
-            this.txtAppointmentSearch.Location = new System.Drawing.Point(238, 84);
-            this.txtAppointmentSearch.Name = "txtAppointmentSearch";
-            this.txtAppointmentSearch.Size = new System.Drawing.Size(307, 25);
-            this.txtAppointmentSearch.TabIndex = 7;
-            this.txtAppointmentSearch.TextChanged += new System.EventHandler(this.txtAppointmentSearch_TextChanged);
+            this.lblShowAppointmentMsg.AutoSize = true;
+            this.lblShowAppointmentMsg.Location = new System.Drawing.Point(90, 112);
+            this.lblShowAppointmentMsg.Name = "lblShowAppointmentMsg";
+            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(410, 17);
+            this.lblShowAppointmentMsg.TabIndex = 11;
+            this.lblShowAppointmentMsg.Text = "Appointment Numbers are available only for approved appointment.";
+            this.lblShowAppointmentMsg.Visible = false;
             // 
-            // btnAppointmentPrint
+            // pnlViewButtons
             // 
-            this.btnAppointmentPrint.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAppointmentPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointmentPrint.Location = new System.Drawing.Point(0, 0);
-            this.btnAppointmentPrint.Name = "btnAppointmentPrint";
-            this.btnAppointmentPrint.Size = new System.Drawing.Size(83, 60);
-            this.btnAppointmentPrint.TabIndex = 6;
-            this.btnAppointmentPrint.Text = "PRINT PDF";
-            this.btnAppointmentPrint.UseVisualStyleBackColor = true;
-            this.btnAppointmentPrint.Click += new System.EventHandler(this.btnAppointmentPrint_click);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentDelete);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentEdit);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentApprove);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentComplete);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentClear);
+            this.pnlViewButtons.Controls.Add(this.btnAppointmentPrint);
+            this.pnlViewButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlViewButtons.Location = new System.Drawing.Point(10, 515);
+            this.pnlViewButtons.Name = "pnlViewButtons";
+            this.pnlViewButtons.Size = new System.Drawing.Size(538, 60);
+            this.pnlViewButtons.TabIndex = 10;
             // 
-            // btnAppointmentComplete
+            // btnAppointmentDelete
             // 
-            this.btnAppointmentComplete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAppointmentComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointmentComplete.Location = new System.Drawing.Point(83, 0);
-            this.btnAppointmentComplete.Name = "btnAppointmentComplete";
-            this.btnAppointmentComplete.Size = new System.Drawing.Size(83, 60);
-            this.btnAppointmentComplete.TabIndex = 6;
-            this.btnAppointmentComplete.Text = "COMPLETE";
-            this.btnAppointmentComplete.UseVisualStyleBackColor = true;
-            this.btnAppointmentComplete.Click += new System.EventHandler(this.btnAppointmentComplete_Click);
-            // 
-            // btnAppointmentApprove
-            // 
-            this.btnAppointmentApprove.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAppointmentApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointmentApprove.Location = new System.Drawing.Point(166, 0);
-            this.btnAppointmentApprove.Name = "btnAppointmentApprove";
-            this.btnAppointmentApprove.Size = new System.Drawing.Size(75, 60);
-            this.btnAppointmentApprove.TabIndex = 6;
-            this.btnAppointmentApprove.Text = "APPROVE";
-            this.btnAppointmentApprove.UseVisualStyleBackColor = true;
-            this.btnAppointmentApprove.Click += new System.EventHandler(this.btnAppointmentApprove_Click);
+            this.btnAppointmentDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAppointmentDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointmentDelete.Location = new System.Drawing.Point(316, 0);
+            this.btnAppointmentDelete.Name = "btnAppointmentDelete";
+            this.btnAppointmentDelete.Size = new System.Drawing.Size(75, 60);
+            this.btnAppointmentDelete.TabIndex = 6;
+            this.btnAppointmentDelete.Text = "DELETE";
+            this.btnAppointmentDelete.UseVisualStyleBackColor = true;
+            this.btnAppointmentDelete.Click += new System.EventHandler(this.btnAppointmentDelete_Click);
             // 
             // btnAppointmentEdit
             // 
@@ -339,17 +334,58 @@
             this.btnAppointmentEdit.UseVisualStyleBackColor = true;
             this.btnAppointmentEdit.Click += new System.EventHandler(this.btnAppointmentEdit_Click);
             // 
-            // btnAppointmentDelete
+            // btnAppointmentApprove
             // 
-            this.btnAppointmentDelete.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAppointmentDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointmentDelete.Location = new System.Drawing.Point(316, 0);
-            this.btnAppointmentDelete.Name = "btnAppointmentDelete";
-            this.btnAppointmentDelete.Size = new System.Drawing.Size(75, 60);
-            this.btnAppointmentDelete.TabIndex = 6;
-            this.btnAppointmentDelete.Text = "DELETE";
-            this.btnAppointmentDelete.UseVisualStyleBackColor = true;
-            this.btnAppointmentDelete.Click += new System.EventHandler(this.btnAppointmentDelete_Click);
+            this.btnAppointmentApprove.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAppointmentApprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointmentApprove.Location = new System.Drawing.Point(166, 0);
+            this.btnAppointmentApprove.Name = "btnAppointmentApprove";
+            this.btnAppointmentApprove.Size = new System.Drawing.Size(75, 60);
+            this.btnAppointmentApprove.TabIndex = 6;
+            this.btnAppointmentApprove.Text = "APPROVE";
+            this.btnAppointmentApprove.UseVisualStyleBackColor = true;
+            this.btnAppointmentApprove.Click += new System.EventHandler(this.btnAppointmentApprove_Click);
+            // 
+            // btnAppointmentComplete
+            // 
+            this.btnAppointmentComplete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAppointmentComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointmentComplete.Location = new System.Drawing.Point(83, 0);
+            this.btnAppointmentComplete.Name = "btnAppointmentComplete";
+            this.btnAppointmentComplete.Size = new System.Drawing.Size(83, 60);
+            this.btnAppointmentComplete.TabIndex = 6;
+            this.btnAppointmentComplete.Text = "COMPLETE";
+            this.btnAppointmentComplete.UseVisualStyleBackColor = true;
+            this.btnAppointmentComplete.Click += new System.EventHandler(this.btnAppointmentComplete_Click);
+            // 
+            // btnAppointmentPrint
+            // 
+            this.btnAppointmentPrint.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAppointmentPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppointmentPrint.Location = new System.Drawing.Point(0, 0);
+            this.btnAppointmentPrint.Name = "btnAppointmentPrint";
+            this.btnAppointmentPrint.Size = new System.Drawing.Size(83, 60);
+            this.btnAppointmentPrint.TabIndex = 6;
+            this.btnAppointmentPrint.Text = "PRINT PDF";
+            this.btnAppointmentPrint.UseVisualStyleBackColor = true;
+            this.btnAppointmentPrint.Click += new System.EventHandler(this.btnAppointmentPrint_click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(238, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Search By Patient Name";
+            // 
+            // txtAppointmentSearch
+            // 
+            this.txtAppointmentSearch.Location = new System.Drawing.Point(238, 84);
+            this.txtAppointmentSearch.Name = "txtAppointmentSearch";
+            this.txtAppointmentSearch.Size = new System.Drawing.Size(270, 25);
+            this.txtAppointmentSearch.TabIndex = 7;
+            this.txtAppointmentSearch.TextChanged += new System.EventHandler(this.txtAppointmentSearch_TextChanged);
             // 
             // cmbFilterAppointment
             // 
@@ -376,6 +412,8 @@
             // 
             // dgvAppointment
             // 
+            this.dgvAppointment.AllowUserToAddRows = false;
+            this.dgvAppointment.AllowUserToDeleteRows = false;
             this.dgvAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -392,6 +430,7 @@
             this.AppointmentStatus});
             this.dgvAppointment.Location = new System.Drawing.Point(9, 135);
             this.dgvAppointment.Name = "dgvAppointment";
+            this.dgvAppointment.ReadOnly = true;
             this.dgvAppointment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAppointment.Size = new System.Drawing.Size(539, 374);
             this.dgvAppointment.TabIndex = 3;
@@ -401,78 +440,64 @@
             this.AppointmentNo.DataPropertyName = "AppointmentNo";
             this.AppointmentNo.HeaderText = "Appointment #";
             this.AppointmentNo.Name = "AppointmentNo";
+            this.AppointmentNo.ReadOnly = true;
             this.AppointmentNo.Visible = false;
             // 
             // AppointmentNumber
             // 
+            this.AppointmentNumber.DataPropertyName = "AppointmentNumber";
             this.AppointmentNumber.HeaderText = "Appointment Number";
             this.AppointmentNumber.Name = "AppointmentNumber";
+            this.AppointmentNumber.ReadOnly = true;
             // 
             // Patient
             // 
             this.Patient.DataPropertyName = "Patient";
             this.Patient.HeaderText = "Patient";
             this.Patient.Name = "Patient";
+            this.Patient.ReadOnly = true;
             // 
             // AppointmentDate
             // 
             this.AppointmentDate.DataPropertyName = "AppDate";
             this.AppointmentDate.HeaderText = "Appointment Date";
             this.AppointmentDate.Name = "AppointmentDate";
+            this.AppointmentDate.ReadOnly = true;
             // 
             // AppointmentTime
             // 
             this.AppointmentTime.DataPropertyName = "AppTime";
             this.AppointmentTime.HeaderText = "Appointment Time";
             this.AppointmentTime.Name = "AppointmentTime";
+            this.AppointmentTime.ReadOnly = true;
             // 
             // SpecialtyArea
             // 
             this.SpecialtyArea.DataPropertyName = "SpecialityArea";
             this.SpecialtyArea.HeaderText = "MO Specialty  Area";
             this.SpecialtyArea.Name = "SpecialtyArea";
+            this.SpecialtyArea.ReadOnly = true;
             // 
             // MedicalOfficer
             // 
-            this.MedicalOfficer.DataPropertyName = "MO_Id";
+            this.MedicalOfficer.DataPropertyName = "MedicalOfficer";
             this.MedicalOfficer.HeaderText = "Medical Officer";
             this.MedicalOfficer.Name = "MedicalOfficer";
+            this.MedicalOfficer.ReadOnly = true;
             // 
             // Symptom
             // 
             this.Symptom.DataPropertyName = "Symptom";
             this.Symptom.HeaderText = "Symptoms";
             this.Symptom.Name = "Symptom";
+            this.Symptom.ReadOnly = true;
             // 
             // AppointmentStatus
             // 
             this.AppointmentStatus.DataPropertyName = "AppoinmentStatus";
             this.AppointmentStatus.HeaderText = "Appointment Status";
             this.AppointmentStatus.Name = "AppointmentStatus";
-            // 
-            // pnlViewButtons
-            // 
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentDelete);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentEdit);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentApprove);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentComplete);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentClear);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentPrint);
-            this.pnlViewButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlViewButtons.Location = new System.Drawing.Point(10, 515);
-            this.pnlViewButtons.Name = "pnlViewButtons";
-            this.pnlViewButtons.Size = new System.Drawing.Size(538, 60);
-            this.pnlViewButtons.TabIndex = 10;
-            // 
-            // lblShowAppointmentMsg
-            // 
-            this.lblShowAppointmentMsg.AutoSize = true;
-            this.lblShowAppointmentMsg.Location = new System.Drawing.Point(90, 112);
-            this.lblShowAppointmentMsg.Name = "lblShowAppointmentMsg";
-            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(410, 17);
-            this.lblShowAppointmentMsg.TabIndex = 11;
-            this.lblShowAppointmentMsg.Text = "Appointment Numbers are available only for approved appointment.";
-            this.lblShowAppointmentMsg.Visible = false;
+            this.AppointmentStatus.ReadOnly = true;
             // 
             // AppointmentModule
             // 
@@ -492,8 +517,8 @@
             this.pnlFormAppointment.PerformLayout();
             this.pnlAppointmentView.ResumeLayout(false);
             this.pnlAppointmentView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).EndInit();
             this.pnlViewButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,6 +551,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvAppointment;
         private System.Windows.Forms.Button btnAppointmentPrint;
+        private System.Windows.Forms.TextBox txtAppointmentNo;
+        private System.Windows.Forms.TextBox txtAppointmentSearch;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel pnlViewButtons;
+        private System.Windows.Forms.Label lblShowAppointmentMsg;
+        private System.Windows.Forms.Button btnAppointmentSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
@@ -535,10 +566,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MedicalOfficer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Symptom;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentStatus;
-        private System.Windows.Forms.TextBox txtAppointmentNo;
-        private System.Windows.Forms.TextBox txtAppointmentSearch;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel pnlViewButtons;
-        private System.Windows.Forms.Label lblShowAppointmentMsg;
     }
 }

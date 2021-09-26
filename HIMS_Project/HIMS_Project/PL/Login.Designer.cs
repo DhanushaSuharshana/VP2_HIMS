@@ -37,6 +37,7 @@
             this.lblLoginError = new System.Windows.Forms.Label();
             this.btnRecoverPW = new System.Windows.Forms.Button();
             this.btnLoginExit = new System.Windows.Forms.Button();
+            this.btnPasswordEye = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -130,11 +131,22 @@
             this.btnLoginExit.UseVisualStyleBackColor = true;
             this.btnLoginExit.Click += new System.EventHandler(this.btnLoginExit_Click);
             // 
+            // btnPasswordEye
+            // 
+            this.btnPasswordEye.Location = new System.Drawing.Point(331, 142);
+            this.btnPasswordEye.Name = "btnPasswordEye";
+            this.btnPasswordEye.Size = new System.Drawing.Size(27, 23);
+            this.btnPasswordEye.TabIndex = 8;
+            this.btnPasswordEye.Text = "Eye";
+            this.btnPasswordEye.UseVisualStyleBackColor = true;
+            this.btnPasswordEye.Click += new System.EventHandler(this.btnPasswordEye_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 348);
+            this.Controls.Add(this.btnPasswordEye);
             this.Controls.Add(this.btnRecoverPW);
             this.Controls.Add(this.lblLoginError);
             this.Controls.Add(this.btnLoginExit);
@@ -148,6 +160,7 @@
             this.Name = "Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +177,6 @@
         private System.Windows.Forms.Label lblLoginError;
         private System.Windows.Forms.Button btnRecoverPW;
         private System.Windows.Forms.Button btnLoginExit;
+        private System.Windows.Forms.Button btnPasswordEye;
     }
 }
