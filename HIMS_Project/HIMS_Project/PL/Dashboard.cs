@@ -189,5 +189,11 @@ namespace HIMS_Project.PL
 
             // Application.Exit();
         }
+
+        private void btnUserProfile_Click(object sender, EventArgs e)
+        {
+            // open user profile form
+            OpenChildForm(new UserProfile());
+        }
     }
 }

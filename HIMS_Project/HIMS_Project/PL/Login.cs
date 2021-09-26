@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using HIMS_Project.BLL;
+using HIMS_Project.Functions;
 using HIMS_Project.Model;
 
 namespace HIMS_Project.PL
@@ -12,6 +13,10 @@ namespace HIMS_Project.PL
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
             txtUsername.Focus();
         }
 
@@ -23,13 +28,6 @@ namespace HIMS_Project.PL
 
         public void VerifyLoginDetail()
         {
-
-            //var LoginUser = new TblUsers
-            //{
-            //    Username = txtUsername.Text,
-            //    UPassword = txtPassword.Text,
-            //};
-
             Login_BLL userCredentials = new Login_BLL();
             bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, txtPassword.Text);
 
@@ -90,6 +88,11 @@ namespace HIMS_Project.PL
             PasswordRecover PwRecover = new PasswordRecover();
             PwRecover.Show();
             this.Hide();
+        }
+
+        private void btnPasswordEye_Click(object sender, EventArgs e)
+        {
+            PasswordFunc.PasswordShowHide(txtPassword);
         }
     }
 }

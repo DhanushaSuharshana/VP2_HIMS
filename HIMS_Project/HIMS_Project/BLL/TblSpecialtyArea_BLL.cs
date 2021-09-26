@@ -10,19 +10,16 @@ namespace HIMS_Project.BLL
 {
     class TblSpecialtyArea_BLL
     {
-        public void cmbLoadAllSpArea(ComboBox cmdLoadAllSpArea)
+        public void cmbLoadAllSpArea(ComboBox cmbAppSpArea)
         {
             try
             {
-                cmdLoadAllSpArea.DataSource = TblSpecialtyArea_DAL.GetAllSpecialtyArea();
-                cmdLoadAllSpArea.DisplayMember = "SDescription";
-                cmdLoadAllSpArea.ValueMember = "SAreaID";
-
-
+                cmbAppSpArea.DataSource = TblSpecialtyArea_DAL.GetAllSpecialtyArea();
+                cmbAppSpArea.DisplayMember = "SDescription";
+                cmbAppSpArea.ValueMember = "SDescription";
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

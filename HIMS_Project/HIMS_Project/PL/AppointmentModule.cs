@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,14 +17,12 @@ namespace HIMS_Project.PL
     public partial class AppointmentModule : Form
     {
         TblUsers_BLL TblUsers_BLL;
-        TblSpecialtyArea_BLL TblSpecialtyArea_BLL;
         TblAppointment_BLL TblAppointment_BLL;
 
         public AppointmentModule()
         {
             InitializeComponent();
             TblUsers_BLL = new TblUsers_BLL();
-            TblSpecialtyArea_BLL = new TblSpecialtyArea_BLL();
             TblAppointment_BLL = new TblAppointment_BLL();
         }
 
@@ -46,20 +45,26 @@ namespace HIMS_Project.PL
         // Load All Specialty Area to Combo box
         private void cmbLoadSpArea()
         {
-            TblSpecialtyArea_BLL.cmbLoadAllSpArea(cmbAppSpArea);
+            TblAppointment_BLL.cmbLoadExistSpArea(cmbAppSpArea);
             cmbAppSpArea.SelectedIndex = -1;
         }
 
         // Load All Medical Officers of each selected Specialty area
         private void cmbAppSpArea_SelectedIndexChanged(object sender, EventArgs e)
         {
-        //    //int SpecialtyArea = cmbAppSpArea.SelectedValue(); // get selected value
-        //    int SpecialtyArea = cmbAppSpArea.Text;
-        //    //Int32.TryParse(cmbAppSpArea.SelectedValue.ToString(), out SpecialtyArea);
-        //    TblUsers_BLL.cmbLoadSpecialMO(SpecialtyArea, cmbAppMO);
-        //    cmbAppMO.SelectedIndex = -1;
+            //    //int SpecialtyArea = cmbAppSpArea.SelectedValue(); // get selected value
+            //    int SpecialtyArea = cmbAppSpArea.Text;
+            //    //Int32.TryParse(cmbAppSpArea.SelectedValue.ToString(), out SpecialtyArea);
+            //    TblUsers_BLL.cmbLoadSpecialMO(SpecialtyArea, cmbAppMO);
+            //    cmbAppMO.SelectedIndex = -1;
+
+            if (cmbAppSpArea.SelectedValue.ToString() != null)
+            {
+                string SpecialtyArea = cmbAppSpArea.SelectedValue.ToString();
+                TblAppointment_BLL.cmbLoadSpecialMO(SpecialtyArea, cmbAppMO);
+            }
         }
-         
+
         // Load Appointment data to data grid view
         private void dgvAllAppointments(int UserRole)
         {
@@ -116,6 +121,8 @@ namespace HIMS_Project.PL
                 btnAppointmentDelete.Hide();
                 btnAppointmentEdit.Hide();
                 btnAppointmentPrint.Hide();
+                AppointmentFunc.ShowUserName(cmbAppPatient); // view loggedin patient name
+                cmbAppPatient.Enabled = false; // disable the ComboBox
             }
                 
         }
@@ -133,26 +140,59 @@ namespace HIMS_Project.PL
         }
 
         // Generate New Appointment Number
-        public int NewAppointmentNumber(int UserRole)
+        public string NewAppointmentNumber(int UserRole)
         {
-            int NewNo = 0;
+            string NewNo = "N/A";
             if (UserRole == 2)
                 NewNo = AppointmentFunc.GenerateAppointmentNo();
-
             return NewNo;
+        }
+        public void validateFields()
+        {
+            if (cmbAppPatient.SelectedIndex == -1)
+            {
+                // Call Function to Validate Empty Fiels
+                ValidateFunc.ValidateEmptyCmbField(cmbAppPatient);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtAppTime.Text))
+            {
+                ValidateFunc.ValidateEmptyTxtField(txtAppTime);
+                return;
+            }
+            if (!Regex.Match(txtAppTime.Text, @"^[0-1]{1}\d{1}:[0-5]{1}\d{1}[AaPp][Mm]$").Success)
+            {
+                ValidateFunc.ValidateTime(txtAppTime);
+                return;
+            }
+            if (cmbAppSpArea.SelectedIndex == -1)
+            {
+                ValidateFunc.ValidateEmptyCmbField(cmbAppSpArea);
+                return;
+            }
+            //if(cmbAppMO.SelectedIndex == -1)
+            //{
+            //    ValidateFunc.ValidateEmptyCmbField(cmbAppMO);
+            //}
+            if (string.IsNullOrEmpty(txtAppSymptom.Text))
+            {
+                ValidateFunc.ValidateEmptyTxtField(txtAppSymptom);
+                return;
+            }
         }
 
         public int AddAppointment()
         {
-            //TblAppoinments _tblAppointments = new TblAppoinments();
+            //TblAppointments _tblAppointments = new TblAppointments();
 
-            var appointment = new TblAppoinments // create new object to store form data
+            var appointment = new TblAppointments // create new object to store form data
             {
-                Patient = int.Parse(cmbAppPatient.SelectedValue.ToString()),
+                Patient = cmbAppPatient.SelectedValue.ToString(),
                 Symptom = txtAppSymptom.Text,
-                MO_Id = int.Parse(cmbAppMO.SelectedValue.ToString()),
-                SpecialityArea = int.Parse(cmbAppSpArea.SelectedValue.ToString()),
-                AppoinmentStatus = NewAppointmentStatus(LoggedInUser.UserRole),
+                //MO_Id = int.Parse(cmbAppMO.SelectedValue.ToString()),
+                MedicalOfficer = "7",
+                SpecialityArea = cmbAppSpArea.SelectedValue.ToString(),
+                AppointmentStatus = NewAppointmentStatus(LoggedInUser.UserRole),
                 AppointmentNumber = NewAppointmentNumber(LoggedInUser.UserRole),
                 AppTime = txtAppTime.Text,
                 AppDate = dtpAppDate.Text,
@@ -165,27 +205,7 @@ namespace HIMS_Project.PL
         {
             try
             {
-                if (cmbAppPatient.SelectedIndex == -1)
-                {
-                    // Call Function to Validate Empty Fiels
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppPatient);
-                }
-                if (string.IsNullOrEmpty(txtAppTime.Text))
-                {
-                    ValidateFunc.ValidateEmptyTxtField(txtAppTime);
-                }
-                if (cmbAppSpArea.SelectedIndex == -1) 
-                {
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppSpArea);
-                }
-                if(cmbAppMO.SelectedIndex == -1)
-                {
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppMO);
-                }
-                if (string.IsNullOrEmpty(txtAppSymptom.Text))
-                {
-                    ValidateFunc.ValidateEmptyTxtField(txtAppSymptom);
-                }
+                validateFields();
 
                 var respond = AddAppointment();
                 if (respond > 0)
@@ -210,6 +230,7 @@ namespace HIMS_Project.PL
             cmbAppMO.SelectedIndex = -1;
             txtAppSymptom.Text = "";
             cmbAppPatient.Focus();
+            txtAppTime.Text = "";
         }
 
         public void EditAppointment()
@@ -228,13 +249,14 @@ namespace HIMS_Project.PL
 
         public int UpdateAppointment()
         {
-            var appointment = new TblAppoinments // create new object to store form data
+            var appointment = new TblAppointments // create new object to store form data
             {
-                AppoinmentNo = int.Parse(txtAppointmentNo.Text),
-                Patient = int.Parse(cmbAppPatient.SelectedValue.ToString()),
+                AppointmentNo = int.Parse(txtAppointmentNo.Text),
+                Patient = cmbAppPatient.SelectedValue.ToString(),
                 Symptom = txtAppSymptom.Text,
-                MO_Id = int.Parse(cmbAppMO.SelectedValue.ToString()),
-                SpecialityArea = int.Parse(cmbAppSpArea.SelectedValue.ToString()),
+                //MedicalOfficer = cmbAppMO.SelectedValue.ToString(),
+                MedicalOfficer = "7",
+                SpecialityArea = cmbAppSpArea.SelectedValue.ToString(),
                 AppTime = txtAppTime.Text,
                 AppDate = dtpAppDate.Text,
             };
@@ -249,9 +271,9 @@ namespace HIMS_Project.PL
 
         public int UpdateAppointmentStatusApproved()
         {
-            var NewStatus = new TblAppoinments
+            var NewStatus = new TblAppointments
             {
-                AppoinmentStatus = "Approved",
+                AppointmentStatus = "Approved",
                 AppointmentNumber = AppointmentFunc.GenerateAppointmentNo(),
             };
             return TblAppointment_BLL.UpdateAppointment(NewStatus);
@@ -259,9 +281,9 @@ namespace HIMS_Project.PL
 
         public int UpdateAppointmentStatusCompleted()
         {
-            var NewStatus = new TblAppoinments
+            var NewStatus = new TblAppointments
             {
-                AppoinmentStatus = "Completed",
+                AppointmentStatus = "Completed",
             };
             return TblAppointment_BLL.UpdateAppointment(NewStatus);
         }
@@ -275,23 +297,7 @@ namespace HIMS_Project.PL
         {
             try
             {
-                if (cmbAppPatient.SelectedIndex == -1)
-                {
-                    // Call Function to Validate Empty Fiels
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppPatient);
-                }
-                if (cmbAppSpArea.SelectedIndex == -1)
-                {
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppSpArea);
-                }
-                if (cmbAppMO.SelectedIndex == -1)
-                {
-                    ValidateFunc.ValidateEmptyCmbField(cmbAppMO);
-                }
-                if (string.IsNullOrEmpty(txtAppSymptom.Text))
-                {
-                    ValidateFunc.ValidateEmptyTxtField(txtAppSymptom);
-                }
+                validateFields();
 
                 var respond = UpdateAppointment();
                 if (respond > 0)
@@ -404,6 +410,11 @@ namespace HIMS_Project.PL
         }
 
         private void txtAppointmentSearch_TextChanged(object sender, EventArgs e)
+        {
+            TblAppointment_BLL.LoadSpecificAppointmentsToGrid(txtAppointmentSearch.Text, dgvAppointment);
+        }
+
+        private void btnAppointmentSearch_Click(object sender, EventArgs e)
         {
             TblAppointment_BLL.LoadSpecificAppointmentsToGrid(txtAppointmentSearch.Text, dgvAppointment);
         }

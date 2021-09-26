@@ -16,7 +16,6 @@ namespace HIMS_Project.DAL
             try
             {
                 return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblUserRole ON TblUsers.UserRole=TblUserRole.RoleId");
-
             }
             catch (Exception)
             {

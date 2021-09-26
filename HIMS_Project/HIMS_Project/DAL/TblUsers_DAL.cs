@@ -29,12 +29,13 @@ namespace HIMS_Project.DAL
         //    }
         //}
 
+        #region Appointment module ComboBox
         // Select All Patients
         public static DataTable GetAllPatients()
         {
             try
             {
-                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblUserRole ON TblUserRole.RoleId=TblUsers.UserRole WHERE TblUserRole.RoleName='Patient'"); 
+                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblUserRole ON TblUserRole.RoleId=TblUsers.UserRole WHERE TblUserRole.RoleName='Patient'");
             }
             catch (Exception)
             {
@@ -42,18 +43,29 @@ namespace HIMS_Project.DAL
             }
         }
 
-        // Select All Medical Officers
-        public static DataTable GetAllMO()
+        #endregion Appointment module ComboBox
+
+        #region User Profile
+        // Select Loginned User Detail for user profile
+        public static DataTable GetUserDetail()
         {
             try
             {
-                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblStaff ON TblStaff.StaffId=TblUsers.StaffId WHERE TblUsers.UserRole=3");
+                string sql = string.Format("SELECT * FROM TblUsers WHERE UserId=@UserId");
+                SqlParameter[] sqlpara = new SqlParameter[1];
+
+                sqlpara[0] = sqlParameterFormat.Format("@UserId", LoggedInUser.UserId);
+
+                return ODBC.GetData(sql, sqlpara);
             }
             catch (Exception)
             {
                 throw;
             }
         }
+        #endregion User Profile
+
+        
 
     }
 }

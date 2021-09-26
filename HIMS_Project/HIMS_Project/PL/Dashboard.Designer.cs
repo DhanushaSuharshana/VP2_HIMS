@@ -358,6 +358,7 @@
             this.btnUserProfile.TabIndex = 5;
             this.btnUserProfile.Text = "Pro";
             this.btnUserProfile.UseVisualStyleBackColor = true;
+            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
             // btnDashboardClose
             // 

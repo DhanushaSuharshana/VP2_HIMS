@@ -31,16 +31,8 @@ namespace HIMS_Project.BLL
         {
             try
             {
-                DataTable _dtable = TblAppointment_DAL.GetAllAppointment();
-
-                foreach (DataRow _dRow in _dtable.Rows)
-                {
-                    if (status == _dRow["AppoinmentStatus"].ToString()) // If find correct data row
-                    {
-                        dgv.AutoGenerateColumns = false;
-                        dgv.DataSource = TblAppointment_DAL.GetAllAppointment();
-                    }
-                }
+                dgv.AutoGenerateColumns = false;
+                dgv.DataSource = TblAppointment_DAL.GetStatusAppointment(status);
             }
             catch (Exception)
             {
@@ -54,26 +46,47 @@ namespace HIMS_Project.BLL
         {
             try
             {
-                DataTable _dtable = TblAppointment_DAL.GetAllAppointment();
-
-                foreach (DataRow _dRow in _dtable.Rows)
-                {
-                    if (usertext == _dRow["Patient"].ToString()) // If find correct data row
-                    {
-                        dgv.AutoGenerateColumns = false;
-                        dgv.DataSource = TblAppointment_DAL.GetAllAppointment();
-                    }
-                }
+                dgv.AutoGenerateColumns = false;
+                dgv.DataSource = TblAppointment_DAL.GetUserSearchAppointment(usertext);
             }
             catch (Exception)
             {
+                throw;
+            }
+        }
 
+        // Fetch All existing specialist area
+        public void cmbLoadExistSpArea(ComboBox cmbAppSpArea)
+        {
+            try
+            {
+                cmbAppSpArea.DataSource = TblAppointment_DAL.GetAllExistSpArea();
+                cmbAppSpArea.DisplayMember = "SpecialityArea"; // Combo Box display value
+                cmbAppSpArea.ValueMember = "SpecialityArea"; // Loading unique value to identify the Patient
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // Fetch All Medical officers for specialty area
+        public void cmbLoadSpecialMO(string SpecialityArea, ComboBox cmbAppMO)
+        {
+            try
+            {
+                cmbAppMO.DataSource = TblAppointment_DAL.GetAllMO(SpecialityArea);
+                cmbAppMO.DisplayMember = "Name";
+                cmbAppMO.ValueMember = "Name";
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
         // Send Appointment Details to Add new record
-        public int AddAppointment(TblAppoinments tblAppointments)
+        public int AddAppointment(TblAppointments tblAppointments)
         {
             try
             {
@@ -86,7 +99,7 @@ namespace HIMS_Project.BLL
         }
 
         // Send Appointment Details to Update each unique record
-        public int UpdateAppointment(TblAppoinments tblAppointments)
+        public int UpdateAppointment(TblAppointments tblAppointments)
         {
             try
             {

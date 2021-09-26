@@ -1,19 +1,21 @@
 ﻿using HIMS_Project.DAL;
+using HIMS_Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HIMS_Project.Functions
 {
     public class AppointmentFunc
     {
-        
-        public static int GenerateAppointmentNo()
+        // Auto Generate an appointment number
+        public static string GenerateAppointmentNo()
         {
-            int NewNumber=0;
+            string NewNumber="1";
 
             try
             {
@@ -21,11 +23,11 @@ namespace HIMS_Project.Functions
 
                 foreach (DataRow _dRow in _dtable.Rows)
                 {
-                    NewNumber = Convert.ToInt32(_dRow["AppointmentNumber"]);
+                    NewNumber = _dRow["AppointmentNo"].ToString();
                 }
-                if (NewNumber == 0)
+                if (NewNumber == "0")
                 {
-                    NewNumber = 1;
+                    NewNumber = "1";
                 }
                 else
                 {
@@ -33,6 +35,22 @@ namespace HIMS_Project.Functions
                 }
 
                 return NewNumber;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // If a user will patient Show his/her name in patient text box
+        public static void ShowUserName(ComboBox cmbAppPatient)
+        {
+            try
+            {
+                cmbAppPatient.DataSource = TblAppointment_DAL.ShowPatientName();
+                cmbAppPatient.DisplayMember = "Name";
+                cmbAppPatient.ValueMember = "Name";
 
             }
             catch (Exception)
