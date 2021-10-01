@@ -126,7 +126,7 @@ namespace HIMS_Project.DAL
             {
                 // set sql insert query
                 string sql = string.Format("INSERT INTO TblAppointments" +
-                    "(AppointmentNumber,Patient,AppDate,,AppTime,Symptom,MedicalOfficer,SpecialityArea,AppointmentStatus) " +
+                    "(AppointmentNumber,Patient,AppDate,AppTime,Symptom,MedicalOfficer,SpecialityArea,AppointmentStatus) " +
                     "VALUES" +
                     "(@AppointmentNumber,@Patient,@AppDate,@AppTime,@Symptom,@MedicalOfficer,@SpecialityArea,@AppointmentStatus)");
                 
