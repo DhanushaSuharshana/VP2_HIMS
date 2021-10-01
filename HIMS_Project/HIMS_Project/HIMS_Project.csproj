@@ -48,12 +48,14 @@
   <ItemGroup>
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\TblAppointment_BLL.cs" />
+    <Compile Include="BLL\TblReceivedPostal_BLL.cs" />
     <Compile Include="BLL\TblSpecialtyArea_BLL.cs" />
     <Compile Include="BLL\TblStaff_BLL.cs" />
     <Compile Include="BLL\TblUsers_BLL.cs" />
     <Compile Include="BLL\UserProfile_BLL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
     <Compile Include="DAL\TblAppointment_DAL.cs" />
+    <Compile Include="DAL\TblReceivedPostal_DAL.cs" />
     <Compile Include="DAL\TblSpecialtyArea_DAL.cs" />
     <Compile Include="DAL\TblStaff_DAL.cs" />
     <Compile Include="DAL\TblUsers_DAL.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Functions\ValidateFunc.cs" />
     <Compile Include="Model\LoggedInUser.cs" />
     <Compile Include="Model\TblAppointments.cs" />
+    <Compile Include="Model\TblPostal.cs" />
     <Compile Include="Model\TblSpecialtyArea.cs" />
     <Compile Include="Model\TblStaff.cs" />
     <Compile Include="Model\TblUsers.cs" />
@@ -93,6 +96,18 @@
     <Compile Include="PL\PasswordRecover.Designer.cs">
       <DependentUpon>PasswordRecover.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\PostalReceivedModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PostalReceivedModule.Designer.cs">
+      <DependentUpon>PostalReceivedModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\UserModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\UserModule.Designer.cs">
+      <DependentUpon>UserModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\UserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\PasswordRecover.resx">
       <DependentUpon>PasswordRecover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PostalReceivedModule.resx">
+      <DependentUpon>PostalReceivedModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\UserModule.resx">
+      <DependentUpon>UserModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>

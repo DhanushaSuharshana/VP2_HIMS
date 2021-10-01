@@ -156,6 +156,7 @@ namespace HIMS_Project.PL
 
         private void btnUser_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new UserModule());
             /*
              * code to be executed
              */
