@@ -84,16 +84,14 @@
     <Compile Include="PL\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Login.Designer.cs">
+    <Compile Include="PL\Login.cs" />
+    <Compile Include="PL\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\PasswordRecover.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\PasswordRecover.Designer.cs">
+    <Compile Include="PL\PasswordRecover.designer.cs">
       <DependentUpon>PasswordRecover.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\PostalDispatchedModule.cs">

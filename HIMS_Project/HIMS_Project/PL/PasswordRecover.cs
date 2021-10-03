@@ -16,7 +16,15 @@ namespace HIMS_Project.PL
     public partial class PasswordRecover : Form
     {
         public PasswordRecover()
+
         {
+            //colour changes ** lahiru **
+
+            this.BackColor = Color.DarkGray;
+            this.TransparencyKey = Color.DarkGray;
+
+            //to here
+
             InitializeComponent();
             txtReqNIC.Focus();
         }
@@ -95,6 +103,16 @@ namespace HIMS_Project.PL
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void PasswordRecover_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

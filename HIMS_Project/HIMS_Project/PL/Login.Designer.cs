@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,73 +38,88 @@
             this.lblLoginError = new System.Windows.Forms.Label();
             this.btnRecoverPW = new System.Windows.Forms.Button();
             this.btnLoginExit = new System.Windows.Forms.Button();
-            this.btnPasswordEye = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 27);
+            this.label1.Location = new System.Drawing.Point(113, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login Form";
+            this.label1.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 100);
+            this.label2.Location = new System.Drawing.Point(51, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Username";
+            this.label2.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 148);
+            this.label3.Location = new System.Drawing.Point(51, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
+            this.label3.Visible = false;
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(134, 100);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Varela Round", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.txtUsername.Location = new System.Drawing.Point(83, 312);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 24);
+            this.txtUsername.Size = new System.Drawing.Size(201, 26);
             this.txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(134, 142);
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Varela Round", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.ForeColor = System.Drawing.Color.Purple;
+            this.txtPassword.Location = new System.Drawing.Point(84, 379);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(200, 24);
+            this.txtPassword.Size = new System.Drawing.Size(199, 26);
             this.txtPassword.TabIndex = 4;
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(35, 186);
+            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.Location = new System.Drawing.Point(118, 467);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 30);
+            this.btnLogin.Size = new System.Drawing.Size(116, 43);
             this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblLoginError
             // 
             this.lblLoginError.AutoSize = true;
+            this.lblLoginError.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoginError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLoginError.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginError.ForeColor = System.Drawing.Color.Red;
-            this.lblLoginError.Location = new System.Drawing.Point(32, 272);
+            this.lblLoginError.ForeColor = System.Drawing.Color.LightGray;
+            this.lblLoginError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLoginError.Location = new System.Drawing.Point(62, 526);
             this.lblLoginError.Name = "lblLoginError";
             this.lblLoginError.Size = new System.Drawing.Size(0, 16);
             this.lblLoginError.TabIndex = 6;
@@ -111,42 +127,44 @@
             // 
             // btnRecoverPW
             // 
+            this.btnRecoverPW.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecoverPW.FlatAppearance.BorderSize = 0;
+            this.btnRecoverPW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRecoverPW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecoverPW.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecoverPW.Location = new System.Drawing.Point(35, 222);
+            this.btnRecoverPW.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRecoverPW.Image = ((System.Drawing.Image)(resources.GetObject("btnRecoverPW.Image")));
+            this.btnRecoverPW.Location = new System.Drawing.Point(54, 428);
             this.btnRecoverPW.Name = "btnRecoverPW";
-            this.btnRecoverPW.Size = new System.Drawing.Size(299, 37);
+            this.btnRecoverPW.Size = new System.Drawing.Size(252, 31);
             this.btnRecoverPW.TabIndex = 7;
-            this.btnRecoverPW.Text = "Forgotten Your Username Or Password?";
-            this.btnRecoverPW.UseVisualStyleBackColor = true;
+            this.btnRecoverPW.UseVisualStyleBackColor = false;
             this.btnRecoverPW.Click += new System.EventHandler(this.btnRecoverPW_Click);
             // 
             // btnLoginExit
             // 
+            this.btnLoginExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoginExit.FlatAppearance.BorderSize = 0;
+            this.btnLoginExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkViolet;
+            this.btnLoginExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginExit.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginExit.Location = new System.Drawing.Point(191, 186);
+            this.btnLoginExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLoginExit.Image = ((System.Drawing.Image)(resources.GetObject("btnLoginExit.Image")));
+            this.btnLoginExit.Location = new System.Drawing.Point(357, 91);
             this.btnLoginExit.Name = "btnLoginExit";
-            this.btnLoginExit.Size = new System.Drawing.Size(143, 30);
+            this.btnLoginExit.Size = new System.Drawing.Size(28, 29);
             this.btnLoginExit.TabIndex = 5;
-            this.btnLoginExit.Text = "Exit";
-            this.btnLoginExit.UseVisualStyleBackColor = true;
+            this.btnLoginExit.UseVisualStyleBackColor = false;
             this.btnLoginExit.Click += new System.EventHandler(this.btnLoginExit_Click);
-            // 
-            // btnPasswordEye
-            // 
-            this.btnPasswordEye.Location = new System.Drawing.Point(331, 142);
-            this.btnPasswordEye.Name = "btnPasswordEye";
-            this.btnPasswordEye.Size = new System.Drawing.Size(27, 23);
-            this.btnPasswordEye.TabIndex = 8;
-            this.btnPasswordEye.Text = "Eye";
-            this.btnPasswordEye.UseVisualStyleBackColor = true;
-            this.btnPasswordEye.Click += new System.EventHandler(this.btnPasswordEye_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 348);
-            this.Controls.Add(this.btnPasswordEye);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(797, 609);
             this.Controls.Add(this.btnRecoverPW);
             this.Controls.Add(this.lblLoginError);
             this.Controls.Add(this.btnLoginExit);
@@ -156,6 +174,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.ShowIcon = false;
@@ -177,6 +196,5 @@
         private System.Windows.Forms.Label lblLoginError;
         private System.Windows.Forms.Button btnRecoverPW;
         private System.Windows.Forms.Button btnLoginExit;
-        private System.Windows.Forms.Button btnPasswordEye;
     }
 }
