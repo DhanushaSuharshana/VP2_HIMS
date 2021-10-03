@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using HIMS_Project.BLL;
-using HIMS_Project.Functions;
 using HIMS_Project.Model;
 
 namespace HIMS_Project.PL
@@ -12,15 +12,18 @@ namespace HIMS_Project.PL
 
         public Login()
         {
-            InitializeComponent();
-        }
+            //colour changes ** lahiru **
 
-        private void Login_Load(object sender, EventArgs e)
-        {
+            this.BackColor = Color.DarkGray;
+            this.TransparencyKey = Color.DarkGray;
+
+            //to here
+
+            InitializeComponent();
             txtUsername.Focus();
         }
 
-        public void Clear() // clear text boxes
+        public void Clear()
         {
             txtUsername.Text = "";
             txtPassword.Text = "";
@@ -28,6 +31,13 @@ namespace HIMS_Project.PL
 
         public void VerifyLoginDetail()
         {
+
+            //var LoginUser = new TblUsers
+            //{
+            //    Username = txtUsername.Text,
+            //    UPassword = txtPassword.Text,
+            //};
+
             Login_BLL userCredentials = new Login_BLL();
             bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, txtPassword.Text);
 
@@ -82,7 +92,6 @@ namespace HIMS_Project.PL
             Application.Exit();
         }
 
-        // If the password will forget go to recover password form
         private void btnRecoverPW_Click(object sender, EventArgs e)
         {
             PasswordRecover PwRecover = new PasswordRecover();
@@ -90,9 +99,9 @@ namespace HIMS_Project.PL
             this.Hide();
         }
 
-        private void btnPasswordEye_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            PasswordFunc.PasswordShowHide(txtPassword);
+
         }
     }
 }

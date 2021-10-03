@@ -45,7 +45,7 @@ namespace HIMS_Project.BLL
             try
             {
                 dgv.AutoGenerateColumns = false;
-                dgv.DataSource = TblDispatchedPostal_DAL.GetAllDispatchedPostal();
+                dgv.DataSource = TblPostal_DAL.GetAllDispatchedPostal();
             }
             catch (Exception)
             {
@@ -59,7 +59,7 @@ namespace HIMS_Project.BLL
             try
             {
                 dgv.AutoGenerateColumns = false;
-                dgv.DataSource = TblDispatchedPostal_DAL.GetUserSearchDispatchedPostal(usertext);
+                dgv.DataSource = TblPostal_DAL.GetUserSearchDispatchedPostal(usertext);
             }
             catch (Exception)
             {
