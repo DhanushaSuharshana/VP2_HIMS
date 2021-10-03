@@ -229,8 +229,8 @@ namespace HIMS_Project.PL
             cmbAppSpArea.SelectedIndex = -1;
             cmbAppMO.SelectedIndex = -1;
             txtAppSymptom.Text = "";
-            cmbAppPatient.Focus();
             txtAppTime.Text = "";
+            cmbAppPatient.Focus();
         }
 
         public void EditAppointment()
