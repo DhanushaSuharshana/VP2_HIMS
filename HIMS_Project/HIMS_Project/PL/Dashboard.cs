@@ -100,6 +100,7 @@ namespace HIMS_Project.PL
 
         private void btnPostalReceived_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new PostalReceivedModule());
             /*
              * code to be executed
              */

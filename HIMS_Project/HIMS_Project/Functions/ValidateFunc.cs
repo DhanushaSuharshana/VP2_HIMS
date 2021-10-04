@@ -54,5 +54,13 @@ namespace HIMS_Project.Functions
             txtPassword.Text = "";
             txtPassword.Focus();
         }
+
+        // Validate Number
+        public static void ValidateNumber(TextBox numberField)
+        {
+            MessageBox.Show("Only numeric numbers are accepted.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            numberField.Text = "";
+            numberField.Focus();
+        }
     }
 }

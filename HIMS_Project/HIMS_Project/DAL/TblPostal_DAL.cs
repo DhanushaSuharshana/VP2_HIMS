@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace HIMS_Project.DAL
 {
-    class TblReceivedPostal_DAL
+    class TblPostal_DAL
     {
         //Select All Received Postal
-        public static DataTable GetAllAppointment()
+        public static DataTable GetAllReceivedPostal()
         {
             try
             {
-                return ODBC.GetData("SELECT * FROM TblPostal MailStatus='received'");
+                return ODBC.GetData("SELECT * FROM TblPostal WHERE MailStatus='Received'");
             }
             catch (Exception)
             {
@@ -29,7 +29,37 @@ namespace HIMS_Project.DAL
         {
             try
             {
-                string sql = string.Format("SELECT * FROM TblPostal WHERE MailFrom LIKE '%' + @usertext + '%' OR MailTo LIKE '%' + @usertext + '%'");
+                string sql = string.Format("SELECT * FROM TblPostal WHERE MailStatus='Received' AND (MailFrom LIKE '%' + @usertext + '%' OR MailTo LIKE '%' + @usertext + '%')");
+                SqlParameter[] sqlpara = new SqlParameter[1];
+
+                sqlpara[0] = sqlParameterFormat.Format("@usertext", usertext);
+
+                return ODBC.GetData(sql, sqlpara);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        //Select All Dispatched Postal
+        public static DataTable GetAllDispatchedPostal()
+        {
+            try
+            {
+                return ODBC.GetData("SELECT * FROM TblPostal WHERE MailStatus='Dispatched'");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        // Search Dispatched Data
+        public static DataTable GetUserSearchDispatchedPostal(string usertext)
+        {
+            try
+            {
+                string sql = string.Format("SELECT * FROM TblPostal WHERE MailStatus='Dispatched' AND (MailFrom LIKE '%' + @usertext + '%' OR MailTo LIKE '%' + @usertext + '%')");
                 SqlParameter[] sqlpara = new SqlParameter[1];
 
                 sqlpara[0] = sqlParameterFormat.Format("@usertext", usertext);
@@ -83,9 +113,9 @@ namespace HIMS_Project.DAL
                                            "SET MailFrom=@MailFrom," +
                                                "FromAddress=@FromAddress," +
                                                "Note=@Note," +
-                                               "MailTo=@MailTo" +
-                                               "Attachment=@Attachment," +
-                                           "WHERE PostalId=@PostalId");
+                                               "MailTo=@MailTo," +
+                                               "Attachment=@Attachment" +
+                                           " WHERE PostalId=@PostalId");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[6];
                 _sql[0] = sqlParameterFormat.Format("@MailFrom", tblPostal.MailFrom);

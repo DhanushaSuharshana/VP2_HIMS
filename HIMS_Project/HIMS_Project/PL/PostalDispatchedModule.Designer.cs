@@ -1,6 +1,6 @@
 ﻿namespace HIMS_Project.PL
 {
-    partial class PostalReceivedModule
+    partial class PostalDispatchedModule
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlRePostalTop = new System.Windows.Forms.Panel();
-            this.btnRePostalClose = new System.Windows.Forms.Button();
+            this.pnlDiPostalTop = new System.Windows.Forms.Panel();
+            this.btnDiPostalClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlPostalForm = new System.Windows.Forms.Panel();
-            this.txtReNote = new System.Windows.Forms.TextBox();
-            this.txtReAddress = new System.Windows.Forms.TextBox();
-            this.txtReTo = new System.Windows.Forms.TextBox();
-            this.txtRePostalId = new System.Windows.Forms.TextBox();
-            this.txtReRefNo = new System.Windows.Forms.TextBox();
-            this.txtReFrom = new System.Windows.Forms.TextBox();
+            this.txtDiNote = new System.Windows.Forms.TextBox();
+            this.txtDiAddress = new System.Windows.Forms.TextBox();
+            this.txtDiTo = new System.Windows.Forms.TextBox();
+            this.txtDiPostalId = new System.Windows.Forms.TextBox();
+            this.txtDiRefNo = new System.Windows.Forms.TextBox();
+            this.txtDiFrom = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,14 +45,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlformButtons = new System.Windows.Forms.Panel();
-            this.btnRePostalSave = new System.Windows.Forms.Button();
-            this.btnRePostalUpdate = new System.Windows.Forms.Button();
+            this.btnDiPostalSave = new System.Windows.Forms.Button();
+            this.btnDiPostalUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlDgvBtn = new System.Windows.Forms.Panel();
-            this.btnRePostalEdit = new System.Windows.Forms.Button();
-            this.btnRePostalDelete = new System.Windows.Forms.Button();
-            this.dgvRePostal = new System.Windows.Forms.DataGridView();
+            this.btnDiPostalEdit = new System.Windows.Forms.Button();
+            this.btnDiPostalDelete = new System.Windows.Forms.Button();
+            this.dgvDiPostal = new System.Windows.Forms.DataGridView();
             this.PostalId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MailFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,42 +60,42 @@
             this.ToName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRePostalSearch = new System.Windows.Forms.TextBox();
+            this.txtDiPostalSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pnlRePostalTop.SuspendLayout();
+            this.pnlDiPostalTop.SuspendLayout();
             this.pnlPostalForm.SuspendLayout();
             this.pnlformButtons.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlDgvBtn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRePostal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiPostal)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlRePostalTop
+            // pnlDiPostalTop
             // 
-            this.pnlRePostalTop.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlRePostalTop.Controls.Add(this.btnRePostalClose);
-            this.pnlRePostalTop.Controls.Add(this.label1);
-            this.pnlRePostalTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRePostalTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlRePostalTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlRePostalTop.Name = "pnlRePostalTop";
-            this.pnlRePostalTop.Size = new System.Drawing.Size(800, 42);
-            this.pnlRePostalTop.TabIndex = 4;
+            this.pnlDiPostalTop.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlDiPostalTop.Controls.Add(this.btnDiPostalClose);
+            this.pnlDiPostalTop.Controls.Add(this.label1);
+            this.pnlDiPostalTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDiPostalTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlDiPostalTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlDiPostalTop.Name = "pnlDiPostalTop";
+            this.pnlDiPostalTop.Size = new System.Drawing.Size(800, 42);
+            this.pnlDiPostalTop.TabIndex = 5;
             // 
-            // btnRePostalClose
+            // btnDiPostalClose
             // 
-            this.btnRePostalClose.BackColor = System.Drawing.Color.White;
-            this.btnRePostalClose.FlatAppearance.BorderSize = 0;
-            this.btnRePostalClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRePostalClose.Font = new System.Drawing.Font("Segoe UI Symbol", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRePostalClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
-            this.btnRePostalClose.Location = new System.Drawing.Point(12, 5);
-            this.btnRePostalClose.Name = "btnRePostalClose";
-            this.btnRePostalClose.Size = new System.Drawing.Size(32, 32);
-            this.btnRePostalClose.TabIndex = 1;
-            this.btnRePostalClose.Text = "X";
-            this.btnRePostalClose.UseVisualStyleBackColor = false;
-            this.btnRePostalClose.Click += new System.EventHandler(this.btnRePostalClose_Click);
+            this.btnDiPostalClose.BackColor = System.Drawing.Color.White;
+            this.btnDiPostalClose.FlatAppearance.BorderSize = 0;
+            this.btnDiPostalClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiPostalClose.Font = new System.Drawing.Font("Segoe UI Symbol", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiPostalClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
+            this.btnDiPostalClose.Location = new System.Drawing.Point(12, 5);
+            this.btnDiPostalClose.Name = "btnDiPostalClose";
+            this.btnDiPostalClose.Size = new System.Drawing.Size(32, 32);
+            this.btnDiPostalClose.TabIndex = 1;
+            this.btnDiPostalClose.Text = "X";
+            this.btnDiPostalClose.UseVisualStyleBackColor = false;
+            this.btnDiPostalClose.Click += new System.EventHandler(this.btnDiPostalClose_Click);
             // 
             // label1
             // 
@@ -103,19 +103,19 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(320, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 25);
+            this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Postal Module";
+            this.label1.Text = "Dispatched Postal";
             // 
             // pnlPostalForm
             // 
             this.pnlPostalForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlPostalForm.Controls.Add(this.txtReNote);
-            this.pnlPostalForm.Controls.Add(this.txtReAddress);
-            this.pnlPostalForm.Controls.Add(this.txtReTo);
-            this.pnlPostalForm.Controls.Add(this.txtRePostalId);
-            this.pnlPostalForm.Controls.Add(this.txtReRefNo);
-            this.pnlPostalForm.Controls.Add(this.txtReFrom);
+            this.pnlPostalForm.Controls.Add(this.txtDiNote);
+            this.pnlPostalForm.Controls.Add(this.txtDiAddress);
+            this.pnlPostalForm.Controls.Add(this.txtDiTo);
+            this.pnlPostalForm.Controls.Add(this.txtDiPostalId);
+            this.pnlPostalForm.Controls.Add(this.txtDiRefNo);
+            this.pnlPostalForm.Controls.Add(this.txtDiFrom);
             this.pnlPostalForm.Controls.Add(this.label7);
             this.pnlPostalForm.Controls.Add(this.label6);
             this.pnlPostalForm.Controls.Add(this.label8);
@@ -126,50 +126,50 @@
             this.pnlPostalForm.Location = new System.Drawing.Point(0, 42);
             this.pnlPostalForm.Name = "pnlPostalForm";
             this.pnlPostalForm.Size = new System.Drawing.Size(800, 132);
-            this.pnlPostalForm.TabIndex = 5;
+            this.pnlPostalForm.TabIndex = 6;
             // 
-            // txtReNote
+            // txtDiNote
             // 
-            this.txtReNote.Location = new System.Drawing.Point(512, 40);
-            this.txtReNote.Multiline = true;
-            this.txtReNote.Name = "txtReNote";
-            this.txtReNote.Size = new System.Drawing.Size(264, 81);
-            this.txtReNote.TabIndex = 4;
+            this.txtDiNote.Location = new System.Drawing.Point(512, 40);
+            this.txtDiNote.Multiline = true;
+            this.txtDiNote.Name = "txtDiNote";
+            this.txtDiNote.Size = new System.Drawing.Size(264, 81);
+            this.txtDiNote.TabIndex = 4;
             // 
-            // txtReAddress
+            // txtDiAddress
             // 
-            this.txtReAddress.Location = new System.Drawing.Point(512, 10);
-            this.txtReAddress.Name = "txtReAddress";
-            this.txtReAddress.Size = new System.Drawing.Size(264, 20);
-            this.txtReAddress.TabIndex = 3;
+            this.txtDiAddress.Location = new System.Drawing.Point(512, 10);
+            this.txtDiAddress.Name = "txtDiAddress";
+            this.txtDiAddress.Size = new System.Drawing.Size(264, 20);
+            this.txtDiAddress.TabIndex = 3;
             // 
-            // txtReTo
+            // txtDiTo
             // 
-            this.txtReTo.Location = new System.Drawing.Point(89, 71);
-            this.txtReTo.Name = "txtReTo";
-            this.txtReTo.Size = new System.Drawing.Size(304, 20);
-            this.txtReTo.TabIndex = 2;
+            this.txtDiTo.Location = new System.Drawing.Point(89, 71);
+            this.txtDiTo.Name = "txtDiTo";
+            this.txtDiTo.Size = new System.Drawing.Size(304, 20);
+            this.txtDiTo.TabIndex = 2;
             // 
-            // txtRePostalId
+            // txtDiPostalId
             // 
-            this.txtRePostalId.Location = new System.Drawing.Point(433, 56);
-            this.txtRePostalId.Name = "txtRePostalId";
-            this.txtRePostalId.Size = new System.Drawing.Size(73, 20);
-            this.txtRePostalId.TabIndex = 1;
+            this.txtDiPostalId.Location = new System.Drawing.Point(433, 56);
+            this.txtDiPostalId.Name = "txtDiPostalId";
+            this.txtDiPostalId.Size = new System.Drawing.Size(73, 20);
+            this.txtDiPostalId.TabIndex = 1;
             // 
-            // txtReRefNo
+            // txtDiRefNo
             // 
-            this.txtReRefNo.Location = new System.Drawing.Point(89, 13);
-            this.txtReRefNo.Name = "txtReRefNo";
-            this.txtReRefNo.Size = new System.Drawing.Size(304, 20);
-            this.txtReRefNo.TabIndex = 1;
+            this.txtDiRefNo.Location = new System.Drawing.Point(89, 13);
+            this.txtDiRefNo.Name = "txtDiRefNo";
+            this.txtDiRefNo.Size = new System.Drawing.Size(304, 20);
+            this.txtDiRefNo.TabIndex = 1;
             // 
-            // txtReFrom
+            // txtDiFrom
             // 
-            this.txtReFrom.Location = new System.Drawing.Point(89, 39);
-            this.txtReFrom.Name = "txtReFrom";
-            this.txtReFrom.Size = new System.Drawing.Size(304, 20);
-            this.txtReFrom.TabIndex = 1;
+            this.txtDiFrom.Location = new System.Drawing.Point(89, 39);
+            this.txtDiFrom.Name = "txtDiFrom";
+            this.txtDiFrom.Size = new System.Drawing.Size(304, 20);
+            this.txtDiFrom.TabIndex = 1;
             // 
             // label7
             // 
@@ -228,36 +228,36 @@
             // pnlformButtons
             // 
             this.pnlformButtons.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pnlformButtons.Controls.Add(this.btnRePostalSave);
-            this.pnlformButtons.Controls.Add(this.btnRePostalUpdate);
+            this.pnlformButtons.Controls.Add(this.btnDiPostalSave);
+            this.pnlformButtons.Controls.Add(this.btnDiPostalUpdate);
             this.pnlformButtons.Controls.Add(this.btnClear);
             this.pnlformButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlformButtons.Location = new System.Drawing.Point(0, 174);
             this.pnlformButtons.Name = "pnlformButtons";
             this.pnlformButtons.Size = new System.Drawing.Size(800, 34);
-            this.pnlformButtons.TabIndex = 14;
+            this.pnlformButtons.TabIndex = 15;
             // 
-            // btnRePostalSave
+            // btnDiPostalSave
             // 
-            this.btnRePostalSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRePostalSave.Location = new System.Drawing.Point(575, 0);
-            this.btnRePostalSave.Name = "btnRePostalSave";
-            this.btnRePostalSave.Size = new System.Drawing.Size(75, 34);
-            this.btnRePostalSave.TabIndex = 0;
-            this.btnRePostalSave.Text = "Save";
-            this.btnRePostalSave.UseVisualStyleBackColor = true;
-            this.btnRePostalSave.Click += new System.EventHandler(this.btnRePostalSave_Click);
+            this.btnDiPostalSave.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDiPostalSave.Location = new System.Drawing.Point(575, 0);
+            this.btnDiPostalSave.Name = "btnDiPostalSave";
+            this.btnDiPostalSave.Size = new System.Drawing.Size(75, 34);
+            this.btnDiPostalSave.TabIndex = 0;
+            this.btnDiPostalSave.Text = "Save";
+            this.btnDiPostalSave.UseVisualStyleBackColor = true;
+            this.btnDiPostalSave.Click += new System.EventHandler(this.btnDiPostalSave_Click);
             // 
-            // btnRePostalUpdate
+            // btnDiPostalUpdate
             // 
-            this.btnRePostalUpdate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRePostalUpdate.Location = new System.Drawing.Point(650, 0);
-            this.btnRePostalUpdate.Name = "btnRePostalUpdate";
-            this.btnRePostalUpdate.Size = new System.Drawing.Size(75, 34);
-            this.btnRePostalUpdate.TabIndex = 0;
-            this.btnRePostalUpdate.Text = "Update";
-            this.btnRePostalUpdate.UseVisualStyleBackColor = true;
-            this.btnRePostalUpdate.Click += new System.EventHandler(this.btnRePostalUpdate_Click);
+            this.btnDiPostalUpdate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDiPostalUpdate.Location = new System.Drawing.Point(650, 0);
+            this.btnDiPostalUpdate.Name = "btnDiPostalUpdate";
+            this.btnDiPostalUpdate.Size = new System.Drawing.Size(75, 34);
+            this.btnDiPostalUpdate.TabIndex = 0;
+            this.btnDiPostalUpdate.Text = "Update";
+            this.btnDiPostalUpdate.UseVisualStyleBackColor = true;
+            this.btnDiPostalUpdate.Click += new System.EventHandler(this.btnDiPostalUpdate_Click);
             // 
             // btnClear
             // 
@@ -274,53 +274,53 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.pnlDgvBtn);
-            this.panel1.Controls.Add(this.dgvRePostal);
-            this.panel1.Controls.Add(this.txtRePostalSearch);
+            this.panel1.Controls.Add(this.dgvDiPostal);
+            this.panel1.Controls.Add(this.txtDiPostalSearch);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 208);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 251);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 16;
             // 
             // pnlDgvBtn
             // 
-            this.pnlDgvBtn.Controls.Add(this.btnRePostalEdit);
-            this.pnlDgvBtn.Controls.Add(this.btnRePostalDelete);
+            this.pnlDgvBtn.Controls.Add(this.btnDiPostalEdit);
+            this.pnlDgvBtn.Controls.Add(this.btnDiPostalDelete);
             this.pnlDgvBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlDgvBtn.Location = new System.Drawing.Point(0, 213);
             this.pnlDgvBtn.Name = "pnlDgvBtn";
             this.pnlDgvBtn.Size = new System.Drawing.Size(800, 38);
             this.pnlDgvBtn.TabIndex = 4;
             // 
-            // btnRePostalEdit
+            // btnDiPostalEdit
             // 
-            this.btnRePostalEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRePostalEdit.Location = new System.Drawing.Point(646, 0);
-            this.btnRePostalEdit.Name = "btnRePostalEdit";
-            this.btnRePostalEdit.Size = new System.Drawing.Size(77, 38);
-            this.btnRePostalEdit.TabIndex = 3;
-            this.btnRePostalEdit.Text = "Edit";
-            this.btnRePostalEdit.UseVisualStyleBackColor = true;
-            this.btnRePostalEdit.Click += new System.EventHandler(this.btnRePostalEdit_Click);
+            this.btnDiPostalEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDiPostalEdit.Location = new System.Drawing.Point(646, 0);
+            this.btnDiPostalEdit.Name = "btnDiPostalEdit";
+            this.btnDiPostalEdit.Size = new System.Drawing.Size(77, 38);
+            this.btnDiPostalEdit.TabIndex = 3;
+            this.btnDiPostalEdit.Text = "Edit";
+            this.btnDiPostalEdit.UseVisualStyleBackColor = true;
+            this.btnDiPostalEdit.Click += new System.EventHandler(this.btnDiPostalEdit_Click);
             // 
-            // btnRePostalDelete
+            // btnDiPostalDelete
             // 
-            this.btnRePostalDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRePostalDelete.Location = new System.Drawing.Point(723, 0);
-            this.btnRePostalDelete.Name = "btnRePostalDelete";
-            this.btnRePostalDelete.Size = new System.Drawing.Size(77, 38);
-            this.btnRePostalDelete.TabIndex = 3;
-            this.btnRePostalDelete.Text = "Delete";
-            this.btnRePostalDelete.UseVisualStyleBackColor = true;
-            this.btnRePostalDelete.Click += new System.EventHandler(this.btnRePostalDelete_Click);
+            this.btnDiPostalDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnDiPostalDelete.Location = new System.Drawing.Point(723, 0);
+            this.btnDiPostalDelete.Name = "btnDiPostalDelete";
+            this.btnDiPostalDelete.Size = new System.Drawing.Size(77, 38);
+            this.btnDiPostalDelete.TabIndex = 3;
+            this.btnDiPostalDelete.Text = "Delete";
+            this.btnDiPostalDelete.UseVisualStyleBackColor = true;
+            this.btnDiPostalDelete.Click += new System.EventHandler(this.btnDiPostalDelete_Click);
             // 
-            // dgvRePostal
+            // dgvDiPostal
             // 
-            this.dgvRePostal.AllowUserToAddRows = false;
-            this.dgvRePostal.AllowUserToDeleteRows = false;
-            this.dgvRePostal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRePostal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDiPostal.AllowUserToAddRows = false;
+            this.dgvDiPostal.AllowUserToDeleteRows = false;
+            this.dgvDiPostal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiPostal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PostalId,
             this.RefNo,
             this.MailFrom,
@@ -328,13 +328,13 @@
             this.ToName,
             this.Date,
             this.Note});
-            this.dgvRePostal.Location = new System.Drawing.Point(7, 38);
-            this.dgvRePostal.Name = "dgvRePostal";
-            this.dgvRePostal.ReadOnly = true;
-            this.dgvRePostal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRePostal.Size = new System.Drawing.Size(788, 169);
-            this.dgvRePostal.TabIndex = 2;
-            this.dgvRePostal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRePostal_CellClick);
+            this.dgvDiPostal.Location = new System.Drawing.Point(7, 38);
+            this.dgvDiPostal.Name = "dgvDiPostal";
+            this.dgvDiPostal.ReadOnly = true;
+            this.dgvDiPostal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiPostal.Size = new System.Drawing.Size(788, 169);
+            this.dgvDiPostal.TabIndex = 2;
+            this.dgvDiPostal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiPostal_CellClick);
             // 
             // PostalId
             // 
@@ -386,13 +386,13 @@
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
             // 
-            // txtRePostalSearch
+            // txtDiPostalSearch
             // 
-            this.txtRePostalSearch.Location = new System.Drawing.Point(143, 11);
-            this.txtRePostalSearch.Name = "txtRePostalSearch";
-            this.txtRePostalSearch.Size = new System.Drawing.Size(250, 20);
-            this.txtRePostalSearch.TabIndex = 1;
-            this.txtRePostalSearch.TextChanged += new System.EventHandler(this.txtRePostalSearch_TextChanged);
+            this.txtDiPostalSearch.Location = new System.Drawing.Point(143, 11);
+            this.txtDiPostalSearch.Name = "txtDiPostalSearch";
+            this.txtDiPostalSearch.Size = new System.Drawing.Size(250, 20);
+            this.txtDiPostalSearch.TabIndex = 1;
+            this.txtDiPostalSearch.TextChanged += new System.EventHandler(this.txtDiPostalSearch_TextChanged);
             // 
             // label3
             // 
@@ -404,58 +404,58 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Search By User Name";
             // 
-            // PostalReceivedModule
+            // PostalDispatchedModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 459);
+            this.ClientSize = new System.Drawing.Size(800, 460);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlformButtons);
             this.Controls.Add(this.pnlPostalForm);
-            this.Controls.Add(this.pnlRePostalTop);
-            this.Name = "PostalReceivedModule";
-            this.Text = "PostalReceivedModule";
-            this.Load += new System.EventHandler(this.PostalReceivedModule_Load);
-            this.pnlRePostalTop.ResumeLayout(false);
-            this.pnlRePostalTop.PerformLayout();
+            this.Controls.Add(this.pnlDiPostalTop);
+            this.Name = "PostalDispatchedModule";
+            this.Text = "PostalDispatchedModule";
+            this.Load += new System.EventHandler(this.PostalDispatchedModule_Load);
+            this.pnlDiPostalTop.ResumeLayout(false);
+            this.pnlDiPostalTop.PerformLayout();
             this.pnlPostalForm.ResumeLayout(false);
             this.pnlPostalForm.PerformLayout();
             this.pnlformButtons.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlDgvBtn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRePostal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiPostal)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlRePostalTop;
-        private System.Windows.Forms.Button btnRePostalClose;
+        private System.Windows.Forms.Panel pnlDiPostalTop;
+        private System.Windows.Forms.Button btnDiPostalClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlPostalForm;
-        private System.Windows.Forms.Panel pnlformButtons;
-        private System.Windows.Forms.Button btnRePostalSave;
-        private System.Windows.Forms.Button btnRePostalUpdate;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlDgvBtn;
-        private System.Windows.Forms.Button btnRePostalEdit;
-        private System.Windows.Forms.Button btnRePostalDelete;
-        private System.Windows.Forms.DataGridView dgvRePostal;
-        private System.Windows.Forms.TextBox txtRePostalSearch;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtReNote;
-        private System.Windows.Forms.TextBox txtReAddress;
-        private System.Windows.Forms.TextBox txtReTo;
-        private System.Windows.Forms.TextBox txtReFrom;
+        private System.Windows.Forms.TextBox txtDiNote;
+        private System.Windows.Forms.TextBox txtDiAddress;
+        private System.Windows.Forms.TextBox txtDiTo;
+        private System.Windows.Forms.TextBox txtDiPostalId;
+        private System.Windows.Forms.TextBox txtDiRefNo;
+        private System.Windows.Forms.TextBox txtDiFrom;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtRePostalId;
+        private System.Windows.Forms.Panel pnlformButtons;
+        private System.Windows.Forms.Button btnDiPostalSave;
+        private System.Windows.Forms.Button btnDiPostalUpdate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDgvBtn;
+        private System.Windows.Forms.Button btnDiPostalEdit;
+        private System.Windows.Forms.Button btnDiPostalDelete;
+        private System.Windows.Forms.DataGridView dgvDiPostal;
         private System.Windows.Forms.DataGridViewTextBoxColumn PostalId;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn MailFrom;
@@ -463,7 +463,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ToName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
-        private System.Windows.Forms.TextBox txtReRefNo;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDiPostalSearch;
+        private System.Windows.Forms.Label label3;
     }
 }
