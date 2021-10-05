@@ -94,9 +94,9 @@ namespace HIMS_Project.PL
 
         private void btnRecoverPW_Click(object sender, EventArgs e)
         {
-            PasswordRecover PwRecover = new PasswordRecover();
-            PwRecover.Show();
-            this.Hide();
+        //    PasswordRecover PwRecover = new PasswordRecover();
+        //    PwRecover.Show();
+        //    this.Hide();
         }
 
         private void Login_Load(object sender, EventArgs e)
