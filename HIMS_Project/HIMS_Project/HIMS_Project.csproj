@@ -84,15 +84,11 @@
     <Compile Include="PL\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Login.cs" />
-    <Compile Include="PL\Login.designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\PasswordRecover.cs">
+    <Compile Include="PL\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\PasswordRecover.designer.cs">
-      <DependentUpon>PasswordRecover.cs</DependentUpon>
+    <Compile Include="PL\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\PostalDispatchedModule.cs">
       <SubType>Form</SubType>
@@ -128,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\PasswordRecover.resx">
-      <DependentUpon>PasswordRecover.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\PostalDispatchedModule.resx">
       <DependentUpon>PostalDispatchedModule.cs</DependentUpon>
