@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\TblAppointment_BLL.cs" />
+    <Compile Include="BLL\TblComplaints_BLL.cs" />
+    <Compile Include="BLL\TblComplaintType_BLL.cs" />
     <Compile Include="BLL\TblPostal_BLL.cs" />
     <Compile Include="BLL\TblSpecialtyArea_BLL.cs" />
     <Compile Include="BLL\TblStaff_BLL.cs" />
@@ -55,6 +57,8 @@
     <Compile Include="BLL\UserProfile_BLL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
     <Compile Include="DAL\TblAppointment_DAL.cs" />
+    <Compile Include="DAL\TblComplaints_DAL.cs" />
+    <Compile Include="DAL\TblComplaintType_DAL.cs" />
     <Compile Include="DAL\TblPostal_DAL.cs" />
     <Compile Include="DAL\TblSpecialtyArea_DAL.cs" />
     <Compile Include="DAL\TblStaff_DAL.cs" />
@@ -66,17 +70,19 @@
     <Compile Include="Functions\ValidateFunc.cs" />
     <Compile Include="Model\LoggedInUser.cs" />
     <Compile Include="Model\TblAppointments.cs" />
+    <Compile Include="Model\TblComplaints.cs" />
+    <Compile Include="Model\TblComplaintType.cs" />
     <Compile Include="Model\TblPostal.cs" />
     <Compile Include="Model\TblSpecialtyArea.cs" />
     <Compile Include="Model\TblStaff.cs" />
     <Compile Include="Model\TblUsers.cs" />
     <Compile Include="Others\MysqlParameterFormat.cs" />
     <Compile Include="Others\ODBC.cs" />
-    <Compile Include="PL\AppointmentModule.cs">
+    <Compile Include="PL\ComplaintsModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\AppointmentModule.Designer.cs">
-      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    <Compile Include="PL\ComplaintsModule.designer.cs">
+      <DependentUpon>ComplaintsModule.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Dashboard.cs">
       <SubType>Form</SubType>
@@ -90,6 +96,12 @@
     <Compile Include="PL\Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\PasswordRecover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PasswordRecover.designer.cs">
+      <DependentUpon>PasswordRecover.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\PostalDispatchedModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,22 +114,28 @@
     <Compile Include="PL\PostalReceivedModule.designer.cs">
       <DependentUpon>PostalReceivedModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\RefComplaintType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\RefComplaintType.designer.cs">
+      <DependentUpon>RefComplaintType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\RefSpecialtyArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\RefSpecialtyArea.designer.cs">
+      <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\UserModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\UserModule.Designer.cs">
+    <Compile Include="PL\UserModule.designer.cs">
       <DependentUpon>UserModule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\UserProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\UserProfile.Designer.cs">
-      <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PL\AppointmentModule.resx">
-      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    <EmbeddedResource Include="PL\ComplaintsModule.resx">
+      <DependentUpon>ComplaintsModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -125,17 +143,23 @@
     <EmbeddedResource Include="PL\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\PasswordRecover.resx">
+      <DependentUpon>PasswordRecover.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\PostalDispatchedModule.resx">
       <DependentUpon>PostalDispatchedModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\PostalReceivedModule.resx">
       <DependentUpon>PostalReceivedModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\RefComplaintType.resx">
+      <DependentUpon>RefComplaintType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\RefSpecialtyArea.resx">
+      <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\UserModule.resx">
       <DependentUpon>UserModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\UserProfile.resx">
-      <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

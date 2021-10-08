@@ -11,6 +11,21 @@ namespace HIMS_Project.BLL
 {
     class TblComplaintType_BLL
     {
+        // Fetch All Complaint Types to Combo Box
+        public void cmbLoadExistComType(ComboBox ComplaintType)
+        {
+            try
+            {
+                ComplaintType.DataSource = TblComplaintType_DAL.GetAllComplaintType();
+                ComplaintType.DisplayMember = "ComDescription"; // Combo Box display value
+                ComplaintType.ValueMember = "TypeNo"; // Loading unique value to identify the Patient
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         // Fetch All Complaint Types Data to Grid View
         public void LoadAllComplaintTypeToGrid(DataGridView dgv)
         {
