@@ -35,27 +35,28 @@
             this.lblLoginError = new System.Windows.Forms.Label();
             this.btnRecoverPW = new System.Windows.Forms.Button();
             this.btnLoginExit = new System.Windows.Forms.Button();
+            this.btnPasswordEye = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Varela Round", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DarkMagenta;
             this.txtUsername.Location = new System.Drawing.Point(83, 312);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(201, 26);
+            this.txtUsername.Size = new System.Drawing.Size(201, 24);
             this.txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Varela Round", 15.75F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.txtPassword.ForeColor = System.Drawing.Color.Purple;
             this.txtPassword.Location = new System.Drawing.Point(84, 379);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(199, 26);
+            this.txtPassword.Size = new System.Drawing.Size(199, 24);
             this.txtPassword.TabIndex = 4;
             // 
             // btnLogin
@@ -121,6 +122,16 @@
             this.btnLoginExit.UseVisualStyleBackColor = false;
             this.btnLoginExit.Click += new System.EventHandler(this.btnLoginExit_Click);
             // 
+            // btnPasswordEye
+            // 
+            this.btnPasswordEye.Location = new System.Drawing.Point(257, 379);
+            this.btnPasswordEye.Name = "btnPasswordEye";
+            this.btnPasswordEye.Size = new System.Drawing.Size(27, 23);
+            this.btnPasswordEye.TabIndex = 9;
+            this.btnPasswordEye.Text = "Eye";
+            this.btnPasswordEye.UseVisualStyleBackColor = true;
+            this.btnPasswordEye.Click += new System.EventHandler(this.btnPasswordEye_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +140,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(797, 609);
+            this.Controls.Add(this.btnPasswordEye);
             this.Controls.Add(this.btnRecoverPW);
             this.Controls.Add(this.lblLoginError);
             this.Controls.Add(this.btnLoginExit);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Label lblLoginError;
         private System.Windows.Forms.Button btnRecoverPW;
         private System.Windows.Forms.Button btnLoginExit;
+        private System.Windows.Forms.Button btnPasswordEye;
     }
 }

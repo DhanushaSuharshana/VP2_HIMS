@@ -26,6 +26,9 @@ namespace HIMS_Project.PL
             //to here
 
             InitializeComponent();
+        }
+        private void PasswordRecover_Load(object sender, EventArgs e)
+        {
             txtReqNIC.Focus();
         }
 
@@ -103,16 +106,6 @@ namespace HIMS_Project.PL
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void PasswordRecover_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
