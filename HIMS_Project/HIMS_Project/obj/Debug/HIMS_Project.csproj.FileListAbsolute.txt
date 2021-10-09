@@ -16,14 +16,11 @@ E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HI
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserModule.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\Project\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csprojAssemblyReference.cache
-D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Dashboard.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Login.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PasswordRecover.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalReceivedModule.resources
-D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserModule.resources
-D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserProfile.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.Properties.Resources.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.GenerateResource.cache
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.CoreCompileInputs.cache
@@ -32,3 +29,6 @@ D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIM
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe.config
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.pdb
+D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
+D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
+D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources

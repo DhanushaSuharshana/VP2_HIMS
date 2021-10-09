@@ -126,12 +126,6 @@
     <Compile Include="PL\RefSpecialtyArea.designer.cs">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\UserModule.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\UserModule.designer.cs">
-      <DependentUpon>UserModule.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\ComplaintsModule.resx">
@@ -157,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\RefSpecialtyArea.resx">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\UserModule.resx">
-      <DependentUpon>UserModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

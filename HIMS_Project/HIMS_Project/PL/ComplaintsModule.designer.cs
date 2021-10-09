@@ -32,10 +32,14 @@
             this.btnComplaintClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlComplaintForm = new System.Windows.Forms.Panel();
+            this.cmbComplaintBy = new System.Windows.Forms.ComboBox();
+            this.cmbComplaintType = new System.Windows.Forms.ComboBox();
+            this.txtCDescription = new System.Windows.Forms.TextBox();
             this.txtComplaintNote = new System.Windows.Forms.TextBox();
             this.txtActionTaken = new System.Windows.Forms.TextBox();
             this.txtComplaintId = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,12 +55,6 @@
             this.btnComplaintEdit = new System.Windows.Forms.Button();
             this.btnComplaintDelete = new System.Windows.Forms.Button();
             this.dgvComplaint = new System.Windows.Forms.DataGridView();
-            this.txtComplaintSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCDescription = new System.Windows.Forms.TextBox();
-            this.cmbComplaintType = new System.Windows.Forms.ComboBox();
-            this.cmbComplaintBy = new System.Windows.Forms.ComboBox();
             this.ComplaintId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComplaintBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +62,8 @@
             this.CDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActionTaken = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtComplaintSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlComplaintTop.SuspendLayout();
             this.pnlComplaintForm.SuspendLayout();
             this.pnlformButtons.SuspendLayout();
@@ -81,7 +81,7 @@
             this.pnlComplaintTop.Location = new System.Drawing.Point(0, 0);
             this.pnlComplaintTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlComplaintTop.Name = "pnlComplaintTop";
-            this.pnlComplaintTop.Size = new System.Drawing.Size(820, 40);
+            this.pnlComplaintTop.Size = new System.Drawing.Size(1132, 40);
             this.pnlComplaintTop.TabIndex = 5;
             // 
             // btnComplaintClose
@@ -111,7 +111,7 @@
             // 
             // pnlComplaintForm
             // 
-            this.pnlComplaintForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlComplaintForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
             this.pnlComplaintForm.Controls.Add(this.cmbComplaintBy);
             this.pnlComplaintForm.Controls.Add(this.cmbComplaintType);
             this.pnlComplaintForm.Controls.Add(this.txtCDescription);
@@ -129,8 +129,32 @@
             this.pnlComplaintForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlComplaintForm.Location = new System.Drawing.Point(0, 40);
             this.pnlComplaintForm.Name = "pnlComplaintForm";
-            this.pnlComplaintForm.Size = new System.Drawing.Size(820, 140);
+            this.pnlComplaintForm.Size = new System.Drawing.Size(1132, 140);
             this.pnlComplaintForm.TabIndex = 6;
+            // 
+            // cmbComplaintBy
+            // 
+            this.cmbComplaintBy.FormattingEnabled = true;
+            this.cmbComplaintBy.Location = new System.Drawing.Point(516, 5);
+            this.cmbComplaintBy.Name = "cmbComplaintBy";
+            this.cmbComplaintBy.Size = new System.Drawing.Size(292, 21);
+            this.cmbComplaintBy.TabIndex = 5;
+            // 
+            // cmbComplaintType
+            // 
+            this.cmbComplaintType.FormattingEnabled = true;
+            this.cmbComplaintType.Location = new System.Drawing.Point(114, 12);
+            this.cmbComplaintType.Name = "cmbComplaintType";
+            this.cmbComplaintType.Size = new System.Drawing.Size(279, 21);
+            this.cmbComplaintType.TabIndex = 5;
+            // 
+            // txtCDescription
+            // 
+            this.txtCDescription.Location = new System.Drawing.Point(516, 32);
+            this.txtCDescription.Multiline = true;
+            this.txtCDescription.Name = "txtCDescription";
+            this.txtCDescription.Size = new System.Drawing.Size(292, 48);
+            this.txtCDescription.TabIndex = 4;
             // 
             // txtComplaintNote
             // 
@@ -160,6 +184,15 @@
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(279, 20);
             this.txtPhoneNo.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(428, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Note";
             // 
             // label7
             // 
@@ -217,20 +250,20 @@
             // 
             // pnlformButtons
             // 
-            this.pnlformButtons.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlformButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
             this.pnlformButtons.Controls.Add(this.btnComplaintSave);
             this.pnlformButtons.Controls.Add(this.btnComplaintUpdate);
             this.pnlformButtons.Controls.Add(this.btnClear);
             this.pnlformButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlformButtons.Location = new System.Drawing.Point(0, 180);
             this.pnlformButtons.Name = "pnlformButtons";
-            this.pnlformButtons.Size = new System.Drawing.Size(820, 37);
+            this.pnlformButtons.Size = new System.Drawing.Size(1132, 37);
             this.pnlformButtons.TabIndex = 15;
             // 
             // btnComplaintSave
             // 
             this.btnComplaintSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnComplaintSave.Location = new System.Drawing.Point(595, 0);
+            this.btnComplaintSave.Location = new System.Drawing.Point(907, 0);
             this.btnComplaintSave.Name = "btnComplaintSave";
             this.btnComplaintSave.Size = new System.Drawing.Size(75, 37);
             this.btnComplaintSave.TabIndex = 0;
@@ -241,7 +274,7 @@
             // btnComplaintUpdate
             // 
             this.btnComplaintUpdate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnComplaintUpdate.Location = new System.Drawing.Point(670, 0);
+            this.btnComplaintUpdate.Location = new System.Drawing.Point(982, 0);
             this.btnComplaintUpdate.Name = "btnComplaintUpdate";
             this.btnComplaintUpdate.Size = new System.Drawing.Size(75, 37);
             this.btnComplaintUpdate.TabIndex = 0;
@@ -252,7 +285,7 @@
             // btnClear
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClear.Location = new System.Drawing.Point(745, 0);
+            this.btnClear.Location = new System.Drawing.Point(1057, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 37);
             this.btnClear.TabIndex = 0;
@@ -262,7 +295,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.pnlDgvBtn);
             this.panel1.Controls.Add(this.dgvComplaint);
             this.panel1.Controls.Add(this.txtComplaintSearch);
@@ -270,7 +303,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 217);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 274);
+            this.panel1.Size = new System.Drawing.Size(1132, 274);
             this.panel1.TabIndex = 16;
             // 
             // pnlDgvBtn
@@ -280,13 +313,13 @@
             this.pnlDgvBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlDgvBtn.Location = new System.Drawing.Point(0, 236);
             this.pnlDgvBtn.Name = "pnlDgvBtn";
-            this.pnlDgvBtn.Size = new System.Drawing.Size(820, 38);
+            this.pnlDgvBtn.Size = new System.Drawing.Size(1132, 38);
             this.pnlDgvBtn.TabIndex = 4;
             // 
             // btnComplaintEdit
             // 
             this.btnComplaintEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnComplaintEdit.Location = new System.Drawing.Point(666, 0);
+            this.btnComplaintEdit.Location = new System.Drawing.Point(978, 0);
             this.btnComplaintEdit.Name = "btnComplaintEdit";
             this.btnComplaintEdit.Size = new System.Drawing.Size(77, 38);
             this.btnComplaintEdit.TabIndex = 3;
@@ -297,7 +330,7 @@
             // btnComplaintDelete
             // 
             this.btnComplaintDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnComplaintDelete.Location = new System.Drawing.Point(743, 0);
+            this.btnComplaintDelete.Location = new System.Drawing.Point(1055, 0);
             this.btnComplaintDelete.Name = "btnComplaintDelete";
             this.btnComplaintDelete.Size = new System.Drawing.Size(77, 38);
             this.btnComplaintDelete.TabIndex = 3;
@@ -309,6 +342,7 @@
             // 
             this.dgvComplaint.AllowUserToAddRows = false;
             this.dgvComplaint.AllowUserToDeleteRows = false;
+            this.dgvComplaint.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvComplaint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComplaint.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ComplaintId,
@@ -322,60 +356,9 @@
             this.dgvComplaint.Name = "dgvComplaint";
             this.dgvComplaint.ReadOnly = true;
             this.dgvComplaint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComplaint.Size = new System.Drawing.Size(801, 192);
+            this.dgvComplaint.Size = new System.Drawing.Size(865, 192);
             this.dgvComplaint.TabIndex = 2;
             this.dgvComplaint.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaint_CellClick);
-            // 
-            // txtComplaintSearch
-            // 
-            this.txtComplaintSearch.Location = new System.Drawing.Point(294, 12);
-            this.txtComplaintSearch.Name = "txtComplaintSearch";
-            this.txtComplaintSearch.Size = new System.Drawing.Size(514, 20);
-            this.txtComplaintSearch.TabIndex = 1;
-            this.txtComplaintSearch.TextChanged += new System.EventHandler(this.txtComplaintSearch_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Search By Complaint Person or Complaint content";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(428, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Note";
-            // 
-            // txtCDescription
-            // 
-            this.txtCDescription.Location = new System.Drawing.Point(516, 32);
-            this.txtCDescription.Multiline = true;
-            this.txtCDescription.Name = "txtCDescription";
-            this.txtCDescription.Size = new System.Drawing.Size(292, 48);
-            this.txtCDescription.TabIndex = 4;
-            // 
-            // cmbComplaintType
-            // 
-            this.cmbComplaintType.FormattingEnabled = true;
-            this.cmbComplaintType.Location = new System.Drawing.Point(114, 12);
-            this.cmbComplaintType.Name = "cmbComplaintType";
-            this.cmbComplaintType.Size = new System.Drawing.Size(279, 21);
-            this.cmbComplaintType.TabIndex = 5;
-            // 
-            // cmbComplaintBy
-            // 
-            this.cmbComplaintBy.FormattingEnabled = true;
-            this.cmbComplaintBy.Location = new System.Drawing.Point(516, 5);
-            this.cmbComplaintBy.Name = "cmbComplaintBy";
-            this.cmbComplaintBy.Size = new System.Drawing.Size(292, 21);
-            this.cmbComplaintBy.TabIndex = 5;
             // 
             // ComplaintId
             // 
@@ -430,11 +413,30 @@
             this.Note.ReadOnly = true;
             this.Note.Width = 200;
             // 
+            // txtComplaintSearch
+            // 
+            this.txtComplaintSearch.Location = new System.Drawing.Point(294, 12);
+            this.txtComplaintSearch.Name = "txtComplaintSearch";
+            this.txtComplaintSearch.Size = new System.Drawing.Size(514, 20);
+            this.txtComplaintSearch.TabIndex = 1;
+            this.txtComplaintSearch.TextChanged += new System.EventHandler(this.txtComplaintSearch_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Search By Complaint Person or Complaint content";
+            // 
             // ComplaintsModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 494);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1132, 694);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlformButtons);
             this.Controls.Add(this.pnlComplaintForm);

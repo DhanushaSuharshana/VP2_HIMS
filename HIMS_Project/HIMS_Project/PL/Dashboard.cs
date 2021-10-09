@@ -109,6 +109,7 @@ namespace HIMS_Project.PL
 
         private void btnPostalDispatched_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new PostalDispatchedModule());
             /*
              * code to be executed
              */
@@ -119,6 +120,7 @@ namespace HIMS_Project.PL
 
         private void btnComplaint_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new ComplaintsModule());
             /*
              * code to be executed
              */
@@ -126,7 +128,7 @@ namespace HIMS_Project.PL
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AppointmentModule());
+            //OpenChildForm(new AppointmentModule());
             /*
              * code to be executed
              */
@@ -140,6 +142,7 @@ namespace HIMS_Project.PL
 
         private void btnReferenceCType_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new RefComplaintType());
             /*
              * code to be executed
              */
@@ -148,6 +151,7 @@ namespace HIMS_Project.PL
 
         private void btnReferenceSpArea_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new RefSpecialtyArea());
             /*
              * code to be executed
              */
@@ -157,7 +161,7 @@ namespace HIMS_Project.PL
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UserModule());
+            //OpenChildForm(new UserModule());
             /*
              * code to be executed
              */
@@ -195,7 +199,7 @@ namespace HIMS_Project.PL
         private void btnUserProfile_Click(object sender, EventArgs e)
         {
             // open user profile form
-            OpenChildForm(new UserProfile());
+            //OpenChildForm(new UserProfile());
         }
     }
 }

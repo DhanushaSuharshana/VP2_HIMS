@@ -65,7 +65,7 @@
             this.pnlSpAreaTop.Location = new System.Drawing.Point(0, 0);
             this.pnlSpAreaTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSpAreaTop.Name = "pnlSpAreaTop";
-            this.pnlSpAreaTop.Size = new System.Drawing.Size(425, 42);
+            this.pnlSpAreaTop.Size = new System.Drawing.Size(746, 42);
             this.pnlSpAreaTop.TabIndex = 6;
             // 
             // btnSpAreaClose
@@ -101,7 +101,7 @@
             this.pnlSpAreaForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSpAreaForm.Location = new System.Drawing.Point(0, 42);
             this.pnlSpAreaForm.Name = "pnlSpAreaForm";
-            this.pnlSpAreaForm.Size = new System.Drawing.Size(425, 62);
+            this.pnlSpAreaForm.Size = new System.Drawing.Size(746, 62);
             this.pnlSpAreaForm.TabIndex = 7;
             // 
             // txtSpDescription
@@ -130,7 +130,7 @@
             this.pnlformButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlformButtons.Location = new System.Drawing.Point(0, 104);
             this.pnlformButtons.Name = "pnlformButtons";
-            this.pnlformButtons.Size = new System.Drawing.Size(425, 34);
+            this.pnlformButtons.Size = new System.Drawing.Size(746, 34);
             this.pnlformButtons.TabIndex = 16;
             // 
             // txtSpAreaId
@@ -144,7 +144,7 @@
             // btnSpAreaSave
             // 
             this.btnSpAreaSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSpAreaSave.Location = new System.Drawing.Point(200, 0);
+            this.btnSpAreaSave.Location = new System.Drawing.Point(521, 0);
             this.btnSpAreaSave.Name = "btnSpAreaSave";
             this.btnSpAreaSave.Size = new System.Drawing.Size(75, 34);
             this.btnSpAreaSave.TabIndex = 0;
@@ -155,7 +155,7 @@
             // btnSpAreaUpdate
             // 
             this.btnSpAreaUpdate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSpAreaUpdate.Location = new System.Drawing.Point(275, 0);
+            this.btnSpAreaUpdate.Location = new System.Drawing.Point(596, 0);
             this.btnSpAreaUpdate.Name = "btnSpAreaUpdate";
             this.btnSpAreaUpdate.Size = new System.Drawing.Size(75, 34);
             this.btnSpAreaUpdate.TabIndex = 0;
@@ -166,7 +166,7 @@
             // btnClear
             // 
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClear.Location = new System.Drawing.Point(350, 0);
+            this.btnClear.Location = new System.Drawing.Point(671, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 34);
             this.btnClear.TabIndex = 0;
@@ -184,7 +184,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 138);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(425, 313);
+            this.panel1.Size = new System.Drawing.Size(746, 313);
             this.panel1.TabIndex = 17;
             // 
             // pnlDgvBtn
@@ -194,13 +194,13 @@
             this.pnlDgvBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlDgvBtn.Location = new System.Drawing.Point(0, 280);
             this.pnlDgvBtn.Name = "pnlDgvBtn";
-            this.pnlDgvBtn.Size = new System.Drawing.Size(425, 33);
+            this.pnlDgvBtn.Size = new System.Drawing.Size(746, 33);
             this.pnlDgvBtn.TabIndex = 4;
             // 
             // btnSpAreaEdit
             // 
             this.btnSpAreaEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSpAreaEdit.Location = new System.Drawing.Point(271, 0);
+            this.btnSpAreaEdit.Location = new System.Drawing.Point(592, 0);
             this.btnSpAreaEdit.Name = "btnSpAreaEdit";
             this.btnSpAreaEdit.Size = new System.Drawing.Size(77, 33);
             this.btnSpAreaEdit.TabIndex = 3;
@@ -211,7 +211,7 @@
             // btnSpAreaDelete
             // 
             this.btnSpAreaDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSpAreaDelete.Location = new System.Drawing.Point(348, 0);
+            this.btnSpAreaDelete.Location = new System.Drawing.Point(669, 0);
             this.btnSpAreaDelete.Name = "btnSpAreaDelete";
             this.btnSpAreaDelete.Size = new System.Drawing.Size(77, 33);
             this.btnSpAreaDelete.TabIndex = 3;
@@ -231,7 +231,7 @@
             this.dgvSpArea.Name = "dgvSpArea";
             this.dgvSpArea.ReadOnly = true;
             this.dgvSpArea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSpArea.Size = new System.Drawing.Size(394, 236);
+            this.dgvSpArea.Size = new System.Drawing.Size(395, 236);
             this.dgvSpArea.TabIndex = 2;
             this.dgvSpArea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSpArea_CellClick);
             // 
@@ -252,7 +252,7 @@
             // 
             // txtSpAreaSearch
             // 
-            this.txtSpAreaSearch.Location = new System.Drawing.Point(158, 11);
+            this.txtSpAreaSearch.Location = new System.Drawing.Point(165, 11);
             this.txtSpAreaSearch.Name = "txtSpAreaSearch";
             this.txtSpAreaSearch.Size = new System.Drawing.Size(250, 20);
             this.txtSpAreaSearch.TabIndex = 1;
@@ -272,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 450);
+            this.ClientSize = new System.Drawing.Size(746, 626);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlformButtons);
             this.Controls.Add(this.pnlSpAreaForm);
