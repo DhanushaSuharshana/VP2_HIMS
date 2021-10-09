@@ -26,6 +26,8 @@ namespace HIMS_Project.PL
         {
             txtDescription.Focus();
             DgvAllComplaintType(); // Fetch All Complaint Type Detail to the DGV
+            btnCTypeEdit.Enabled = false;
+            btnCTypeDelete.Enabled = false;
         }
 
         private void DgvAllComplaintType()

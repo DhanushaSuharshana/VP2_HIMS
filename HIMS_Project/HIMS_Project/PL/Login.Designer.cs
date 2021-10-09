@@ -124,12 +124,15 @@
             // 
             // btnPasswordEye
             // 
-            this.btnPasswordEye.Location = new System.Drawing.Point(257, 379);
+            this.btnPasswordEye.BackColor = System.Drawing.Color.Transparent;
+            this.btnPasswordEye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPasswordEye.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPasswordEye.Image = ((System.Drawing.Image)(resources.GetObject("btnPasswordEye.Image")));
+            this.btnPasswordEye.Location = new System.Drawing.Point(250, 374);
             this.btnPasswordEye.Name = "btnPasswordEye";
-            this.btnPasswordEye.Size = new System.Drawing.Size(27, 23);
+            this.btnPasswordEye.Size = new System.Drawing.Size(44, 33);
             this.btnPasswordEye.TabIndex = 9;
-            this.btnPasswordEye.Text = "Eye";
-            this.btnPasswordEye.UseVisualStyleBackColor = true;
+            this.btnPasswordEye.UseVisualStyleBackColor = false;
             this.btnPasswordEye.Click += new System.EventHandler(this.btnPasswordEye_Click);
             // 
             // Login
