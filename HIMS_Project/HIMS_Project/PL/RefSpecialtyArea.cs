@@ -169,5 +169,10 @@ namespace HIMS_Project.PL
         {
             this.Close();
         }
+
+        private void btnComTypeClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

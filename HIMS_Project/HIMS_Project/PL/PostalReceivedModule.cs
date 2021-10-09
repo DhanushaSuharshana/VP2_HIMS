@@ -239,5 +239,10 @@ namespace HIMS_Project.PL
             btnRePostalEdit.Enabled = true;
             btnRePostalDelete.Enabled = true;
         }
+
+        private void pnlRePostalTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
