@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,6 +25,7 @@ namespace HIMS_Project.PL
 
         private void PostalDispatchedModule_Load(object sender, EventArgs e)
         {
+            txtDiRefNo.Focus();
             UserAccessComponent(LoggedInUser.UserRole);
             DgvAllDispatchedPostal(); // Fetch All Received Postal Detail to the DGV
         }
@@ -68,6 +70,8 @@ namespace HIMS_Project.PL
             txtDiTo.Text = "";
             txtDiNote.Text = "";
             txtDiRefNo.Focus();
+            UserAccessComponent(LoggedInUser.UserRole);
+            DgvAllDispatchedPostal();
         }
 
         private void btnDiPostalClose_Click(object sender, EventArgs e)
@@ -80,12 +84,6 @@ namespace HIMS_Project.PL
             AllClear();
         }
 
-        private int GenerateRandomRefNo()
-        {
-            int refNo = 1;
-
-            return refNo;
-        }
         public int AddDispatchedPostal()
         {
             var DispatchedPostal = new TblPostal // create new object to store form data
@@ -125,11 +123,11 @@ namespace HIMS_Project.PL
                 ValidateFunc.ValidateEmptyTxtField(txtDiTo);
                 return false;
             }
-            //if (!Regex.Match(txtReRefNo.Text, @"^[\d]$").Success)
-            //{
-            //    ValidateFunc.ValidateNumber(txtReRefNo);
-            //    return false;
-            //}
+            if (!Regex.Match(txtDiRefNo.Text, @"^\d{15}$").Success)
+            {
+                ValidateFunc.ValidateNumber(txtDiRefNo);
+                return false;
+            }
             return true;
         }
         private void btnDiPostalSave_Click(object sender, EventArgs e)
@@ -142,14 +140,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllDispatchedPostal();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void EditDispatchedPostal()
@@ -183,8 +180,6 @@ namespace HIMS_Project.PL
                 MailTo = txtDiTo.Text,
                 Attachment = "No Attachment",
                 PostalId = int.Parse(txtDiPostalId.Text),
-                //MDate = DateTime.Now,
-                //MailStatus = "Received",
             };
             return TblPostal_BLL.UpdatePostal(DispatchedPostal);
         }
@@ -199,14 +194,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllDispatchedPostal();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -224,13 +218,12 @@ namespace HIMS_Project.PL
                 if (respond > 0)
                 {
                     MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DgvAllDispatchedPostal();
                     AllClear();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

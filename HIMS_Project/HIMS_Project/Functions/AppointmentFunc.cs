@@ -15,25 +15,27 @@ namespace HIMS_Project.Functions
         // Auto Generate an appointment number
         public static string GenerateAppointmentNo()
         {
-            string NewNumber="1";
-
+        string NewNumber = "1";
+        int LastNumber;
+        string countNo = "";
             try
             {
                 DataTable _dtable = TblAppointment_DAL.GetMaxAppointmentno();
 
                 foreach (DataRow _dRow in _dtable.Rows)
                 {
-                    NewNumber = _dRow["AppointmentNo"].ToString();
-                }
-                if (NewNumber == "0")
-                {
-                    NewNumber = "1";
-                }
-                else
-                {
-                    NewNumber += 1;
-                }
+                    countNo = _dRow["CountNo"].ToString();
 
+                    if (countNo == "0")
+                    {
+                        NewNumber = "1";
+                    }
+                    else
+                    {
+                        LastNumber = Convert.ToInt32(_dRow["LastAppointmentNo"]);
+                        NewNumber = LastNumber.ToString();
+                    }
+                }
                 return NewNumber;
 
             }
@@ -49,8 +51,8 @@ namespace HIMS_Project.Functions
             try
             {
                 cmbAppPatient.DataSource = TblAppointment_DAL.ShowPatientName();
-                cmbAppPatient.DisplayMember = "Name";
-                cmbAppPatient.ValueMember = "Name";
+                cmbAppPatient.DisplayMember = "UName";
+                cmbAppPatient.ValueMember = "UName";
 
             }
             catch (Exception)

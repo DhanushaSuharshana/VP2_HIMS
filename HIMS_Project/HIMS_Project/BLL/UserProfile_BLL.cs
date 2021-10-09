@@ -22,7 +22,7 @@ namespace HIMS_Project.BLL
                 {
                     LoadUser = true;
                     LoggedInUser.NIC = _dRow["NIC"].ToString();
-                    LoggedInUser.Name = _dRow["Name"].ToString();
+                    LoggedInUser.UName = _dRow["UName"].ToString();
                     LoggedInUser.UserAddress = _dRow["UserAddress"].ToString();
                     LoggedInUser.DOB = _dRow["DOB"].ToString();
                     LoggedInUser.Gender = _dRow["Gender"].ToString();

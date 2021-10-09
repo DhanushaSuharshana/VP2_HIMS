@@ -10,17 +10,15 @@ namespace HIMS_Project.PL
 {
     public partial class Login : Form
     {
-
+        CryptoLab_BLL _cryptoLab_Bll;
         public Login()
         {
             //colour changes ** lahiru **
-
             this.BackColor = Color.DarkGray;
             this.TransparencyKey = Color.DarkGray;
-
             //to here
-
             InitializeComponent();
+            _cryptoLab_Bll = new CryptoLab_BLL();
         }
         private void Login_Load(object sender, EventArgs e)
         {
@@ -33,8 +31,18 @@ namespace HIMS_Project.PL
             txtPassword.Text = "";
         }
 
+        #region Encrypt Password
+        public string TextEncrypt() // Encrypt Password by using 3Des
+        {
+            var EncryptPw = txtPassword.Text.Trim();
+            return _cryptoLab_Bll.EncryptText(EncryptPw);
+
+        }
+        #endregion Encrypt Passwrod
+
         public void VerifyLoginDetail()
         {
+            var password = TextEncrypt();
             Login_BLL userCredentials = new Login_BLL();
             bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, txtPassword.Text);
 
@@ -77,9 +85,9 @@ namespace HIMS_Project.PL
                     VerifyLoginDetail();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -95,7 +103,6 @@ namespace HIMS_Project.PL
             PwRecover.Show();
             this.Hide();
         }
-
 
         private void btnPasswordEye_Click(object sender, EventArgs e)
         {

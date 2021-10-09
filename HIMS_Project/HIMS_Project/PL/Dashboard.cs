@@ -128,7 +128,7 @@ namespace HIMS_Project.PL
 
         private void btnAppointment_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new AppointmentModule());
+            OpenChildForm(new AppointmentModule());
             /*
              * code to be executed
              */

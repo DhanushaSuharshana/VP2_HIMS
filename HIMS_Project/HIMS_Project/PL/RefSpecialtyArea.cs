@@ -26,19 +26,22 @@ namespace HIMS_Project.PL
         {
             txtSpDescription.Focus();
             DgvAllSpecialtyArea();
+            btnSpAreaUpdate.Hide();
+            btnSpAreaEdit.Enabled = false;
+            btnSpAreaDelete.Enabled = false;
         }
 
         private void DgvAllSpecialtyArea()
         {
-            //TblSpecialtyArea_BLL.LoadAllSpecialtyAreaToGrid(dgvSpArea);
+            TblSpecialtyArea_BLL.LoadAllSpecialtyAreaToGrid(dgvSpArea);
         }
 
-        //public int AddSpecialtyArea()
-        //{
-        //    //var SDescription = txtSpDescription.Text;
+        public int AddSpecialtyArea()
+        {
+            var SDescription = txtSpDescription.Text;
 
-            //return TblSpecialtyArea_BLL.AddSpecialtyArea(SDescription);
-        //}
+            return TblSpecialtyArea_BLL.AddSpecialtyArea(SDescription);
+        }
 
         private bool validateFields()
         {
@@ -53,23 +56,22 @@ namespace HIMS_Project.PL
 
         private void btnSpAreaSave_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (validateFields())
-            //    {
-            //        var respond = AddSpecialtyArea();
-            //        if (respond > 0)
-            //        {
-            //            MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            DgvAllSpecialtyArea();
-            //            AllClear();
-            //        }
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
+            try
+            {
+                if (validateFields())
+                {
+                    var respond = AddSpecialtyArea();
+                    if (respond > 0)
+                    {
+                        MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        AllClear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         public void EditSpecialtyArea()
@@ -86,36 +88,35 @@ namespace HIMS_Project.PL
             EditSpecialtyArea();
         }
 
-        //public int UpdatSpecialtyArea()
-        //{
-        //    var SpecialtyArea = new TblSpecialtyArea // create new object to store form data
-        //    {
-        //        SAreaID = int.Parse(txtSpAreaId.Text),
-        //        SDescription = txtSpDescription.Text,
-        //    };
+        public int UpdatSpecialtyArea()
+        {
+            var SpecialtyArea = new TblSpecialtyArea // create new object to store form data
+            {
+                SAreaID = int.Parse(txtSpAreaId.Text),
+                SDescription = txtSpDescription.Text,
+            };
 
-        //    return TblSpecialtyArea_BLL.UpdateSpecialtyArea(SpecialtyArea);
-        //}
+            return TblSpecialtyArea_BLL.UpdateSpecialtyArea(SpecialtyArea);
+        }
 
         private void btnSpAreaUpdate_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (validateFields())
-            //    {
-            //        var respond = UpdatSpecialtyArea();
-            //        if (respond > 0)
-            //        {
-            //            MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            DgvAllSpecialtyArea();
-            //            AllClear();
-            //        }
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
+            try
+            {
+                if (validateFields())
+                {
+                    var respond = UpdatSpecialtyArea();
+                    if (respond > 0)
+                    {
+                        MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        AllClear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void AllClear()
@@ -123,6 +124,11 @@ namespace HIMS_Project.PL
             txtSpAreaId.Text = "";
             txtSpDescription.Text = "";
             txtSpDescription.Focus();
+            btnSpAreaSave.Show();
+            btnSpAreaUpdate.Hide();
+            btnSpAreaEdit.Enabled = false;
+            btnSpAreaDelete.Enabled = false;
+            DgvAllSpecialtyArea();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -130,33 +136,32 @@ namespace HIMS_Project.PL
             AllClear();
         }
 
-        //public int DeleteSpArea()
-        //{
-        //    int SpAreaId = int.Parse(dgvSpArea.SelectedRows[0].Cells[0].Value.ToString());
-        //    return TblSpecialtyArea_BLL.DeleteSpecialtyAreae(SpAreaId);
-        //}
+        public int DeleteSpArea()
+        {
+            int SpAreaId = int.Parse(dgvSpArea.SelectedRows[0].Cells[0].Value.ToString());
+            return TblSpecialtyArea_BLL.DeleteSpecialtyAreae(SpAreaId);
+        }
 
         private void btnSpAreaDelete_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    var respond = DeleteSpArea();
-            //    if (respond > 0)
-            //    {
-            //        MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        DgvAllSpecialtyArea();
-            //        AllClear();
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    throw;
-            //}
+            try
+            {
+                var respond = DeleteSpArea();
+                if (respond > 0)
+                {
+                    MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AllClear();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void txtSpAreaSearch_TextChanged(object sender, EventArgs e)
         {
-            //TblSpecialtyArea_BLL.LoadSpecificSpecialtyAreaToGrid(txtSpAreaSearch.Text, dgvSpArea);
+            TblSpecialtyArea_BLL.LoadSpecificSpecialtyAreaToGrid(txtSpAreaSearch.Text, dgvSpArea);
         }
 
         private void dgvSpArea_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -170,9 +175,5 @@ namespace HIMS_Project.PL
             this.Close();
         }
 
-        private void btnComTypeClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

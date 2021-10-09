@@ -67,8 +67,6 @@ namespace HIMS_Project.PL
         {
             try
             {
-                //Regex RgNIC = new Regex(@"^\d{9}[Vv]|^\d{12}$");
-
                 // check text boxes are empty or not
                 if (txtReqNIC.Text=="" || dtpReqDOB.Text=="")
                 {
@@ -90,9 +88,9 @@ namespace HIMS_Project.PL
                     RequestLoginDetail();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

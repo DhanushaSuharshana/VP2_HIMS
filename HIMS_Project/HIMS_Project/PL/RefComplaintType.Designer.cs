@@ -61,7 +61,7 @@
             this.btnComTypeClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComTypeClose.Font = new System.Drawing.Font("Segoe UI Symbol", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComTypeClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnComTypeClose.Location = new System.Drawing.Point(614, -3);
+            this.btnComTypeClose.Location = new System.Drawing.Point(614, -34);
             this.btnComTypeClose.Name = "btnComTypeClose";
             this.btnComTypeClose.Size = new System.Drawing.Size(48, 49);
             this.btnComTypeClose.TabIndex = 1;
@@ -81,7 +81,6 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(376, 25);
             this.txtDescription.TabIndex = 1;
-            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // txtCTypeId
             // 
@@ -100,7 +99,7 @@
             this.btnCTypeSave.FlatAppearance.BorderSize = 0;
             this.btnCTypeSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCTypeSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTypeSave.Location = new System.Drawing.Point(57, 267);
+            this.btnCTypeSave.Location = new System.Drawing.Point(57, 236);
             this.btnCTypeSave.Name = "btnCTypeSave";
             this.btnCTypeSave.Size = new System.Drawing.Size(119, 48);
             this.btnCTypeSave.TabIndex = 0;
@@ -116,7 +115,7 @@
             this.btnCTypeUpdate.FlatAppearance.BorderSize = 0;
             this.btnCTypeUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCTypeUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTypeUpdate.Location = new System.Drawing.Point(224, 266);
+            this.btnCTypeUpdate.Location = new System.Drawing.Point(224, 235);
             this.btnCTypeUpdate.Name = "btnCTypeUpdate";
             this.btnCTypeUpdate.Size = new System.Drawing.Size(119, 48);
             this.btnCTypeUpdate.TabIndex = 0;
@@ -132,7 +131,7 @@
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(340, 267);
+            this.btnClear.Location = new System.Drawing.Point(340, 236);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(119, 48);
             this.btnClear.TabIndex = 0;
@@ -188,7 +187,7 @@
             this.dgvComplaintType.ReadOnly = true;
             this.dgvComplaintType.RowHeadersWidth = 150;
             this.dgvComplaintType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComplaintType.Size = new System.Drawing.Size(542, 282);
+            this.dgvComplaintType.Size = new System.Drawing.Size(542, 220);
             this.dgvComplaintType.TabIndex = 2;
             this.dgvComplaintType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComplaintType_CellClick);
             // 
@@ -232,7 +231,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-6, -42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1333, 929);
+            this.pictureBox1.Size = new System.Drawing.Size(1333, 867);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -290,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1327, 842);
+            this.ClientSize = new System.Drawing.Size(1327, 780);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
