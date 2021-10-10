@@ -53,3 +53,23 @@ E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\H
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.VisitorModule.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.VisitorModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Dashboard.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Login.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PasswordRecover.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalReceivedModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.SplashScreen.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.VisitorModule.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.Properties.Resources.resources
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.exe
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.pdb
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe.config
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe
+C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.pdb

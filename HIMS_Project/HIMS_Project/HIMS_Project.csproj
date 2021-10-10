@@ -94,7 +94,9 @@
     <Compile Include="PL\ComplaintsModule.designer.cs">
       <DependentUpon>ComplaintsModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Dashboard.cs" />
+    <Compile Include="PL\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PL\Dashboard.designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
@@ -134,6 +136,12 @@
     <Compile Include="PL\RefSpecialtyArea.designer.cs">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\VisitorModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\RefSpecialtyArea.resx">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\VisitorModule.resx">
       <DependentUpon>VisitorModule.cs</DependentUpon>
