@@ -32,21 +32,21 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlTopSpace = new System.Windows.Forms.Panel();
-            this.lblMDIUserRole = new System.Windows.Forms.Label();
-            this.lblMDIUsername = new System.Windows.Forms.Label();
-            this.btnDashboardClose = new System.Windows.Forms.Button();
             this.btnUserProfile = new System.Windows.Forms.Button();
+            this.lblMDIUsername = new System.Windows.Forms.Label();
+            this.lblMDIUserRole = new System.Windows.Forms.Label();
+            this.btnDashboardClose = new System.Windows.Forms.Button();
             this.btnVisitor = new System.Windows.Forms.Button();
             this.btnPostal = new System.Windows.Forms.Button();
             this.pnlSubPostal = new System.Windows.Forms.Panel();
-            this.btnPostalReceived = new System.Windows.Forms.Button();
             this.btnPostalDispatched = new System.Windows.Forms.Button();
+            this.btnPostalReceived = new System.Windows.Forms.Button();
             this.btnComplaint = new System.Windows.Forms.Button();
             this.btnAppointment = new System.Windows.Forms.Button();
             this.btnReference = new System.Windows.Forms.Button();
             this.pnlSubReference = new System.Windows.Forms.Panel();
-            this.btnReferenceCType = new System.Windows.Forms.Button();
             this.btnReferenceSpArea = new System.Windows.Forms.Button();
+            this.btnReferenceCType = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.pnlContent.Location = new System.Drawing.Point(249, 0);
             this.pnlContent.MinimumSize = new System.Drawing.Size(729, 456);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(815, 741);
+            this.pnlContent.Size = new System.Drawing.Size(1351, 900);
             this.pnlContent.TabIndex = 9;
             // 
             // pnlTopSpace
@@ -94,21 +94,22 @@
             this.pnlTopSpace.Size = new System.Drawing.Size(249, 147);
             this.pnlTopSpace.TabIndex = 2;
             // 
-            // lblMDIUserRole
+            // btnUserProfile
             // 
-            this.lblMDIUserRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMDIUserRole.AutoSize = true;
-            this.lblMDIUserRole.BackColor = System.Drawing.Color.Transparent;
-            this.lblMDIUserRole.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
-            this.lblMDIUserRole.ForeColor = System.Drawing.Color.White;
-            this.lblMDIUserRole.Location = new System.Drawing.Point(71, 113);
-            this.lblMDIUserRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMDIUserRole.Name = "lblMDIUserRole";
-            this.lblMDIUserRole.Size = new System.Drawing.Size(83, 17);
-            this.lblMDIUserRole.TabIndex = 3;
-            this.lblMDIUserRole.Text = "User Role";
-            this.lblMDIUserRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUserProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
+            this.btnUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnUserProfile.FlatAppearance.BorderSize = 0;
+            this.btnUserProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserProfile.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.Image")));
+            this.btnUserProfile.Location = new System.Drawing.Point(73, 9);
+            this.btnUserProfile.Name = "btnUserProfile";
+            this.btnUserProfile.Size = new System.Drawing.Size(79, 79);
+            this.btnUserProfile.TabIndex = 5;
+            this.btnUserProfile.UseVisualStyleBackColor = false;
+            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
             // lblMDIUsername
             // 
@@ -121,10 +122,26 @@
             this.lblMDIUsername.Location = new System.Drawing.Point(71, 91);
             this.lblMDIUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMDIUsername.Name = "lblMDIUsername";
-            this.lblMDIUsername.Size = new System.Drawing.Size(86, 17);
+            this.lblMDIUsername.Size = new System.Drawing.Size(109, 22);
             this.lblMDIUsername.TabIndex = 4;
             this.lblMDIUsername.Text = "Username";
             this.lblMDIUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMDIUserRole
+            // 
+            this.lblMDIUserRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMDIUserRole.AutoSize = true;
+            this.lblMDIUserRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblMDIUserRole.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.lblMDIUserRole.ForeColor = System.Drawing.Color.White;
+            this.lblMDIUserRole.Location = new System.Drawing.Point(71, 113);
+            this.lblMDIUserRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMDIUserRole.Name = "lblMDIUserRole";
+            this.lblMDIUserRole.Size = new System.Drawing.Size(105, 22);
+            this.lblMDIUserRole.TabIndex = 3;
+            this.lblMDIUserRole.Text = "User Role";
+            this.lblMDIUserRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDashboardClose
             // 
@@ -143,23 +160,6 @@
             this.btnDashboardClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboardClose.UseVisualStyleBackColor = false;
             this.btnDashboardClose.Click += new System.EventHandler(this.btnDashboardClose_Click);
-            // 
-            // btnUserProfile
-            // 
-            this.btnUserProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUserProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(64)))));
-            this.btnUserProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUserProfile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnUserProfile.FlatAppearance.BorderSize = 0;
-            this.btnUserProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserProfile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUserProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnUserProfile.Image")));
-            this.btnUserProfile.Location = new System.Drawing.Point(73, 9);
-            this.btnUserProfile.Name = "btnUserProfile";
-            this.btnUserProfile.Size = new System.Drawing.Size(79, 79);
-            this.btnUserProfile.TabIndex = 5;
-            this.btnUserProfile.UseVisualStyleBackColor = false;
-            this.btnUserProfile.Click += new System.EventHandler(this.btnUserProfile_Click);
             // 
             // btnVisitor
             // 
@@ -209,23 +209,6 @@
             this.pnlSubPostal.Size = new System.Drawing.Size(249, 80);
             this.pnlSubPostal.TabIndex = 5;
             // 
-            // btnPostalReceived
-            // 
-            this.btnPostalReceived.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPostalReceived.FlatAppearance.BorderSize = 0;
-            this.btnPostalReceived.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPostalReceived.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
-            this.btnPostalReceived.ForeColor = System.Drawing.Color.White;
-            this.btnPostalReceived.Location = new System.Drawing.Point(0, 0);
-            this.btnPostalReceived.Name = "btnPostalReceived";
-            this.btnPostalReceived.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPostalReceived.Size = new System.Drawing.Size(249, 40);
-            this.btnPostalReceived.TabIndex = 0;
-            this.btnPostalReceived.Text = "Received Postal";
-            this.btnPostalReceived.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPostalReceived.UseVisualStyleBackColor = true;
-            this.btnPostalReceived.Click += new System.EventHandler(this.btnPostalReceived_Click);
-            // 
             // btnPostalDispatched
             // 
             this.btnPostalDispatched.Dock = System.Windows.Forms.DockStyle.Top;
@@ -242,6 +225,23 @@
             this.btnPostalDispatched.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPostalDispatched.UseVisualStyleBackColor = true;
             this.btnPostalDispatched.Click += new System.EventHandler(this.btnPostalDispatched_Click);
+            // 
+            // btnPostalReceived
+            // 
+            this.btnPostalReceived.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPostalReceived.FlatAppearance.BorderSize = 0;
+            this.btnPostalReceived.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostalReceived.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPostalReceived.ForeColor = System.Drawing.Color.White;
+            this.btnPostalReceived.Location = new System.Drawing.Point(0, 0);
+            this.btnPostalReceived.Name = "btnPostalReceived";
+            this.btnPostalReceived.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPostalReceived.Size = new System.Drawing.Size(249, 40);
+            this.btnPostalReceived.TabIndex = 0;
+            this.btnPostalReceived.Text = "Received Postal";
+            this.btnPostalReceived.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPostalReceived.UseVisualStyleBackColor = true;
+            this.btnPostalReceived.Click += new System.EventHandler(this.btnPostalReceived_Click);
             // 
             // btnComplaint
             // 
@@ -308,23 +308,6 @@
             this.pnlSubReference.Size = new System.Drawing.Size(249, 80);
             this.pnlSubReference.TabIndex = 9;
             // 
-            // btnReferenceCType
-            // 
-            this.btnReferenceCType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReferenceCType.FlatAppearance.BorderSize = 0;
-            this.btnReferenceCType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReferenceCType.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
-            this.btnReferenceCType.ForeColor = System.Drawing.Color.White;
-            this.btnReferenceCType.Location = new System.Drawing.Point(0, 0);
-            this.btnReferenceCType.Name = "btnReferenceCType";
-            this.btnReferenceCType.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReferenceCType.Size = new System.Drawing.Size(249, 40);
-            this.btnReferenceCType.TabIndex = 0;
-            this.btnReferenceCType.Text = "Complaint Types";
-            this.btnReferenceCType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReferenceCType.UseVisualStyleBackColor = true;
-            this.btnReferenceCType.Click += new System.EventHandler(this.btnReferenceCType_Click);
-            // 
             // btnReferenceSpArea
             // 
             this.btnReferenceSpArea.Dock = System.Windows.Forms.DockStyle.Top;
@@ -341,6 +324,23 @@
             this.btnReferenceSpArea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReferenceSpArea.UseVisualStyleBackColor = true;
             this.btnReferenceSpArea.Click += new System.EventHandler(this.btnReferenceSpArea_Click);
+            // 
+            // btnReferenceCType
+            // 
+            this.btnReferenceCType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReferenceCType.FlatAppearance.BorderSize = 0;
+            this.btnReferenceCType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReferenceCType.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnReferenceCType.ForeColor = System.Drawing.Color.White;
+            this.btnReferenceCType.Location = new System.Drawing.Point(0, 0);
+            this.btnReferenceCType.Name = "btnReferenceCType";
+            this.btnReferenceCType.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnReferenceCType.Size = new System.Drawing.Size(249, 40);
+            this.btnReferenceCType.TabIndex = 0;
+            this.btnReferenceCType.Text = "Complaint Types";
+            this.btnReferenceCType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReferenceCType.UseVisualStyleBackColor = true;
+            this.btnReferenceCType.Click += new System.EventHandler(this.btnReferenceCType_Click);
             // 
             // btnLogOut
             // 
@@ -385,9 +385,9 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label2.Location = new System.Drawing.Point(0, 711);
+            this.label2.Location = new System.Drawing.Point(0, 849);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 30);
+            this.label2.Size = new System.Drawing.Size(304, 34);
             this.label2.TabIndex = 0;
             this.label2.Text = "    Hospital Information Management \r\nSystem";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -412,25 +412,27 @@
             this.pnlMenuBar.ForeColor = System.Drawing.Color.White;
             this.pnlMenuBar.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuBar.Name = "pnlMenuBar";
-            this.pnlMenuBar.Size = new System.Drawing.Size(249, 741);
+            this.pnlMenuBar.Size = new System.Drawing.Size(249, 900);
             this.pnlMenuBar.TabIndex = 6;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1064, 741);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlMenuBar);
             this.Controls.Add(this.btnClose);
             this.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(960, 600);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDI Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.pnlTopSpace.ResumeLayout(false);
             this.pnlTopSpace.PerformLayout();

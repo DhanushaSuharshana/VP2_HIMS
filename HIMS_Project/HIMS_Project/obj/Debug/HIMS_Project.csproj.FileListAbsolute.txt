@@ -50,3 +50,5 @@ E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\H
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.exe
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.pdb
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
+D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources
+D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.VisitorModule.resources

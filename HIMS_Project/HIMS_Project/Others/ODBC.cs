@@ -17,7 +17,7 @@ namespace HIMS_Project.Others
         {
             if (con == null)
             {
-                string connectionString = @"Data Source=sachini\SQLEXPRESS;Initial Catalog=HIMS_DB;User ID=sa;Password=123;Pooling=False";
+                string connectionString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=HIMS_DB;User ID=sa;Password=123;Pooling=False";
 
                 con = new SqlConnection(connectionString);
             }
