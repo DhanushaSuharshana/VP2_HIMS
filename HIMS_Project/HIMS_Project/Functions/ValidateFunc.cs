@@ -54,13 +54,12 @@ namespace HIMS_Project.Functions
             txtPassword.Text = "";
             txtPassword.Focus();
         }
-
-        // Validate Number
-        public static void ValidateNumber(TextBox numberField)
+        //Validate NIC
+        public static void ValidateNIC(TextBox txtNIC)
         {
-            MessageBox.Show("Only numeric numbers are accepted.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            numberField.Text = "";
-            numberField.Focus();
+            MessageBox.Show("Invalid NIC.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            txtNIC.Text = "";
+            txtNIC.Focus();
         }
     }
 }
