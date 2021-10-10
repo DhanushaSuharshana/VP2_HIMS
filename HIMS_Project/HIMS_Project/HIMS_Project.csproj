@@ -94,12 +94,6 @@
     <Compile Include="PL\ComplaintsModule.designer.cs">
       <DependentUpon>ComplaintsModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\ComplaintsModule.resx">
       <DependentUpon>ComplaintsModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
