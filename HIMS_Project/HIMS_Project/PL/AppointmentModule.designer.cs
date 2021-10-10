@@ -113,20 +113,20 @@
             this.pnlFormAppointment.Controls.Add(this.label2);
             this.pnlFormAppointment.Controls.Add(this.label1);
             this.pnlFormAppointment.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFormAppointment.Location = new System.Drawing.Point(673, 0);
+            this.pnlFormAppointment.Location = new System.Drawing.Point(737, 0);
             this.pnlFormAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFormAppointment.Name = "pnlFormAppointment";
             this.pnlFormAppointment.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFormAppointment.Size = new System.Drawing.Size(309, 585);
+            this.pnlFormAppointment.Size = new System.Drawing.Size(366, 585);
             this.pnlFormAppointment.TabIndex = 1;
             // 
             // txtAppointmentNo
             // 
             this.txtAppointmentNo.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtAppointmentNo.ForeColor = System.Drawing.Color.White;
-            this.txtAppointmentNo.Location = new System.Drawing.Point(79, 64);
+            this.txtAppointmentNo.Location = new System.Drawing.Point(105, 66);
             this.txtAppointmentNo.Name = "txtAppointmentNo";
-            this.txtAppointmentNo.Size = new System.Drawing.Size(50, 25);
+            this.txtAppointmentNo.Size = new System.Drawing.Size(50, 29);
             this.txtAppointmentNo.TabIndex = 11;
             this.txtAppointmentNo.Visible = false;
             // 
@@ -137,9 +137,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label10.Location = new System.Drawing.Point(19, 23);
+            this.label10.Location = new System.Drawing.Point(13, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(280, 18);
+            this.label10.Size = new System.Drawing.Size(350, 23);
             this.label10.TabIndex = 11;
             this.label10.Text = "Fill Appointmnet Form In Here..";
             // 
@@ -163,7 +163,7 @@
             this.btnAppointmentUpdate.ForeColor = System.Drawing.Color.White;
             this.btnAppointmentUpdate.Location = new System.Drawing.Point(10, 515);
             this.btnAppointmentUpdate.Name = "btnAppointmentUpdate";
-            this.btnAppointmentUpdate.Size = new System.Drawing.Size(289, 30);
+            this.btnAppointmentUpdate.Size = new System.Drawing.Size(346, 30);
             this.btnAppointmentUpdate.TabIndex = 9;
             this.btnAppointmentUpdate.Text = "U P D A T E";
             this.btnAppointmentUpdate.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             this.btnAppointmentSave.ForeColor = System.Drawing.Color.White;
             this.btnAppointmentSave.Location = new System.Drawing.Point(10, 545);
             this.btnAppointmentSave.Name = "btnAppointmentSave";
-            this.btnAppointmentSave.Size = new System.Drawing.Size(289, 30);
+            this.btnAppointmentSave.Size = new System.Drawing.Size(346, 30);
             this.btnAppointmentSave.TabIndex = 9;
             this.btnAppointmentSave.Text = "S A V E";
             this.btnAppointmentSave.UseVisualStyleBackColor = false;
@@ -191,7 +191,7 @@
             this.cmbAppSpArea.FormattingEnabled = true;
             this.cmbAppSpArea.Location = new System.Drawing.Point(25, 297);
             this.cmbAppSpArea.Name = "cmbAppSpArea";
-            this.cmbAppSpArea.Size = new System.Drawing.Size(263, 28);
+            this.cmbAppSpArea.Size = new System.Drawing.Size(263, 33);
             this.cmbAppSpArea.TabIndex = 8;
             this.cmbAppSpArea.SelectedIndexChanged += new System.EventHandler(this.cmbAppSpArea_SelectedIndexChanged);
             // 
@@ -203,7 +203,7 @@
             this.cmbAppMO.FormattingEnabled = true;
             this.cmbAppMO.Location = new System.Drawing.Point(25, 363);
             this.cmbAppMO.Name = "cmbAppMO";
-            this.cmbAppMO.Size = new System.Drawing.Size(263, 28);
+            this.cmbAppMO.Size = new System.Drawing.Size(263, 33);
             this.cmbAppMO.TabIndex = 7;
             // 
             // txtAppSymptom
@@ -229,7 +229,7 @@
             this.dtpAppDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpAppDate.Location = new System.Drawing.Point(22, 164);
             this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(266, 27);
+            this.dtpAppDate.Size = new System.Drawing.Size(266, 32);
             this.dtpAppDate.TabIndex = 4;
             this.dtpAppDate.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
@@ -242,7 +242,7 @@
             this.cmbAppPatient.FormattingEnabled = true;
             this.cmbAppPatient.Location = new System.Drawing.Point(22, 95);
             this.cmbAppPatient.Name = "cmbAppPatient";
-            this.cmbAppPatient.Size = new System.Drawing.Size(266, 28);
+            this.cmbAppPatient.Size = new System.Drawing.Size(266, 33);
             this.cmbAppPatient.TabIndex = 3;
             // 
             // label6
@@ -252,7 +252,7 @@
             this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label6.Location = new System.Drawing.Point(21, 337);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 20);
+            this.label6.Size = new System.Drawing.Size(156, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "Medical Officer";
             // 
@@ -263,7 +263,7 @@
             this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label5.Location = new System.Drawing.Point(21, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.Size = new System.Drawing.Size(145, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Specialty Area";
             // 
@@ -274,7 +274,7 @@
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label4.Location = new System.Drawing.Point(21, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.Size = new System.Drawing.Size(107, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Symptoms";
             // 
@@ -285,7 +285,7 @@
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label3.Location = new System.Drawing.Point(21, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.Size = new System.Drawing.Size(184, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Appointment Time";
             // 
@@ -296,7 +296,7 @@
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label2.Location = new System.Drawing.Point(21, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(182, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Appointment Date";
             // 
@@ -307,7 +307,7 @@
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label1.Location = new System.Drawing.Point(21, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
             // 
@@ -371,7 +371,7 @@
             this.lblShowAppointmentMsg.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.lblShowAppointmentMsg.Location = new System.Drawing.Point(59, 112);
             this.lblShowAppointmentMsg.Name = "lblShowAppointmentMsg";
-            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(489, 15);
+            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(634, 20);
             this.lblShowAppointmentMsg.TabIndex = 11;
             this.lblShowAppointmentMsg.Text = "Appointment Numbers are available only for approved appointment.";
             this.lblShowAppointmentMsg.Visible = false;
@@ -474,7 +474,7 @@
             this.label9.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label9.Location = new System.Drawing.Point(201, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(323, 32);
+            this.label9.Size = new System.Drawing.Size(393, 40);
             this.label9.TabIndex = 8;
             this.label9.Text = "Appointment Module";
             // 
@@ -486,7 +486,7 @@
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label8.Location = new System.Drawing.Point(315, 51);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 20);
+            this.label8.Size = new System.Drawing.Size(235, 25);
             this.label8.TabIndex = 8;
             this.label8.Text = "Search By Patient Name";
             // 
@@ -517,7 +517,7 @@
             "Completed"});
             this.cmbFilterAppointment.Location = new System.Drawing.Point(14, 73);
             this.cmbFilterAppointment.Name = "cmbFilterAppointment";
-            this.cmbFilterAppointment.Size = new System.Drawing.Size(177, 28);
+            this.cmbFilterAppointment.Size = new System.Drawing.Size(177, 33);
             this.cmbFilterAppointment.TabIndex = 5;
             this.cmbFilterAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbFilterAppointment_SelectedIndexChanged);
             // 
@@ -528,7 +528,7 @@
             this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label7.Location = new System.Drawing.Point(13, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 4;
             this.label7.Text = "Filter By ";
             // 
@@ -553,6 +553,7 @@
             this.dgvAppointment.Location = new System.Drawing.Point(9, 135);
             this.dgvAppointment.Name = "dgvAppointment";
             this.dgvAppointment.ReadOnly = true;
+            this.dgvAppointment.RowHeadersWidth = 51;
             this.dgvAppointment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAppointment.Size = new System.Drawing.Size(658, 397);
             this.dgvAppointment.TabIndex = 3;
@@ -562,49 +563,62 @@
             // 
             this.AppointmentNo.DataPropertyName = "AppointmentNo";
             this.AppointmentNo.HeaderText = "Appointment #";
+            this.AppointmentNo.MinimumWidth = 6;
             this.AppointmentNo.Name = "AppointmentNo";
             this.AppointmentNo.ReadOnly = true;
             this.AppointmentNo.Visible = false;
+            this.AppointmentNo.Width = 125;
             // 
             // AppointmentNumber
             // 
             this.AppointmentNumber.DataPropertyName = "AppointmentNumber";
             this.AppointmentNumber.HeaderText = "Appointment Number";
+            this.AppointmentNumber.MinimumWidth = 6;
             this.AppointmentNumber.Name = "AppointmentNumber";
             this.AppointmentNumber.ReadOnly = true;
+            this.AppointmentNumber.Width = 125;
             // 
             // Patient
             // 
             this.Patient.DataPropertyName = "Patient";
             this.Patient.HeaderText = "Patient";
+            this.Patient.MinimumWidth = 6;
             this.Patient.Name = "Patient";
             this.Patient.ReadOnly = true;
+            this.Patient.Width = 125;
             // 
             // AppointmentDate
             // 
             this.AppointmentDate.DataPropertyName = "AppDate";
             this.AppointmentDate.HeaderText = "Appointment Date";
+            this.AppointmentDate.MinimumWidth = 6;
             this.AppointmentDate.Name = "AppointmentDate";
             this.AppointmentDate.ReadOnly = true;
+            this.AppointmentDate.Width = 125;
             // 
             // AppointmentTime
             // 
             this.AppointmentTime.DataPropertyName = "AppTime";
             this.AppointmentTime.HeaderText = "Appointment Time";
+            this.AppointmentTime.MinimumWidth = 6;
             this.AppointmentTime.Name = "AppointmentTime";
             this.AppointmentTime.ReadOnly = true;
+            this.AppointmentTime.Width = 125;
             // 
             // SpecialtyArea
             // 
             this.SpecialtyArea.DataPropertyName = "SpecialityArea";
             this.SpecialtyArea.HeaderText = "MO Specialty  Area";
+            this.SpecialtyArea.MinimumWidth = 6;
             this.SpecialtyArea.Name = "SpecialtyArea";
             this.SpecialtyArea.ReadOnly = true;
+            this.SpecialtyArea.Width = 125;
             // 
             // MedicalOfficer
             // 
             this.MedicalOfficer.DataPropertyName = "MedicalOfficer";
             this.MedicalOfficer.HeaderText = "Medical Officer";
+            this.MedicalOfficer.MinimumWidth = 6;
             this.MedicalOfficer.Name = "MedicalOfficer";
             this.MedicalOfficer.ReadOnly = true;
             this.MedicalOfficer.Width = 120;
@@ -613,22 +627,26 @@
             // 
             this.Symptom.DataPropertyName = "Symptom";
             this.Symptom.HeaderText = "Symptoms";
+            this.Symptom.MinimumWidth = 6;
             this.Symptom.Name = "Symptom";
             this.Symptom.ReadOnly = true;
+            this.Symptom.Width = 125;
             // 
             // AppointmentStatus
             // 
             this.AppointmentStatus.DataPropertyName = "AppointmentStatus";
             this.AppointmentStatus.HeaderText = "Appointment Status";
+            this.AppointmentStatus.MinimumWidth = 6;
             this.AppointmentStatus.Name = "AppointmentStatus";
             this.AppointmentStatus.ReadOnly = true;
+            this.AppointmentStatus.Width = 125;
             // 
             // AppointmentModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(982, 585);
+            this.ClientSize = new System.Drawing.Size(1103, 585);
             this.Controls.Add(this.pnlAppointmentView);
             this.Controls.Add(this.pnlFormAppointment);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

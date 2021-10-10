@@ -55,6 +55,7 @@
     <Compile Include="BLL\TblSpecialtyArea_BLL.cs" />
     <Compile Include="BLL\TblStaff_BLL.cs" />
     <Compile Include="BLL\TblUsers_BLL.cs" />
+    <Compile Include="BLL\TblVisitor_BLL.cs" />
     <Compile Include="BLL\UserProfile_BLL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
     <Compile Include="DAL\TblAppointment_DAL.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="DAL\TblSpecialtyArea_DAL.cs" />
     <Compile Include="DAL\TblStaff_DAL.cs" />
     <Compile Include="DAL\TblUsers_DAL.cs" />
+    <Compile Include="DAL\TblVisitor_DAL.cs" />
     <Compile Include="DAL\UserProfile_DAL.cs" />
     <Compile Include="Functions\AppointmentFunc.cs" />
     <Compile Include="Functions\PasswordFunc.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Model\TblSpecialtyArea.cs" />
     <Compile Include="Model\TblStaff.cs" />
     <Compile Include="Model\TblUsers.cs" />
+    <Compile Include="Model\TblVisitor.cs" />
     <Compile Include="Others\MysqlParameterFormat.cs" />
     <Compile Include="Others\ODBC.cs" />
     <Compile Include="PL\AppointmentModule.cs">
@@ -133,6 +136,12 @@
     <Compile Include="PL\RefSpecialtyArea.designer.cs">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\VisitorModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\VisitorModule.designer.cs">
+      <DependentUpon>VisitorModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PL\AppointmentModule.resx">
@@ -161,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\RefSpecialtyArea.resx">
       <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\VisitorModule.resx">
+      <DependentUpon>VisitorModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

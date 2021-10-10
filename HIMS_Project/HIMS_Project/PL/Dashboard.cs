@@ -22,11 +22,14 @@ namespace HIMS_Project.PL
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+
             // View User Role of Logged in user
             lblMDIUsername.Text = LoggedInUser.Username;
             lblMDIUserRole.Text = LoggedInUser.RoleName;
             customizeMenuDesign();
             UserAccessControl(LoggedInUser.UserRole);
+            this.Width = 1600;
+            this.Height = 900;
         }
 
         #region User Access
@@ -87,6 +90,7 @@ namespace HIMS_Project.PL
 
         private void btnVisitor_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new VisitorModule());
             /*
              * code to be executed
              */
