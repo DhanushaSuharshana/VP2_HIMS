@@ -15,6 +15,7 @@ namespace HIMS_Project.PL
 {
     public partial class PasswordRecover : Form
     {
+        CryptoLab_BLL _cryptoLab_Bll;
         public PasswordRecover()
 
         {
@@ -26,6 +27,7 @@ namespace HIMS_Project.PL
             //to here
 
             InitializeComponent();
+            _cryptoLab_Bll = new CryptoLab_BLL();
         }
         private void PasswordRecover_Load(object sender, EventArgs e)
         {
@@ -38,7 +40,14 @@ namespace HIMS_Project.PL
             dtpReqDOB.Text = "";
             pnlRecoverData.Hide();
         }
+        #region Decrypt Password
+        public string TextDencrypt(string EncryptedPW) // Encrypt Password by using 3Des
+        {
+            var DecryptPw = EncryptedPW.ToString().Trim();
+            return _cryptoLab_Bll.DecryptText(DecryptPw);
 
+        }
+        #endregion Decrypt Passwrod
         public void RequestLoginDetail()
         {
             Login_BLL userRequest = new Login_BLL();
@@ -46,8 +55,9 @@ namespace HIMS_Project.PL
 
             if (ReqUserFound) // if user found
             {
+                var EncryptedPW = userRequest.RecoverPassword;
                 lblReUsername.Text = userRequest.RecoverUsername;
-                lblRePassword.Text = userRequest.RecoverPassword;
+                lblRePassword.Text = TextDencrypt(EncryptedPW);
                 lblErrorRequest.Hide();
                 pnlRecoverData.Show();
                 btnLoginReq.Enabled = false;

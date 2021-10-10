@@ -506,10 +506,10 @@
             // 
             // cmbFilterAppointment
             // 
-            this.cmbFilterAppointment.BackColor = System.Drawing.SystemColors.Info;
+            this.cmbFilterAppointment.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.cmbFilterAppointment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFilterAppointment.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFilterAppointment.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.cmbFilterAppointment.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilterAppointment.ForeColor = System.Drawing.Color.White;
             this.cmbFilterAppointment.FormattingEnabled = true;
             this.cmbFilterAppointment.Items.AddRange(new object[] {
             "Pending",
@@ -627,7 +627,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(982, 585);
             this.Controls.Add(this.pnlAppointmentView);
             this.Controls.Add(this.pnlFormAppointment);

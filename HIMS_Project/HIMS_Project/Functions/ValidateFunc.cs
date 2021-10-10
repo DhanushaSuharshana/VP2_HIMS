@@ -61,5 +61,13 @@ namespace HIMS_Project.Functions
             txtNIC.Text = "";
             txtNIC.Focus();
         }
+
+        // Validate Number
+        public static void ValidateNumber(TextBox numberField)
+        {
+            MessageBox.Show("Only numeric numbers are accepted.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            numberField.Text = "";
+            numberField.Focus();
+        }
     }
 }

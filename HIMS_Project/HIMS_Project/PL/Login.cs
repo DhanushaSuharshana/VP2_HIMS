@@ -44,7 +44,7 @@ namespace HIMS_Project.PL
         {
             var password = TextEncrypt();
             Login_BLL userCredentials = new Login_BLL();
-            bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, txtPassword.Text);
+            bool UserFound = userCredentials.AuthenticateUser(txtUsername.Text, password);
 
             if (UserFound) // if user found
             {
