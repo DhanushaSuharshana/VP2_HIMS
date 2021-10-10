@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnComTypeClose = new System.Windows.Forms.Button();
+            this.btnSpAreaClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSpArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.btnSpAreaSave.FlatAppearance.BorderSize = 0;
             this.btnSpAreaSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnSpAreaSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSpAreaSave.Location = new System.Drawing.Point(57, 267);
+            this.btnSpAreaSave.Location = new System.Drawing.Point(57, 236);
             this.btnSpAreaSave.Name = "btnSpAreaSave";
             this.btnSpAreaSave.Size = new System.Drawing.Size(119, 48);
             this.btnSpAreaSave.TabIndex = 0;
@@ -96,7 +96,7 @@
             this.btnSpAreaUpdate.FlatAppearance.BorderSize = 0;
             this.btnSpAreaUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnSpAreaUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSpAreaUpdate.Location = new System.Drawing.Point(224, 266);
+            this.btnSpAreaUpdate.Location = new System.Drawing.Point(224, 235);
             this.btnSpAreaUpdate.Name = "btnSpAreaUpdate";
             this.btnSpAreaUpdate.Size = new System.Drawing.Size(119, 48);
             this.btnSpAreaUpdate.TabIndex = 0;
@@ -112,7 +112,7 @@
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(340, 267);
+            this.btnClear.Location = new System.Drawing.Point(340, 236);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(119, 48);
             this.btnClear.TabIndex = 0;
@@ -167,7 +167,7 @@
             this.dgvSpArea.ReadOnly = true;
             this.dgvSpArea.RowHeadersWidth = 150;
             this.dgvSpArea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSpArea.Size = new System.Drawing.Size(542, 282);
+            this.dgvSpArea.Size = new System.Drawing.Size(542, 220);
             this.dgvSpArea.TabIndex = 2;
             this.dgvSpArea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSpArea_CellClick);
             // 
@@ -212,7 +212,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-6, -42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1333, 929);
+            this.pictureBox1.Size = new System.Drawing.Size(1333, 867);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -252,30 +252,30 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Search By Description";
             // 
-            // btnComTypeClose
+            // btnSpAreaClose
             // 
-            this.btnComTypeClose.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnComTypeClose.BackColor = System.Drawing.Color.White;
-            this.btnComTypeClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComTypeClose.BackgroundImage")));
-            this.btnComTypeClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnComTypeClose.FlatAppearance.BorderSize = 0;
-            this.btnComTypeClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnComTypeClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComTypeClose.Font = new System.Drawing.Font("Segoe UI Symbol", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComTypeClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnComTypeClose.Location = new System.Drawing.Point(614, -3);
-            this.btnComTypeClose.Name = "btnComTypeClose";
-            this.btnComTypeClose.Size = new System.Drawing.Size(48, 49);
-            this.btnComTypeClose.TabIndex = 9;
-            this.btnComTypeClose.UseVisualStyleBackColor = false;
-            this.btnComTypeClose.Click += new System.EventHandler(this.btnComTypeClose_Click);
+            this.btnSpAreaClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSpAreaClose.BackColor = System.Drawing.Color.White;
+            this.btnSpAreaClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSpAreaClose.BackgroundImage")));
+            this.btnSpAreaClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSpAreaClose.FlatAppearance.BorderSize = 0;
+            this.btnSpAreaClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnSpAreaClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpAreaClose.Font = new System.Drawing.Font("Segoe UI Symbol", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpAreaClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSpAreaClose.Location = new System.Drawing.Point(614, -34);
+            this.btnSpAreaClose.Name = "btnSpAreaClose";
+            this.btnSpAreaClose.Size = new System.Drawing.Size(48, 49);
+            this.btnSpAreaClose.TabIndex = 9;
+            this.btnSpAreaClose.UseVisualStyleBackColor = false;
+            this.btnSpAreaClose.Click += new System.EventHandler(this.btnSpAreaClose_Click);
             // 
             // RefSpecialtyArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 842);
-            this.Controls.Add(this.btnComTypeClose);
+            this.ClientSize = new System.Drawing.Size(1327, 780);
+            this.Controls.Add(this.btnSpAreaClose);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -316,6 +316,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn SAreaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDescription;
-        private System.Windows.Forms.Button btnComTypeClose;
+        private System.Windows.Forms.Button btnSpAreaClose;
     }
 }

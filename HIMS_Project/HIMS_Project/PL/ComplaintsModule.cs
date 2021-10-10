@@ -94,6 +94,7 @@ namespace HIMS_Project.PL
             txtComplaintNote.Text = "";
             cmbComplaintType.Focus();
             UserAccessComponent(LoggedInUser.UserRole);
+            DgvAllComplaint();
         }
 
         public int AddComplaint()
@@ -153,14 +154,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllComplaint();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -210,14 +210,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllComplaint();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -235,13 +234,12 @@ namespace HIMS_Project.PL
                 if (respond > 0)
                 {
                     MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DgvAllComplaint();
                     AllClear();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -264,11 +262,6 @@ namespace HIMS_Project.PL
         private void btnComplaintClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

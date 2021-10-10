@@ -76,24 +76,38 @@ namespace HIMS_Project.DAL
         {
             try
             {
-                return ODBC.GetData("SELECT COUNT(AppointmentNo)AS AppointmentNo FROM TblAppointments");
+                return ODBC.GetData("SELECT COUNT(AppointmentNo) AS CountNo, MAX(AppointmentNo) AS LastAppointmentNo FROM TblAppointments WHERE AppointmentStatus='Approved'");
             }
             catch (Exception)
             {
                 throw;
             }
         }
-        // Select All Medical Officers
-        public static DataTable GetAllMO(string SpecialityArea)
+        // Select All Specific Medical Officers
+        public static DataTable GetAllSpecificMO(string SpecialityArea)
         {
             try
             {
-                string sql = string.Format("SELECT TblUsers.Name FROM TblUsers INNER JOIN TblStaff ON TblStaff.StaffId=TblUsers.StaffId WHERE TblUsers.UserRole=3 AND TblStaff.SpecialityArea=@SpecialityArea");
+                string sql = string.Format("SELECT * FROM TblUsers INNER JOIN TblStaff ON TblUsers.StaffId=TblStaff.StaffId WHERE TblUsers.UserRole=3 AND TblStaff.SpecialityArea=@SpecialityArea");
                 SqlParameter[] sqlpara = new SqlParameter[1];
 
                 sqlpara[0] = sqlParameterFormat.Format("@SpecialityArea", SpecialityArea);
 
                 return ODBC.GetData(sql, sqlpara);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // Select All Medical Officers
+        public static DataTable GetAllMO()
+        {
+            try
+            {
+                return ODBC.GetData("SELECT * FROM TblUsers INNER JOIN TblStaff ON TblUsers.StaffId=TblStaff.StaffId WHERE TblUsers.UserRole=3");
+                
             }
             catch (Exception)
             {
@@ -148,9 +162,53 @@ namespace HIMS_Project.DAL
                 throw;
             }
         }
+        // Update Appointment status to approved
+        public static int UpdateApprovedAppointment(TblAppointments NewStatus)
+        {
+            try
+            {
+                // Set Update query
+                string sql = string.Format("UPDATE TblAppointments " +
+                                           "SET AppointmentNumber=@AppointmentNumber," +
+                                               "AppointmentStatus=@AppointmentStatus" +
+                                           " WHERE AppointmentNo=@AppointmentNo");
+                // set parameters
+                SqlParameter[] _sql = new SqlParameter[3];
+                _sql[0] = sqlParameterFormat.Format("@AppointmentNumber", NewStatus.AppointmentNumber);
+                _sql[1] = sqlParameterFormat.Format("@AppointmentStatus", NewStatus.AppointmentStatus);
+                _sql[2] = sqlParameterFormat.Format("@AppointmentNo", NewStatus.AppointmentNo);
 
+                return ODBC.SetData(sql, _sql);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        // Update Appointment status to Colmplete
+        public static int UpdateCompleteAppointment(TblAppointments NewStatus)
+        {
+            try
+            {
+                // Set Update query
+                string sql = string.Format("UPDATE TblAppointments " +
+                                           "SET AppointmentStatus=@AppointmentStatus" +
+                                           " WHERE AppointmentNo=@AppointmentNo");
+                // set parameters
+                SqlParameter[] _sql = new SqlParameter[2];
+                _sql[0] = sqlParameterFormat.Format("@AppointmentStatus", NewStatus.AppointmentStatus);
+                _sql[1] = sqlParameterFormat.Format("@AppointmentNo", NewStatus.AppointmentNo);
+
+                return ODBC.SetData(sql, _sql);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         // Update Appointment Record
-
         public static int UpdateAppointment(TblAppointments tblAppointment)
         {
             try
@@ -160,12 +218,12 @@ namespace HIMS_Project.DAL
                                            "SET AppointmentNumber=@AppointmentNumber," +
                                                "Patient=@Patient," +
                                                "AppDate=@AppDate," +
-                                               "AppTime=@AppTime" +
+                                               "AppTime=@AppTime," +
                                                "Symptom=@Symptom," +
                                                "MedicalOfficer=@MedicalOfficer," +
                                                "SpecialityArea=@SpecialityArea," +
-                                               "AppointmentStatus=@AppointmentStatus," +
-                                           "WHERE AppointmentNo=@AppointmentNo");
+                                               "AppointmentStatus=@AppointmentStatus" +
+                                           " WHERE AppointmentNo=@AppointmentNo");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[9];
                 _sql[0] = sqlParameterFormat.Format("@AppointmentNumber", tblAppointment.AppointmentNumber);

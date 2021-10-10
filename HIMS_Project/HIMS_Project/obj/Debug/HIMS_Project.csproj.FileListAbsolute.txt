@@ -32,3 +32,21 @@ D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIM
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
 D:\Projects\Group Project\Project Files\Project_source\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe.config
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.pdb
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csprojAssemblyReference.cache
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Dashboard.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Login.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PasswordRecover.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalReceivedModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.Properties.Resources.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.GenerateResource.cache
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.CoreCompileInputs.cache
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.exe
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.pdb
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.AppointmentModule.resources

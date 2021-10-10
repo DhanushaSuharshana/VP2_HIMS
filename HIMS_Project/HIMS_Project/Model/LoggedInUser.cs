@@ -14,7 +14,7 @@ namespace HIMS_Project.Model
         public static int UserRole { get; set; }
         public static string RoleName { get; set; }
         public static string NIC { get; set; }
-        public static string Name { get; set; }
+        public static string UName { get; set; }
         public static string UserAddress { get; set; }
         public static string DOB { get; set; }
         public static string Gender { get; set; }

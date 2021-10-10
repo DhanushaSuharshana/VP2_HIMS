@@ -26,6 +26,7 @@ namespace HIMS_Project.PL
         {
             txtDescription.Focus();
             DgvAllComplaintType(); // Fetch All Complaint Type Detail to the DGV
+            btnCTypeUpdate.Hide();
             btnCTypeEdit.Enabled = false;
             btnCTypeDelete.Enabled = false;
         }
@@ -63,14 +64,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllComplaintType();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -109,14 +109,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllComplaintType();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -125,6 +124,11 @@ namespace HIMS_Project.PL
             txtCTypeId.Text = "";
             txtDescription.Text = "";
             txtDescription.Focus();
+            DgvAllComplaintType();
+            btnCTypeSave.Show();
+            btnCTypeUpdate.Hide();
+            btnCTypeEdit.Enabled = false;
+            btnCTypeDelete.Enabled = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -146,13 +150,12 @@ namespace HIMS_Project.PL
                 if (respond > 0)
                 {
                     MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DgvAllComplaintType();
                     AllClear();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -172,9 +175,5 @@ namespace HIMS_Project.PL
             this.Close();
         }
 
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

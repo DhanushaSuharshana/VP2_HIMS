@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CryptoLab_BLL.cs" />
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\TblAppointment_BLL.cs" />
     <Compile Include="BLL\TblComplaints_BLL.cs" />
@@ -78,6 +79,12 @@
     <Compile Include="Model\TblUsers.cs" />
     <Compile Include="Others\MysqlParameterFormat.cs" />
     <Compile Include="Others\ODBC.cs" />
+    <Compile Include="PL\AppointmentModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AppointmentModule.designer.cs">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\ComplaintsModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\AppointmentModule.resx">
+      <DependentUpon>AppointmentModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\ComplaintsModule.resx">
       <DependentUpon>ComplaintsModule.cs</DependentUpon>
     </EmbeddedResource>

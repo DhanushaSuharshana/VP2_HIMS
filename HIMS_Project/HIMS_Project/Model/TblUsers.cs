@@ -11,7 +11,7 @@ namespace HIMS_Project.Model
     {
         public int UserId { get; set; }
         public string NIC { get; set; }
-        public string Name { get; set; }
+        public string UName { get; set; }
         public string UserAddress { get; set; }
         public string DOB { get; set; }
         public string Gender { get; set; }

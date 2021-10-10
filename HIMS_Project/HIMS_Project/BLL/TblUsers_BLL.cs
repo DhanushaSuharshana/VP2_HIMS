@@ -19,8 +19,8 @@ namespace HIMS_Project.BLL
             try
             {
                 cmbPatient.DataSource = TblUsers_DAL.GetAllPatients();
-                cmbPatient.DisplayMember = "Name"; // Combo Box display value
-                cmbPatient.ValueMember = "Name"; // Loading unique value to identify the Patient
+                cmbPatient.DisplayMember = "UName"; // Combo Box display value
+                cmbPatient.ValueMember = "UName"; // Loading unique value to identify the Patient
             }
             catch (Exception)
             {

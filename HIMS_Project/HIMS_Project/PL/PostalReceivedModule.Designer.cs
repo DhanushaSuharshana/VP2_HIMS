@@ -84,7 +84,6 @@
             this.pnlRePostalTop.Name = "pnlRePostalTop";
             this.pnlRePostalTop.Size = new System.Drawing.Size(1311, 71);
             this.pnlRePostalTop.TabIndex = 4;
-            this.pnlRePostalTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRePostalTop_Paint);
             // 
             // label9
             // 
@@ -117,6 +116,7 @@
             // 
             // pnlPostalForm
             // 
+            this.pnlPostalForm.AutoSize = true;
             this.pnlPostalForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlPostalForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlPostalForm.Controls.Add(this.label4);
@@ -135,7 +135,7 @@
             this.pnlPostalForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPostalForm.Location = new System.Drawing.Point(0, 71);
             this.pnlPostalForm.Name = "pnlPostalForm";
-            this.pnlPostalForm.Size = new System.Drawing.Size(1311, 181);
+            this.pnlPostalForm.Size = new System.Drawing.Size(1311, 174);
             this.pnlPostalForm.TabIndex = 5;
             // 
             // label4
@@ -342,7 +342,7 @@
             this.panel1.Controls.Add(this.dgvRePostal);
             this.panel1.Controls.Add(this.txtRePostalSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 252);
+            this.panel1.Location = new System.Drawing.Point(0, 245);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1311, 238);
             this.panel1.TabIndex = 15;
@@ -503,7 +503,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1311, 803);
+            this.ClientSize = new System.Drawing.Size(1311, 780);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlPostalForm);
             this.Controls.Add(this.pnlRePostalTop);
@@ -523,6 +523,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRePostal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

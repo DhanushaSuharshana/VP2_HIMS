@@ -18,7 +18,7 @@ namespace HIMS_Project.DAL
             try
             {
                 return ODBC.GetData("SELECT * FROM TblUsers LEFT JOIN TblStaff ON TblStaff.StaffId=TblUsers.StaffId");
-                
+
             }
             catch (Exception)
             {
@@ -27,14 +27,14 @@ namespace HIMS_Project.DAL
         }
 
         // Update user password
-        public static int UpdateUserPassword(String NewPw)
+        public static int UpdateUserPassword(string NewPw)
         {
             try
             {
                 // Set Update query
                 string sql = string.Format("UPDATE TblUsers " +
-                                           "SET UPassword=@NewPw," +
-                                           "WHERE UserId=@UserId");
+                                           "SET UPassword=@NewPw" +
+                                           " WHERE UserId=@UserId");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[2];
                 _sql[0] = sqlParameterFormat.Format("@NewPw", NewPw);
@@ -50,14 +50,14 @@ namespace HIMS_Project.DAL
         }
 
         // Update username
-        public static int UpdateUsername(String username)
+        public static int UpdateUsername(string username)
         {
             try
             {
                 // Set Update query
                 string sql = string.Format("UPDATE TblUsers " +
-                                           "SET Username=@username," +
-                                           "WHERE UserId=@UserId");
+                                           "SET Username=@username" +
+                                           " WHERE UserId=@UserId");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[2];
                 _sql[0] = sqlParameterFormat.Format("@username", username);
@@ -79,15 +79,15 @@ namespace HIMS_Project.DAL
             {
                 // Set Update query
                 string sql = string.Format("UPDATE TblUsers " +
-                                           "SET Username=@Name," +
+                                           "SET UName=@UName," +
                                                 "UserAddress=@UserAddress," +
                                                 "MaritalStatus=@MaritalStatus," +
                                                 "Contact=@Contact," +
-                                                "Allergies=@Allergies," +
-                                           "WHERE UserId=@UserId");
+                                                "Allergies=@Allergies" +
+                                           " WHERE UserId=@UserId");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[6];
-                _sql[0] = sqlParameterFormat.Format("@Name", tblUsers.Name);
+                _sql[0] = sqlParameterFormat.Format("@UName", tblUsers.UName);
                 _sql[1] = sqlParameterFormat.Format("@UserAddress", tblUsers.UserAddress);
                 _sql[2] = sqlParameterFormat.Format("@MaritalStatus", tblUsers.MaritalStatus);
                 _sql[3] = sqlParameterFormat.Format("@Contact", tblUsers.Contact);
@@ -102,7 +102,7 @@ namespace HIMS_Project.DAL
                 throw;
             }
         }
-        
+
         // Update User Proffessional Info
         public static int UpdateStaffInfo(TblStaff tblstaff)
         {
@@ -113,8 +113,8 @@ namespace HIMS_Project.DAL
                                            "SET StaffEmail=@StaffEmail," +
                                                 "JoinDate=@JoinDate," +
                                                 "SpecialityArea=@SpecialityArea," +
-                                                "Photograph=@Photograph," +
-                                           "WHERE StaffId=@StaffId");
+                                                "Photograph=@Photograph" +
+                                           " WHERE StaffId=@StaffId");
                 // set parameters
                 SqlParameter[] _sql = new SqlParameter[6];
                 _sql[0] = sqlParameterFormat.Format("@StaffEmail", tblstaff.StaffEmail);
@@ -129,6 +129,7 @@ namespace HIMS_Project.DAL
             {
                 throw;
             }
+
         }
     }
 }

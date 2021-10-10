@@ -75,9 +75,24 @@ namespace HIMS_Project.BLL
         {
             try
             {
-                cmbAppMO.DataSource = TblAppointment_DAL.GetAllMO(SpecialityArea);
-                cmbAppMO.DisplayMember = "Name";
-                cmbAppMO.ValueMember = "Name";
+                cmbAppMO.DataSource = TblAppointment_DAL.GetAllSpecificMO(SpecialityArea);
+                cmbAppMO.DisplayMember = "UName";
+                cmbAppMO.ValueMember = "UName";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        // Fetch All Medical officers 
+        public void cmbLoadExistMO(ComboBox cmbAppMO)
+        {
+            try
+            {
+                cmbAppMO.DataSource = TblAppointment_DAL.GetAllMO();
+                cmbAppMO.DisplayMember = "UName";
+                cmbAppMO.ValueMember = "UName";
             }
             catch (Exception)
             {
@@ -97,7 +112,30 @@ namespace HIMS_Project.BLL
                 throw;
             }
         }
-
+        // Update Appointment Status to Approved
+        public int UpdateApprovedAppointment(TblAppointments NewStatus)
+        {
+            try
+            {
+                return TblAppointment_DAL.UpdateApprovedAppointment(NewStatus);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        // Update Appointment Status to Complete
+        public int UpdateCompleteAppointment(TblAppointments NewStatus)
+        {
+            try
+            {
+                return TblAppointment_DAL.UpdateCompleteAppointment(NewStatus);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         // Send Appointment Details to Update each unique record
         public int UpdateAppointment(TblAppointments tblAppointments)
         {

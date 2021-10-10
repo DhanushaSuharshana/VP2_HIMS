@@ -25,6 +25,7 @@ namespace HIMS_Project.PL
 
         private void PostalReceivedModule_Load(object sender, EventArgs e)
         {
+            txtReRefNo.Focus();
             UserAccessComponent(LoggedInUser.UserRole);
             DgvAllReceivedPostal(); // Fetch All Received Postal Detail to the DGV
         }
@@ -73,6 +74,8 @@ namespace HIMS_Project.PL
             txtReTo.Text = "";
             txtReNote.Text = "";
             txtReRefNo.Focus();
+            UserAccessComponent(LoggedInUser.UserRole);
+            DgvAllReceivedPostal();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -80,12 +83,6 @@ namespace HIMS_Project.PL
             AllClear();
         }
 
-        private int GenerateRandomRefNo()
-        {
-            int refNo=1;
-
-            return refNo;
-        }
         public int AddReceivedPostal()
         {
             var ReceivedPostal = new TblPostal // create new object to store form data
@@ -125,11 +122,11 @@ namespace HIMS_Project.PL
                 ValidateFunc.ValidateEmptyTxtField(txtReTo);
                 return false;
             }
-            //if (!Regex.Match(txtReRefNo.Text, @"^[\d]$").Success)
-            //{
-            //    ValidateFunc.ValidateNumber(txtReRefNo);
-            //    return false;
-            //}
+            if (!Regex.Match(txtReRefNo.Text, @"^\d{15}$").Success)
+            {
+                ValidateFunc.ValidateNumber(txtReRefNo);
+                return false;
+            }
             return true;
         }
 
@@ -143,14 +140,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Saved", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllReceivedPostal();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public void EditReceivedPostal()
@@ -183,8 +179,6 @@ namespace HIMS_Project.PL
                 MailTo = txtReTo.Text,
                 Attachment = "No Attachment",
                 PostalId = int.Parse(txtRePostalId.Text),
-                //MDate = DateTime.Now,
-                //MailStatus = "Received",
             };
             return TblPostal_BLL.UpdatePostal(ReceivedPostal);
         }
@@ -199,14 +193,13 @@ namespace HIMS_Project.PL
                     if (respond > 0)
                     {
                         MessageBox.Show("Successfully Updated", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgvAllReceivedPostal();
                         AllClear();
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -224,13 +217,12 @@ namespace HIMS_Project.PL
                 if (respond > 0)
                 {
                     MessageBox.Show("Successfully Removed", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DgvAllReceivedPostal();
                     AllClear();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -240,9 +232,5 @@ namespace HIMS_Project.PL
             btnRePostalDelete.Enabled = true;
         }
 
-        private void pnlRePostalTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
