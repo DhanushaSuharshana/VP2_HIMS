@@ -17,5 +17,9 @@ namespace HIMS_Project.PL
             InitializeComponent();
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
