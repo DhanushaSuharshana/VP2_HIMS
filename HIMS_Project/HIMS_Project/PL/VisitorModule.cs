@@ -70,7 +70,6 @@ namespace HIMS_Project.PL
             txtVInTime.Text = "";
             txtVOutTime.Text = "";
             txtVNote.Text = "";
-            txtVAttachement.Text = "";
             txtVPurpose.Focus();
             btnVSave.Show();
             UserAccessComponent(LoggedInUser.UserRole);
@@ -164,9 +163,9 @@ namespace HIMS_Project.PL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -203,9 +202,9 @@ namespace HIMS_Project.PL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -232,10 +231,6 @@ namespace HIMS_Project.PL
             txtVInTime.Text = dgvVisitor.SelectedRows[0].Cells[6].Value.ToString();
             txtVOutTime.Text = dgvVisitor.SelectedRows[0].Cells[7].Value.ToString();
             txtVNote.Text = dgvVisitor.SelectedRows[0].Cells[8].Value.ToString();
-            //txtVAttachement.Text = dgvVisitor.SelectedRows[0].Cells[9].Value.ToString();
-            /*
-             * Edit Attach document
-             */
 
             btnVUpdate.Show();
             btnVSave.Hide();
@@ -266,9 +261,9 @@ namespace HIMS_Project.PL
                     AllClear();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message, "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

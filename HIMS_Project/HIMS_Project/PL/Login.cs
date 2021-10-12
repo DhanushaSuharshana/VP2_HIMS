@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using HIMS_Project.BLL;
 using HIMS_Project.Functions;
-using HIMS_Project.Model;
 
 namespace HIMS_Project.PL
 {
@@ -14,26 +13,27 @@ namespace HIMS_Project.PL
         CryptoLab_BLL _cryptoLab_Bll;
         public Login()
         {
+            /*
             //Splash Screen Thread ** Suha **
             Thread SplashThread = new Thread(new ThreadStart(StartSplash));
             SplashThread.Start();
             Thread.Sleep(4000);
-
+            */
             //colour changes ** lahiru **
             this.BackColor = Color.DarkGray;
             this.TransparencyKey = Color.DarkGray;
             //to here
             InitializeComponent();
-
-
-            SplashThread.Abort();
             txtUsername.Focus();
+            
+            /*
+            SplashThread.Abort();
 
             //Bring Login Infront of all windows ** Suha **
             this.WindowState = FormWindowState.Minimized;
             this.Show();
             this.WindowState = FormWindowState.Normal;
-
+            */
             _cryptoLab_Bll = new CryptoLab_BLL();
         }
         private void Login_Load(object sender, EventArgs e)
@@ -41,10 +41,10 @@ namespace HIMS_Project.PL
             txtUsername.Focus();
         }
 
-        public void StartSplash()
-        {
-            Application.Run(new SplashScreen());
-        }
+        //public void StartSplash()
+        //{
+        //    Application.Run(new SplashScreen());
+        //}
 
         public void Clear()
         {
@@ -82,7 +82,6 @@ namespace HIMS_Project.PL
             }
 
         }
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

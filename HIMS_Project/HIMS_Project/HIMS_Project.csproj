@@ -88,6 +88,18 @@
     <Compile Include="PL\AppointmentModule.designer.cs">
       <DependentUpon>AppointmentModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\ComplaintsModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ComplaintsModule.Designer.cs">
+      <DependentUpon>ComplaintsModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +112,47 @@
     <Compile Include="PL\PasswordRecover.designer.cs">
       <DependentUpon>PasswordRecover.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\PostalDispatchedModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PostalDispatchedModule.Designer.cs">
+      <DependentUpon>PostalDispatchedModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PostalReceivedModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PostalReceivedModule.Designer.cs">
+      <DependentUpon>PostalReceivedModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\RefComplaintType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\RefComplaintType.Designer.cs">
+      <DependentUpon>RefComplaintType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\RefSpecialtyArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\RefSpecialtyArea.Designer.cs">
+      <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\UserModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\UserModule.Designer.cs">
+      <DependentUpon>UserModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\VisitorModule.cs">
       <SubType>Form</SubType>
@@ -117,14 +165,38 @@
     <EmbeddedResource Include="PL\AppointmentModule.resx">
       <DependentUpon>AppointmentModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\ComplaintsModule.resx">
+      <DependentUpon>ComplaintsModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\PasswordRecover.resx">
       <DependentUpon>PasswordRecover.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\PostalDispatchedModule.resx">
+      <DependentUpon>PostalDispatchedModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PostalReceivedModule.resx">
+      <DependentUpon>PostalReceivedModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\RefComplaintType.resx">
+      <DependentUpon>RefComplaintType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\RefSpecialtyArea.resx">
+      <DependentUpon>RefSpecialtyArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\UserModule.resx">
+      <DependentUpon>UserModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\VisitorModule.resx">
       <DependentUpon>VisitorModule.cs</DependentUpon>

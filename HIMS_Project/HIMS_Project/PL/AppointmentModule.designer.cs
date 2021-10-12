@@ -55,7 +55,6 @@
             this.btnAppointmentEdit = new System.Windows.Forms.Button();
             this.btnAppointmentApprove = new System.Windows.Forms.Button();
             this.btnAppointmentComplete = new System.Windows.Forms.Button();
-            this.btnAppointmentPrint = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAppointmentSearch = new System.Windows.Forms.TextBox();
@@ -113,20 +112,20 @@
             this.pnlFormAppointment.Controls.Add(this.label2);
             this.pnlFormAppointment.Controls.Add(this.label1);
             this.pnlFormAppointment.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFormAppointment.Location = new System.Drawing.Point(737, 0);
+            this.pnlFormAppointment.Location = new System.Drawing.Point(512, 0);
             this.pnlFormAppointment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlFormAppointment.Name = "pnlFormAppointment";
             this.pnlFormAppointment.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlFormAppointment.Size = new System.Drawing.Size(366, 585);
+            this.pnlFormAppointment.Size = new System.Drawing.Size(242, 585);
             this.pnlFormAppointment.TabIndex = 1;
             // 
             // txtAppointmentNo
             // 
             this.txtAppointmentNo.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtAppointmentNo.ForeColor = System.Drawing.Color.White;
-            this.txtAppointmentNo.Location = new System.Drawing.Point(105, 66);
+            this.txtAppointmentNo.Location = new System.Drawing.Point(102, 66);
             this.txtAppointmentNo.Name = "txtAppointmentNo";
-            this.txtAppointmentNo.Size = new System.Drawing.Size(50, 29);
+            this.txtAppointmentNo.Size = new System.Drawing.Size(50, 25);
             this.txtAppointmentNo.TabIndex = 11;
             this.txtAppointmentNo.Visible = false;
             // 
@@ -135,13 +134,13 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label10.Location = new System.Drawing.Point(13, 21);
+            this.label10.Location = new System.Drawing.Point(13, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(350, 23);
+            this.label10.Size = new System.Drawing.Size(192, 17);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Fill Appointmnet Form In Here..";
+            this.label10.Text = "Create An Appointmnet";
             // 
             // txtAppTime
             // 
@@ -149,11 +148,11 @@
             this.txtAppTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAppTime.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppTime.ForeColor = System.Drawing.Color.White;
-            this.txtAppTime.Location = new System.Drawing.Point(25, 231);
+            this.txtAppTime.Location = new System.Drawing.Point(22, 231);
             this.txtAppTime.Multiline = true;
             this.txtAppTime.Name = "txtAppTime";
-            this.txtAppTime.Size = new System.Drawing.Size(263, 30);
-            this.txtAppTime.TabIndex = 10;
+            this.txtAppTime.Size = new System.Drawing.Size(200, 30);
+            this.txtAppTime.TabIndex = 3;
             // 
             // btnAppointmentUpdate
             // 
@@ -163,7 +162,7 @@
             this.btnAppointmentUpdate.ForeColor = System.Drawing.Color.White;
             this.btnAppointmentUpdate.Location = new System.Drawing.Point(10, 515);
             this.btnAppointmentUpdate.Name = "btnAppointmentUpdate";
-            this.btnAppointmentUpdate.Size = new System.Drawing.Size(346, 30);
+            this.btnAppointmentUpdate.Size = new System.Drawing.Size(222, 30);
             this.btnAppointmentUpdate.TabIndex = 9;
             this.btnAppointmentUpdate.Text = "U P D A T E";
             this.btnAppointmentUpdate.UseVisualStyleBackColor = false;
@@ -177,7 +176,7 @@
             this.btnAppointmentSave.ForeColor = System.Drawing.Color.White;
             this.btnAppointmentSave.Location = new System.Drawing.Point(10, 545);
             this.btnAppointmentSave.Name = "btnAppointmentSave";
-            this.btnAppointmentSave.Size = new System.Drawing.Size(346, 30);
+            this.btnAppointmentSave.Size = new System.Drawing.Size(222, 30);
             this.btnAppointmentSave.TabIndex = 9;
             this.btnAppointmentSave.Text = "S A V E";
             this.btnAppointmentSave.UseVisualStyleBackColor = false;
@@ -189,10 +188,11 @@
             this.cmbAppSpArea.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAppSpArea.ForeColor = System.Drawing.Color.White;
             this.cmbAppSpArea.FormattingEnabled = true;
-            this.cmbAppSpArea.Location = new System.Drawing.Point(25, 297);
+            this.cmbAppSpArea.ItemHeight = 20;
+            this.cmbAppSpArea.Location = new System.Drawing.Point(22, 297);
             this.cmbAppSpArea.Name = "cmbAppSpArea";
-            this.cmbAppSpArea.Size = new System.Drawing.Size(263, 33);
-            this.cmbAppSpArea.TabIndex = 8;
+            this.cmbAppSpArea.Size = new System.Drawing.Size(200, 28);
+            this.cmbAppSpArea.TabIndex = 4;
             this.cmbAppSpArea.SelectedIndexChanged += new System.EventHandler(this.cmbAppSpArea_SelectedIndexChanged);
             // 
             // cmbAppMO
@@ -201,10 +201,10 @@
             this.cmbAppMO.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAppMO.ForeColor = System.Drawing.Color.White;
             this.cmbAppMO.FormattingEnabled = true;
-            this.cmbAppMO.Location = new System.Drawing.Point(25, 363);
+            this.cmbAppMO.Location = new System.Drawing.Point(22, 363);
             this.cmbAppMO.Name = "cmbAppMO";
-            this.cmbAppMO.Size = new System.Drawing.Size(263, 33);
-            this.cmbAppMO.TabIndex = 7;
+            this.cmbAppMO.Size = new System.Drawing.Size(200, 28);
+            this.cmbAppMO.TabIndex = 5;
             // 
             // txtAppSymptom
             // 
@@ -212,10 +212,10 @@
             this.txtAppSymptom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAppSymptom.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppSymptom.ForeColor = System.Drawing.Color.White;
-            this.txtAppSymptom.Location = new System.Drawing.Point(25, 427);
+            this.txtAppSymptom.Location = new System.Drawing.Point(22, 427);
             this.txtAppSymptom.Multiline = true;
             this.txtAppSymptom.Name = "txtAppSymptom";
-            this.txtAppSymptom.Size = new System.Drawing.Size(263, 66);
+            this.txtAppSymptom.Size = new System.Drawing.Size(200, 66);
             this.txtAppSymptom.TabIndex = 6;
             // 
             // dtpAppDate
@@ -227,10 +227,10 @@
             this.dtpAppDate.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.dtpAppDate.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAppDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAppDate.Location = new System.Drawing.Point(22, 164);
+            this.dtpAppDate.Location = new System.Drawing.Point(19, 164);
             this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(266, 32);
-            this.dtpAppDate.TabIndex = 4;
+            this.dtpAppDate.Size = new System.Drawing.Size(203, 27);
+            this.dtpAppDate.TabIndex = 2;
             this.dtpAppDate.Value = new System.DateTime(2021, 9, 12, 0, 0, 0, 0);
             // 
             // cmbAppPatient
@@ -240,74 +240,74 @@
             this.cmbAppPatient.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAppPatient.ForeColor = System.Drawing.Color.White;
             this.cmbAppPatient.FormattingEnabled = true;
-            this.cmbAppPatient.Location = new System.Drawing.Point(22, 95);
+            this.cmbAppPatient.Location = new System.Drawing.Point(19, 95);
             this.cmbAppPatient.Name = "cmbAppPatient";
-            this.cmbAppPatient.Size = new System.Drawing.Size(266, 33);
-            this.cmbAppPatient.TabIndex = 3;
+            this.cmbAppPatient.Size = new System.Drawing.Size(203, 28);
+            this.cmbAppPatient.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label6.Location = new System.Drawing.Point(21, 337);
+            this.label6.Location = new System.Drawing.Point(18, 337);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 25);
+            this.label6.Size = new System.Drawing.Size(120, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Medical Officer";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label5.Location = new System.Drawing.Point(21, 271);
+            this.label5.Location = new System.Drawing.Point(18, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 25);
+            this.label5.Size = new System.Drawing.Size(113, 16);
             this.label5.TabIndex = 2;
             this.label5.Text = "Specialty Area";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(21, 401);
+            this.label4.Location = new System.Drawing.Point(18, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 25);
+            this.label4.Size = new System.Drawing.Size(87, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Symptoms";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label3.Location = new System.Drawing.Point(21, 205);
+            this.label3.Location = new System.Drawing.Point(18, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 25);
+            this.label3.Size = new System.Drawing.Size(151, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Appointment Time";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label2.Location = new System.Drawing.Point(21, 135);
+            this.label2.Location = new System.Drawing.Point(18, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 25);
+            this.label2.Size = new System.Drawing.Size(146, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Appointment Date";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label1.Location = new System.Drawing.Point(21, 66);
+            this.label1.Location = new System.Drawing.Point(18, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 25);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient";
             // 
@@ -316,9 +316,9 @@
             this.btnAppointmentClear.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAppointmentClear.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAppointmentClear.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentClear.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAppointmentClear.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.btnAppointmentClear.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentClear.Location = new System.Drawing.Point(561, 0);
+            this.btnAppointmentClear.Location = new System.Drawing.Point(394, 0);
             this.btnAppointmentClear.Name = "btnAppointmentClear";
             this.btnAppointmentClear.Size = new System.Drawing.Size(91, 45);
             this.btnAppointmentClear.TabIndex = 9;
@@ -344,7 +344,7 @@
             this.pnlAppointmentView.Location = new System.Drawing.Point(0, 0);
             this.pnlAppointmentView.Name = "pnlAppointmentView";
             this.pnlAppointmentView.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.pnlAppointmentView.Size = new System.Drawing.Size(677, 585);
+            this.pnlAppointmentView.Size = new System.Drawing.Size(510, 585);
             this.pnlAppointmentView.TabIndex = 3;
             // 
             // btnAppointmentSearch
@@ -354,7 +354,7 @@
             this.btnAppointmentSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppointmentSearch.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppointmentSearch.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentSearch.Location = new System.Drawing.Point(601, 72);
+            this.btnAppointmentSearch.Location = new System.Drawing.Point(427, 71);
             this.btnAppointmentSearch.Name = "btnAppointmentSearch";
             this.btnAppointmentSearch.Size = new System.Drawing.Size(65, 31);
             this.btnAppointmentSearch.TabIndex = 12;
@@ -369,9 +369,9 @@
             this.lblShowAppointmentMsg.AutoSize = true;
             this.lblShowAppointmentMsg.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShowAppointmentMsg.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblShowAppointmentMsg.Location = new System.Drawing.Point(59, 112);
+            this.lblShowAppointmentMsg.Location = new System.Drawing.Point(9, 108);
             this.lblShowAppointmentMsg.Name = "lblShowAppointmentMsg";
-            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(634, 20);
+            this.lblShowAppointmentMsg.Size = new System.Drawing.Size(489, 15);
             this.lblShowAppointmentMsg.TabIndex = 11;
             this.lblShowAppointmentMsg.Text = "Appointment Numbers are available only for approved appointment.";
             this.lblShowAppointmentMsg.Visible = false;
@@ -385,10 +385,9 @@
             this.pnlViewButtons.Controls.Add(this.btnAppointmentApprove);
             this.pnlViewButtons.Controls.Add(this.btnAppointmentComplete);
             this.pnlViewButtons.Controls.Add(this.btnAppointmentClear);
-            this.pnlViewButtons.Controls.Add(this.btnAppointmentPrint);
             this.pnlViewButtons.Location = new System.Drawing.Point(12, 535);
             this.pnlViewButtons.Name = "pnlViewButtons";
-            this.pnlViewButtons.Size = new System.Drawing.Size(652, 45);
+            this.pnlViewButtons.Size = new System.Drawing.Size(485, 45);
             this.pnlViewButtons.TabIndex = 10;
             // 
             // btnAppointmentDelete
@@ -396,9 +395,9 @@
             this.btnAppointmentDelete.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAppointmentDelete.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAppointmentDelete.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentDelete.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAppointmentDelete.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.btnAppointmentDelete.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentDelete.Location = new System.Drawing.Point(353, 0);
+            this.btnAppointmentDelete.Location = new System.Drawing.Point(270, 0);
             this.btnAppointmentDelete.Name = "btnAppointmentDelete";
             this.btnAppointmentDelete.Size = new System.Drawing.Size(75, 45);
             this.btnAppointmentDelete.TabIndex = 6;
@@ -411,9 +410,9 @@
             this.btnAppointmentEdit.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAppointmentEdit.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAppointmentEdit.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentEdit.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAppointmentEdit.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.btnAppointmentEdit.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentEdit.Location = new System.Drawing.Point(278, 0);
+            this.btnAppointmentEdit.Location = new System.Drawing.Point(195, 0);
             this.btnAppointmentEdit.Name = "btnAppointmentEdit";
             this.btnAppointmentEdit.Size = new System.Drawing.Size(75, 45);
             this.btnAppointmentEdit.TabIndex = 6;
@@ -426,9 +425,9 @@
             this.btnAppointmentApprove.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAppointmentApprove.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAppointmentApprove.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentApprove.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAppointmentApprove.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.btnAppointmentApprove.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentApprove.Location = new System.Drawing.Point(185, 0);
+            this.btnAppointmentApprove.Location = new System.Drawing.Point(102, 0);
             this.btnAppointmentApprove.Name = "btnAppointmentApprove";
             this.btnAppointmentApprove.Size = new System.Drawing.Size(93, 45);
             this.btnAppointmentApprove.TabIndex = 6;
@@ -441,9 +440,9 @@
             this.btnAppointmentComplete.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnAppointmentComplete.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAppointmentComplete.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentComplete.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAppointmentComplete.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.btnAppointmentComplete.ForeColor = System.Drawing.Color.White;
-            this.btnAppointmentComplete.Location = new System.Drawing.Point(83, 0);
+            this.btnAppointmentComplete.Location = new System.Drawing.Point(0, 0);
             this.btnAppointmentComplete.Name = "btnAppointmentComplete";
             this.btnAppointmentComplete.Size = new System.Drawing.Size(102, 45);
             this.btnAppointmentComplete.TabIndex = 6;
@@ -451,30 +450,16 @@
             this.btnAppointmentComplete.UseVisualStyleBackColor = false;
             this.btnAppointmentComplete.Click += new System.EventHandler(this.btnAppointmentComplete_Click);
             // 
-            // btnAppointmentPrint
-            // 
-            this.btnAppointmentPrint.BackColor = System.Drawing.SystemColors.Info;
-            this.btnAppointmentPrint.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAppointmentPrint.FlatAppearance.BorderSize = 0;
-            this.btnAppointmentPrint.Font = new System.Drawing.Font("Lucida Fax", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAppointmentPrint.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAppointmentPrint.Location = new System.Drawing.Point(0, 0);
-            this.btnAppointmentPrint.Name = "btnAppointmentPrint";
-            this.btnAppointmentPrint.Size = new System.Drawing.Size(83, 45);
-            this.btnAppointmentPrint.TabIndex = 6;
-            this.btnAppointmentPrint.Text = "PRINT PDF";
-            this.btnAppointmentPrint.UseVisualStyleBackColor = false;
-            this.btnAppointmentPrint.Click += new System.EventHandler(this.btnAppointmentPrint_click);
-            // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Fax", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Lucida Fax", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label9.Location = new System.Drawing.Point(201, 9);
+            this.label9.Location = new System.Drawing.Point(134, 8);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(393, 40);
+            this.label9.Size = new System.Drawing.Size(256, 25);
             this.label9.TabIndex = 8;
             this.label9.Text = "Appointment Module";
             // 
@@ -482,11 +467,11 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(315, 51);
+            this.label8.Location = new System.Drawing.Point(125, 51);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(235, 25);
+            this.label8.Size = new System.Drawing.Size(183, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "Search By Patient Name";
             // 
@@ -497,10 +482,10 @@
             this.txtAppointmentSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAppointmentSearch.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppointmentSearch.ForeColor = System.Drawing.Color.White;
-            this.txtAppointmentSearch.Location = new System.Drawing.Point(319, 73);
+            this.txtAppointmentSearch.Location = new System.Drawing.Point(164, 72);
             this.txtAppointmentSearch.Multiline = true;
             this.txtAppointmentSearch.Name = "txtAppointmentSearch";
-            this.txtAppointmentSearch.Size = new System.Drawing.Size(283, 29);
+            this.txtAppointmentSearch.Size = new System.Drawing.Size(262, 29);
             this.txtAppointmentSearch.TabIndex = 7;
             this.txtAppointmentSearch.TextChanged += new System.EventHandler(this.txtAppointmentSearch_TextChanged);
             // 
@@ -517,18 +502,18 @@
             "Completed"});
             this.cmbFilterAppointment.Location = new System.Drawing.Point(14, 73);
             this.cmbFilterAppointment.Name = "cmbFilterAppointment";
-            this.cmbFilterAppointment.Size = new System.Drawing.Size(177, 33);
+            this.cmbFilterAppointment.Size = new System.Drawing.Size(144, 28);
             this.cmbFilterAppointment.TabIndex = 5;
             this.cmbFilterAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbFilterAppointment_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Lucida Fax", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.label7.Location = new System.Drawing.Point(13, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 25);
+            this.label7.Size = new System.Drawing.Size(74, 16);
             this.label7.TabIndex = 4;
             this.label7.Text = "Filter By ";
             // 
@@ -555,7 +540,7 @@
             this.dgvAppointment.ReadOnly = true;
             this.dgvAppointment.RowHeadersWidth = 51;
             this.dgvAppointment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAppointment.Size = new System.Drawing.Size(658, 397);
+            this.dgvAppointment.Size = new System.Drawing.Size(489, 397);
             this.dgvAppointment.TabIndex = 3;
             this.dgvAppointment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointment_CellClick);
             // 
@@ -643,15 +628,14 @@
             // 
             // AppointmentModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1103, 585);
+            this.ClientSize = new System.Drawing.Size(754, 585);
             this.Controls.Add(this.pnlAppointmentView);
             this.Controls.Add(this.pnlFormAppointment);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(729, 456);
             this.Name = "AppointmentModule";
             this.Text = "AppointmentModule";
             this.TopMost = true;
@@ -693,7 +677,6 @@
         private System.Windows.Forms.ComboBox cmbFilterAppointment;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvAppointment;
-        private System.Windows.Forms.Button btnAppointmentPrint;
         private System.Windows.Forms.TextBox txtAppointmentNo;
         private System.Windows.Forms.TextBox txtAppointmentSearch;
         private System.Windows.Forms.Label label8;

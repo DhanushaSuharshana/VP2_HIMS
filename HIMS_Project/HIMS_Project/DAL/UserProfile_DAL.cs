@@ -18,7 +18,7 @@ namespace HIMS_Project.DAL
             try
             {
                 return ODBC.GetData("SELECT * FROM TblUsers LEFT JOIN TblStaff ON TblStaff.StaffId=TblUsers.StaffId");
-
+                
             }
             catch (Exception)
             {
@@ -102,7 +102,7 @@ namespace HIMS_Project.DAL
                 throw;
             }
         }
-
+        
         // Update User Proffessional Info
         public static int UpdateStaffInfo(TblStaff tblstaff)
         {
@@ -112,16 +112,14 @@ namespace HIMS_Project.DAL
                 string sql = string.Format("UPDATE TblStaff " +
                                            "SET StaffEmail=@StaffEmail," +
                                                 "JoinDate=@JoinDate," +
-                                                "SpecialityArea=@SpecialityArea," +
-                                                "Photograph=@Photograph" +
+                                                "SpecialityArea=@SpecialityArea" +
                                            " WHERE StaffId=@StaffId");
                 // set parameters
-                SqlParameter[] _sql = new SqlParameter[6];
+                SqlParameter[] _sql = new SqlParameter[4];
                 _sql[0] = sqlParameterFormat.Format("@StaffEmail", tblstaff.StaffEmail);
                 _sql[1] = sqlParameterFormat.Format("@JoinDate", tblstaff.JoinDate);
                 _sql[2] = sqlParameterFormat.Format("@SpecialityArea", tblstaff.SpecialityArea);
-                //_sql[3] = sqlParameterFormat.Format("@Photograph", tblstaff.Photograph);
-                _sql[4] = sqlParameterFormat.Format("@StaffId", LoggedInUser.StaffId);
+                _sql[3] = sqlParameterFormat.Format("@StaffId", LoggedInUser.StaffId);
 
                 return ODBC.SetData(sql, _sql);
             }
@@ -129,7 +127,6 @@ namespace HIMS_Project.DAL
             {
                 throw;
             }
-
         }
     }
 }
