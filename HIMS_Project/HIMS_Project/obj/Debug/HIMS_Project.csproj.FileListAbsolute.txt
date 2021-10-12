@@ -36,14 +36,9 @@ E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\H
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.pdb
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csprojAssemblyReference.cache
-E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Dashboard.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.Login.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PasswordRecover.resources
-E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
-E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalReceivedModule.resources
-E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
-E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.Properties.Resources.resources
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.GenerateResource.cache
 E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.csproj.CoreCompileInputs.cache
@@ -73,3 +68,11 @@ C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Pro
 C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe.config
 C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.exe
 C:\Users\Dell\source\repos\VP2_HIMS\HIMS_Project\HIMS_Project\bin\Debug\HIMS_Project.pdb
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.SplashScreen.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserProfile.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.UserModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.ComplaintsModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalDispatchedModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.PostalReceivedModule.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefComplaintType.resources
+E:\UNI\Semester 3\Visual Programming II\Group Assignment\VP2_HIMS\HIMS_Project\HIMS_Project\obj\Debug\HIMS_Project.PL.RefSpecialtyArea.resources

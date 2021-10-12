@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HIMS_Project.DAL;
+using HIMS_Project.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +10,30 @@ namespace HIMS_Project.BLL
 {
     class TblStaff_BLL
     {
-        #region User Profile
-        // Fetch All Logginned User staff details to user profile form
+        // Send staff Details to Add new record
+        public int AddStaff(TblStaff tblStaff)
+        {
+            try
+            {
+                return TblStaff_DAL.AddNewStaff(tblStaff);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
-
-        #endregion User Profile
+        // Send staff Details to Update each unique record
+        public int UpdateStaff(TblStaff tblStaff)
+        {
+            try
+            {
+                return TblStaff_DAL.UpdateStaff(tblStaff);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

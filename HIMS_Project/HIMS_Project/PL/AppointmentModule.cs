@@ -58,17 +58,6 @@ namespace HIMS_Project.PL
         // Load All Medical Officers of each selected Specialty area
         private void cmbAppSpArea_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ////    //int SpecialtyArea = cmbAppSpArea.SelectedValue(); // get selected value
-            ////    int SpecialtyArea = cmbAppSpArea.Text;
-            ////    //Int32.TryParse(cmbAppSpArea.SelectedValue.ToString(), out SpecialtyArea);
-            ////    TblUsers_BLL.cmbLoadSpecialMO(SpecialtyArea, cmbAppMO);
-            ////    cmbAppMO.SelectedIndex = -1;
-
-            //if (cmbAppSpArea.SelectedValue.ToString() != null)
-            //{
-                //string SpecialtyArea = cmbAppSpArea.SelectedValue.ToString();
-                //TblAppointment_BLL.cmbLoadSpecialMO(SpecialtyArea, cmbAppMO);
-            //}
             cmbLoadMO();
         }
 
@@ -96,7 +85,6 @@ namespace HIMS_Project.PL
                 btnAppointmentApprove.Hide();
                 btnAppointmentComplete.Hide();
                 btnAppointmentEdit.Hide();
-                btnAppointmentPrint.Hide();
                 btnAppointmentDelete.Enabled = false;
                 pnlAppointmentView.Width = 887;
                 pnlAppointmentView.Height = 624;
@@ -106,10 +94,11 @@ namespace HIMS_Project.PL
                 // pnlFormAppointment.Show();
                 btnAppointmentDelete.Hide();
                 btnAppointmentComplete.Hide();
-                btnAppointmentUpdate.Enabled = false;
+                btnAppointmentUpdate.Hide();
                 btnAppointmentApprove.Enabled = false;
                 btnAppointmentEdit.Enabled = false;
-                btnAppointmentPrint.Enabled = false;
+                pnlAppointmentView.Width = 736;
+                pnlAppointmentView.Height = 624;
             }
             if (UserRole == 3) // If user will Medical Officer
             {
@@ -117,8 +106,9 @@ namespace HIMS_Project.PL
                 btnAppointmentApprove.Hide();
                 btnAppointmentDelete.Hide();
                 btnAppointmentEdit.Hide();
-                btnAppointmentPrint.Hide();
                 btnAppointmentComplete.Enabled = false;
+                pnlAppointmentView.Width = 887;
+                pnlAppointmentView.Height = 624;
             }
             if (UserRole == 4) // If user will Patient
             {
@@ -129,9 +119,10 @@ namespace HIMS_Project.PL
                 btnAppointmentApprove.Hide();
                 btnAppointmentDelete.Hide();
                 btnAppointmentEdit.Hide();
-                btnAppointmentPrint.Hide();
                 AppointmentFunc.ShowUserName(cmbAppPatient); // view loggedin patient name
                 cmbAppPatient.Enabled = false; // disable the ComboBox
+                pnlAppointmentView.Width = 736;
+                pnlAppointmentView.Height = 624;
             }
                 
         }
@@ -243,6 +234,8 @@ namespace HIMS_Project.PL
             cmbAppPatient.Focus();
             UserAccessComponent(LoggedInUser.UserRole);
             dgvAllAppointments(LoggedInUser.UserRole);
+            btnAppointmentUpdate.Hide();
+            btnAppointmentSave.Show();
         }
 
         public void EditAppointment()
@@ -255,8 +248,8 @@ namespace HIMS_Project.PL
             cmbAppMO.Text = dgvAppointment.SelectedRows[0].Cells[6].Value.ToString();
             txtAppSymptom.Text = dgvAppointment.SelectedRows[0].Cells[7].Value.ToString();
 
-            btnAppointmentUpdate.Enabled = true;
-            btnAppointmentSave.Enabled = false;
+            btnAppointmentUpdate.Show();
+            btnAppointmentSave.Hide();
         }
 
         public int UpdateAppointment()
